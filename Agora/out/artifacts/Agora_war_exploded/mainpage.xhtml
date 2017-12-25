@@ -7,11 +7,15 @@
 
     <ui:define name="navbar">
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+            <li><a href="/logout.jsf"><span class="glyphicon glyphicon-log-out" /> Logout</a></li>
         </ul>
+        <p class="navbar-text navbar-right">Welcome #{authBean.loggedUsername}</p>
     </ui:define>
 
     <ui:define name="content">
+        <br />
+        <br />
+        <br />
         <h1>Welcome to the Login Demo!!</h1>
     </ui:define>
 </ui:composition>

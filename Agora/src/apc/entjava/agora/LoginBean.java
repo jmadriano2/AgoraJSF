@@ -1,18 +1,22 @@
 package apc.entjava.agora;
 
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
 
 @ManagedBean
 public class LoginBean {
-    private String loginName;
+    private String username;
     private String password;
 
-    public String getLoginName() {
-        return loginName;
+    @ManagedProperty(value = "#{authBean}")
+    private AuthBean authBean;
+
+    public String getUsername() {
+        return username;
     }
 
-    public void setLoginName(String loginName) {
-        this.loginName = loginName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
@@ -23,8 +27,17 @@ public class LoginBean {
         this.password = password;
     }
 
-    public String login1() {
-        if(loginName.equals("test") && password.equals("me")){
+    public AuthBean getAuthBean() {
+        return authBean;
+    }
+
+    public void setAuthBean(AuthBean authBean) {
+        this.authBean = authBean;
+    }
+
+    public String login() {
+        if(username.equals("urmum") && password.equals("password")){
+            authBean.setLoggedUsername(username);
             return "mainpage";
         }else{
             return "error";
