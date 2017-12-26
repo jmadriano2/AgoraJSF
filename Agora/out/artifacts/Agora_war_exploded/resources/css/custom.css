@@ -12,6 +12,16 @@ li {
 }
 .navbar-brand {
     margin-top: 10px;
+    margin-left: 150px;
+}
+.container {
+    max-width: 1000px;
+    min-width: 1000px;
+    margin:0 auto;
+}
+.pull-left {
+    float: left;
+    margin-left: 120px;
 }
 .container-fluid{
     background: #cffac2;

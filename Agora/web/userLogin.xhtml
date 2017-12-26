@@ -14,45 +14,69 @@
 
     <ui:define name="navbar">
         <h:form>
-        <ul class="nav navbar-nav navbar-right">
-            <li>
-                <h:inputText styleClass="form-control" id="username" value="#{loginBean.username}"
-                             a:placeholder="Username"/>
-            </li>
-            <li>
-                <h:inputSecret styleClass="form-control" id="password" value="#{loginBean.password}"
-                               a:placeholder="Password"/>
-            </li>
-            <li>
-                <h:commandButton styleClass="btn btn-info" value="Log In" action="#{loginBean.login}"/>
-            </li>
-        </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <h:inputText styleClass="form-control" id="username" value="#{loginBean.username}"
+                                 a:placeholder="Username"/>
+                </li>
+                <li>
+                    <h:inputSecret styleClass="form-control" id="password" value="#{loginBean.password}"
+                                   a:placeholder="Password"/>
+                </li>
+                <li class="loginButton">
+                    <h:commandButton styleClass="btn btn-info" value="Log In" action="#{loginBean.login}"/>
+                </li>
+            </ul>
         </h:form>
     </ui:define>
 
     <ui:define name="content">
         <br/>
         <br/>
-        <h1>Create an Account</h1>
-        <h3>Be a Part of Agora!</h3>
-        <h:form styleClass="form-horizontal">
-            <div class="form-group">
-                <h:outputLabel styleClass="control-label col-sm-2" for="username">Login Name:</h:outputLabel>
-                <div class="col-sm-4">
-                    <h:inputText styleClass="form-control" id="username1" value="#{loginBean.username}"/>
-                </div>
+            <div class="col-sm-offset-6 col-sm-3"><h1>Create an Account</h1></div>
+            <div class="row">
+                <div class="col-sm-offset-6 col-sm-3"><h3>Be a Part of Agora!</h3></div>
             </div>
-            <div class="form-group">
-                <h:outputLabel styleClass="control-label col-sm-2" for="password">Password:</h:outputLabel>
-                <div class="col-sm-4">
-                    <h:inputSecret styleClass="form-control" id="password1" value="#{loginBean.password}"/>
+            <br/>
+            <h:form styleClass="form-horizontal">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-offset-6 col-sm-3">
+                            <h:inputText styleClass="form-control" a:placeholder="Nickname" id="newnick"
+                                         value="#{loginBean.username}"/>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-4">
-                    <h:commandButton styleClass="btn btn-info" value="Log In" action="#{loginBean.login}"/>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-offset-6 col-sm-3">
+                            <h:inputText styleClass="form-control" a:placeholder="Username" id="newaccount"
+                                         value="#{loginBean.username}"/>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </h:form>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-offset-6 col-sm-3">
+                            <h:inputSecret styleClass="form-control" a:placeholder="Password" id="newpass"
+                                           value="#{loginBean.password}"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-offset-6 col-sm-3">
+                            <h:inputSecret styleClass="form-control" a:placeholder="Confirm Password" id="conpass"
+                                           value="#{loginBean.password}"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-7 col-sm-4">
+                        <h:commandButton styleClass="btn btn-info" value="Create Account" action="#{loginBean.login}"/>
+                    </div>
+                </div>
+            </h:form>
     </ui:define>
 </ui:composition>
