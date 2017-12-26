@@ -30,6 +30,18 @@
             <web-resource-name>XHTML files</web-resource-name>
             <url-pattern>*.xhtml</url-pattern>
         </web-resource-collection>
-        <auth-constraint />
+        <auth-constraint/>
     </security-constraint>
+
+    <!-- Additional tags for AuthFilter -->
+    <filter>
+        <filter-name>AuthFilter</filter-name>
+        <filter-class>apc.entjava.agora.services.AuthFilter</filter-class>
+    </filter>
+    <!-- Set the auth filter to secure all the pages in the /protected/* path of the application  -->
+    <filter-mapping>
+        <filter-name>AuthFilter</filter-name>
+        <url-pattern>/protected/*</url-pattern>
+    </filter-mapping>
+
 </web-app>

@@ -36,7 +36,7 @@ public class LoginBean {
     }
 
     public String login() {
-        if(username.equals("urmum") && password.equals("password")){
+        if(username.equals("test") && password.equals("me")){
             authBean.setLoggedUsername(username);
             return "mainpage";
         }else{
