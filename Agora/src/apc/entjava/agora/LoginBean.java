@@ -1,5 +1,8 @@
 package apc.entjava.agora;
 
+import apc.entjava.agora.dataobjects.LoginDao;
+import apc.entjava.agora.services.LoginService;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 
@@ -35,10 +38,12 @@ public class LoginBean {
         this.authBean = authBean;
     }
 
+    private LoginService loginService = new LoginDao();
+
     public String login() {
-        if(username.equals("test") && password.equals("me")){
+        if(loginService.login(username,password)){
             authBean.setLoggedUsername(username);
-            return "mainpage";
+            return "protected/mainpage";
         }else{
             return "error";
         }
