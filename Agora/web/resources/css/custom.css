@@ -1,55 +1,18 @@
 html {
-    background-color: #cffac2;
+    background: #cffac2;
 }
-h1 {
-    --font-family-sans-serif: "Helvetica Neue";
+li {
+    margin-top: 30px;
+    margin-right: 20px;
 }
-
-.navbar {
-    height: 100px;
+.navbar.navbar-inverse {
+    min-height:100px;
     background: #28a745;
+    margin-bottom: 0px;
 }
 .navbar-brand {
-    position: absolute;
-    top: 15px;
-    left: 100px;
+    margin-top: 10px;
 }
-.container-fluid {
-    background-color: #cffac2;
-}
-.control-label.username_label {
-    position: absolute;
-    top: 15px;
-    right: 540px;
-    font-size: 15px;
-    color: white;
-}
-.form-control.mr-sm-2.username {
-    position: absolute;
-    top: 40px;
-    right: 400px;
-    height: 30px;
-    width: 200px;
-}
-.control-label.password_label {
-    position: absolute;
-    top: 15px;
-    right: 325px;
-    font-size: 15px;
-    color: white;
-}
-.form-control.mr-sm-2.password {
-    position: absolute;
-    top: 40px;
-    right: 180px;
-    height: 30px;
-    width: 200px;
-}
-.btn {
-    position: absolute;
-    background: #42fa68;
-    color: white;
-    top: 30px;
-    right: 100px;
-    width: 70px;
+.container-fluid{
+    background: #cffac2;
 }
