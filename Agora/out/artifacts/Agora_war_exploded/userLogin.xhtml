@@ -5,408 +5,48 @@
                 xmlns:f="http://xmlns.jcp.org/jsf/core"
                 template="/WEB-INF/templates/loginTemplate.xhtml">
 
-    <ui:define name="title">Agora</ui:define>
+    <ui:define name="title">Agora - Log In</ui:define>
+
+    <ui:define name="custom">
+        <link rel="stylesheet" href="resources/css/custom.css" />
+    </ui:define>
 
     <ui:define name="navbar">
-        <h:form styleClass="form-horizontal">
-        <ul class="nav navbar-nav navbar-right">
-            <li><h:outputLabel styleClass="control-label col-sm-2" for="username">Login Name:</h:outputLabel></li>
-        </ul>
-        <!--<p class="navbar-text navbar-right">-->
-            <!--Welcome #{authBean.loggedUsername}!-->
-        <!--</p>-->
+        <h:form class="form-inline">
+            <ul class="nav navbar-nav navbar-right">
+                <h:outputLabel styleClass="control-label username_label" for="username" >Username</h:outputLabel>
+                <li><h:inputText class="form-control mr-sm-2 username" id="username" value="#{loginBean.username}"/></li>
+                <h:outputLabel styleClass="control-label password_label" for="password">Password</h:outputLabel>
+                <li><h:inputSecret class="form-control mr-sm-2 password" id="password" value="#{loginBean.password}"/></li>
+                <li><h:commandButton class="btn my-2 my-sm-0" type="submit" value="Log In" action="#{loginBean.login}"/></li>
+            </ul>
         </h:form>
     </ui:define>
 
     <ui:define name="content">
         <br />
         <br />
-        <br />
-        <h1>Log In</h1>
+        <h1>Create an Account</h1>
+        <h3>Be a Part of Agora!</h3>
         <h:form styleClass="form-horizontal">
             <div class="form-group">
-                <h:outputLabel styleClass="control-label col-sm-2" for="username">Login Name:</h:outputLabel>
+                <h:outputLabel styleClass="control-label newaccount_label" for="newaccount">Login Name:</h:outputLabel>
                 <div class="col-sm-4">
-                    <h:inputText styleClass="form-control" id="username" value="#{loginBean.username}"/>
+                    <h:inputText styleClass="form-control newaccount" id="newaccount" />
                 </div>
             </div>
             <div class="form-group">
                 <h:outputLabel styleClass="control-label col-sm-2" for="password">Password:</h:outputLabel>
                 <div class="col-sm-4">
-                    <h:inputSecret styleClass="form-control" id="password" value="#{loginBean.password}"/>
+                    <h:inputSecret styleClass="form-control newpass" />
+                    <h:inputSecret styleClass="form-control conpass" />
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-4">
-                    <h:commandButton styleClass="btn btn-info" value="Log In" action="#{loginBean.login}"/>
+                    <h:commandButton styleClass="btn btn-info" value="Log In" />
                 </div>
             </div>
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
-            <hr />
-            <br />
         </h:form>
     </ui:define>
 </ui:composition>
