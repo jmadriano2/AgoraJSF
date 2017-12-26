@@ -25,10 +25,10 @@
     <!-- url: The JDBC connection url for connecting to your MySQL database.
      -->
 
-    <Resource name="jdbc/logindemo" auth="Container" type="javax.sql.DataSource"
+    <Resource name="jdbc/agoraDB" auth="Container" type="javax.sql.DataSource"
               maxActive="100" maxIdle="30" maxWait="10000"
-              username="logindemo" password="logindemo" driverClassName="com.mysql.cj.jdbc.Driver"
-              url="jdbc:mysql://localhost:3306/logindemo"/>
+              username="AgoraAdmin" password="agorapassword" driverClassName="com.mysql.cj.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/agoraDB"/>
 
 
 </Context>

@@ -24,6 +24,6 @@ public class AuthBean implements Serializable{
 
     public String logout() {
         FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
-        return "index?faces-redirect=true";
+        return "userLogin?faces-redirect=true";
     }
 }

@@ -18,7 +18,7 @@ public class LoginDao implements LoginService {
         Context context = null;
         try {
             context = new InitialContext();
-            this.ds = (DataSource)context.lookup("java:comp/env/jdbc/logindemo");
+            this.ds = (DataSource)context.lookup("java:comp/env/jdbc/agoraDB");
         } catch (NamingException e) {
             e.printStackTrace();
             throw new RuntimeException(e);
@@ -29,19 +29,37 @@ public class LoginDao implements LoginService {
     public boolean login(String username, String password) {
         try(Connection conn = ds.getConnection();
             PreparedStatement stmt = conn.prepareStatement(
-                    "SELECT * FROM user WHERE username=? AND password=?")) {
+                    "SELECT user_nickname FROM users WHERE user_name=? AND user_password=?")) {
             stmt.setString(1, username);
             stmt.setString(2, password);
 
             try (ResultSet rs = stmt.executeQuery()){
-                if(rs.next())
-                    return true;
-                else
-                    return false;
+                return rs.next();
             }
         } catch (SQLException e){
             e.printStackTrace();
             throw new RuntimeException(e);
         }
+    }
+
+    public String nickname(String username, String password) {
+        String name = "";
+        try(Connection conn = ds.getConnection();
+            PreparedStatement stmt = conn.prepareStatement(
+                    "SELECT user_nickname FROM users WHERE user_name=? AND user_password=?")) {
+            stmt.setString(1, username);
+            stmt.setString(2, password);
+
+            try (ResultSet rs = stmt.executeQuery()){
+                if(rs.next()){
+                    name = rs.getString("user_nickname");
+                    return name;
+                }
+            }
+        } catch (SQLException e){
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+        return name;
     }
 }
