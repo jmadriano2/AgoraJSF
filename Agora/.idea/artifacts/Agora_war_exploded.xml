@@ -10,6 +10,7 @@
         <element id="directory" name="lib">
           <element id="library" level="project" name="org.glassfish:javax.faces:2.2.1" />
           <element id="library" level="project" name="mysql:mysql-connector-java:6.0.6" />
+          <element id="library" level="project" name="BootsFaces-OSP-1.1.3-dist-default" />
         </element>
       </element>
     </root>
