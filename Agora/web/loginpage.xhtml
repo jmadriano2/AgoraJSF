@@ -28,8 +28,8 @@
     <b:navBar brandImg="resources/images/agora_login.png" brandHref="#" class="top">
         <h:form class="navbar-form navbar-right" role="form">
             <div class="form-group">
-                <b:inputText type="text" class="form-control" a:placeholder="Username"/>
-                <b:inputSecret class="form-control" a:placeholder="Password"/>
+                <b:inputText type="text" class="form-control" a:placeholder="Username" value="#{loginBean.username}"/>
+                <b:inputSecret class="form-control" a:placeholder="Password" value="#{loginBean.password}" />
             </div>
             <h:commandButton styleClass="btn btn-info" value="Log In" action="#{loginBean.login}"/>
         </h:form>

@@ -26,7 +26,7 @@ public class AuthFilter implements Filter {
                 authBean.getLoggedUsername() == null ||
                 authBean.getLoggedUsername().isEmpty()) {
             String contextPath = ((HttpServletRequest)servletRequest).getContextPath();
-            ((HttpServletResponse)servletResponse).sendRedirect(contextPath + "/index.jsf");
+            ((HttpServletResponse)servletResponse).sendRedirect(contextPath + "/loginpage.jsf");
         }
 
         filterChain.doFilter(servletRequest, servletResponse);
