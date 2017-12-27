@@ -26,3 +26,6 @@ li {
 .container-fluid{
     background: #cffac2;
 }
+.col-md-3.fname {
+    padding-right: 0px;
+}

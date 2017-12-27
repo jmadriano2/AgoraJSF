@@ -33,50 +33,59 @@
     <ui:define name="content">
         <br/>
         <br/>
-            <div class="col-sm-offset-6 col-sm-3"><h1>Create an Account</h1></div>
-            <div class="row">
-                <div class="col-sm-offset-6 col-sm-3"><h3>Be a Part of Agora!</h3></div>
+
+        <div class="row">
+            <div class="col-lg-offset-1 col-lg-5">
+                <br />
+                <h:graphicImage value="resources/images/discussion.png" class="img-responsive img-rounded" />
             </div>
-            <br/>
-            <h:form styleClass="form-horizontal">
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col-sm-offset-6 col-sm-3">
-                            <h:inputText styleClass="form-control" a:placeholder="Nickname" id="newnick"
-                                         value="#{loginBean.username}"/>
+            <div class="col-lg-6">
+                <h1>Create an Account</h1>
+                <h3>Be a Part of Agora!</h3>
+                <h:form styleClass="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-lg-4 fname">
+                            <h:inputText styleClass="form-control" a:placeholder="First Name" id="fname"
+                                         value=""/>
+                        </div>
+                        <div class="col-lg-4">
+                            <h:inputText styleClass="form-control" a:placeholder="Last Name" id="lname"
+                                         value=""/>
                         </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col-sm-offset-6 col-sm-3">
+                    <div class="form-group">
+                        <div class="col-sm-8">
                             <h:inputText styleClass="form-control" a:placeholder="Username" id="newaccount"
                                          value="#{loginBean.username}"/>
                         </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col-sm-offset-6 col-sm-3">
+
+                    <div class="form-group">
+                        <div class="col-sm-8">
+                            <h:inputText styleClass="form-control" a:placeholder="Email" id="email"
+                                         value="#{loginBean.username}"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-8">
                             <h:inputSecret styleClass="form-control" a:placeholder="Password" id="newpass"
                                            value="#{loginBean.password}"/>
                         </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col-sm-offset-6 col-sm-3">
+                    <div class="form-group">
+                        <div class="col-sm-8">
                             <h:inputSecret styleClass="form-control" a:placeholder="Confirm Password" id="conpass"
                                            value="#{loginBean.password}"/>
                         </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-offset-7 col-sm-4">
-                        <h:commandButton styleClass="btn btn-info" value="Create Account" action="#{loginBean.login}"/>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-4">
+                            <h:commandButton styleClass="btn btn-info" value="Create Account" action="#{loginBean.login}"/>
+                        </div>
                     </div>
-                </div>
-            </h:form>
+                </h:form>
+            </div>
+        </div>
     </ui:define>
 </ui:composition>
