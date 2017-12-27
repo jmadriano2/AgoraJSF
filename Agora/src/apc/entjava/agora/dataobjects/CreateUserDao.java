@@ -52,20 +52,16 @@ public class CreateUserDao implements CreateUserService {
             e.printStackTrace();
             throw new RuntimeException(e);
         } finally {
-            connCLose(stmt, conn);
+            try {
+                assert conn != null;
+                conn.close();
+                assert stmt != null;
+                stmt.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
         return i > 0;
-    }
-
-    static void connCLose(PreparedStatement stmt, Connection conn) {
-        try {
-            assert conn != null;
-            conn.close();
-            assert stmt != null;
-            stmt.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 }
 
