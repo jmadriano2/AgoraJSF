@@ -4,12 +4,12 @@
                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
                 xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
                 xmlns:f="http://xmlns.jcp.org/jsf/core"
-                template="/WEB-INF/templates/loginTemplate.xhtml">
+                template="/WEB-INF/templates/template.xhtml">
 
     <ui:define name="title">Agora - Log In</ui:define>
 
     <ui:define name="custom">
-        <link rel="stylesheet" href="resources/css/custom.css"/>
+        <link rel="stylesheet" href="resources/css/loginCustom.css"/>
     </ui:define>
 
     <ui:define name="navbar">
@@ -45,43 +45,43 @@
                 <h:form styleClass="form-horizontal">
                     <div class="form-group">
                         <div class="col-lg-4 fname">
-                            <h:inputText styleClass="form-control" a:placeholder="First Name" id="fname"
-                                         value=""/>
+                            <h:inputText styleClass="form-control" a:placeholder="First Name"
+                                         value="#{createUserBean.firstName}"/>
                         </div>
                         <div class="col-lg-4">
-                            <h:inputText styleClass="form-control" a:placeholder="Last Name" id="lname"
-                                         value=""/>
+                            <h:inputText styleClass="form-control" a:placeholder="Last Name"
+                                         value="#{createUserBean.lastName}"/>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-sm-8">
-                            <h:inputText styleClass="form-control" a:placeholder="Username" id="newaccount"
-                                         value="#{loginBean.username}"/>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="col-sm-8">
-                            <h:inputText styleClass="form-control" a:placeholder="Email" id="email"
-                                         value="#{loginBean.username}"/>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-8">
-                            <h:inputSecret styleClass="form-control" a:placeholder="Password" id="newpass"
-                                           value="#{loginBean.password}"/>
+                            <h:inputText styleClass="form-control" a:placeholder="Username"
+                                         value="#{createUserBean.username}"/>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <div class="col-sm-8">
-                            <h:inputSecret styleClass="form-control" a:placeholder="Confirm Password" id="conpass"
-                                           value="#{loginBean.password}"/>
+                            <h:inputText styleClass="form-control" a:placeholder="Email"
+                                         value="#{createUserBean.email}"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-8">
+                            <h:inputSecret styleClass="form-control" a:placeholder="Password"
+                                           value="#{createUserBean.password}"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-8">
+                            <h:inputSecret styleClass="form-control" a:placeholder="Confirm Password"
+                                           value="#{createUserBean.conpass}"/>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-4">
-                            <h:commandButton styleClass="btn btn-info" value="Create Account" action="#{loginBean.login}"/>
+                            <h:commandButton class="btn btn-info" value="Create Account" action="#{createUserBean.createUser}"/>
                         </div>
                     </div>
                 </h:form>

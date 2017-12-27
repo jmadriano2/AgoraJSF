@@ -1,0 +1,30 @@
+html {
+    background: #cffac2;
+}
+.navbar.navbar-inverse {
+    min-height: 70px;
+    background: #28a745;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.container {
+    max-width: 1000px;
+    min-width: 1000px;
+    margin:0 auto;
+}
+.container-fluid{
+    background: #cffac2;
+}
+.col-md-3.fname {
+    padding-right: 0px;
+}
+.form-control.search {
+    margin-left: 20px;
+    margin-top: 15px;
+    height: 30px;
+    width:450px !important;
+}
+.btn.btn-default {
+    margin-top: 15px;
+    height: 30px;
+}

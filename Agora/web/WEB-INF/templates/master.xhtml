@@ -6,8 +6,12 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 
 <h:head>
-    <title><ui:insert name="title">Login Demo</ui:insert></title>
+    <title><ui:insert name="title">Agora</ui:insert></title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <ui:insert name="custom" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="#{resource['images/favicon.ico']}"/>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
@@ -20,17 +24,30 @@
 </h:head>
 
 <h:body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
+    <nav class="navbar navbar-inverse">
+        <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Login Demo</a>
+                <a class="navbar-brand" href="#">
+                    <h:graphicImage value="resources/images/agora_login.png" class="img-responsive"/>
+                </a>
             </div>
-            <ui:insert name="navbar"></ui:insert>
+            <ui:insert name="navbar" />
         </div>
     </nav>
 
     <div class="container-fluid">
-        <ui:insert name="content"></ui:insert>
+        <h:form class="navbar-form">
+            <div class="form-group">
+                <div class="input-group">
+                    <h:inputText type="text" class="form-control search" a:placeholder="Search"/>
+                    <div class="input-group-btn">
+                        <button class="btn btn-default">
+                            <i class="glyphicon glyphicon-search"/>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </h:form>
     </div>
 </h:body>
 
