@@ -1,0 +1,16 @@
+html {
+    background: #cffac2;
+}
+.top {
+    min-height:70px !important;
+    border-color: black !important;
+    background: #28a745 !important;
+    padding-left: 10% !important;
+    margin-bottom: 0px !important;
+}
+.search_box {
+    margin-top: 25px;
+}
+.search_btn {
+    height: 30px;
+}

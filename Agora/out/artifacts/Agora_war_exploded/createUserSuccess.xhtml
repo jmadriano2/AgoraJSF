@@ -9,28 +9,13 @@
     <ui:define name="title">Agora - Log In</ui:define>
 
     <ui:define name="custom">
-        <link rel="stylesheet" href="resources/css/loginCustom.css"/>
-    </ui:define>
-
-    <ui:define name="navbar">
-        <h:form>
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <h:inputText styleClass="form-control" id="username" value="#{loginBean.username}"
-                                 a:placeholder="Username"/>
-                </li>
-                <li>
-                    <h:inputSecret styleClass="form-control" id="password" value="#{loginBean.password}"
-                                   a:placeholder="Password"/>
-                </li>
-                <li class="loginButton">
-                    <h:commandButton styleClass="btn btn-info" value="Log In" action="#{loginBean.login}"/>
-                </li>
-            </ul>
-        </h:form>
+        <link rel="stylesheet" href="resources/css/loginStyle.css"/>
     </ui:define>
 
     <ui:define name="content">
-        <h1>Congratulations Your Account Has Been Created!!!</h1>
+        <br />
+        <br />
+        <br />
+        <h1 style="text-align: center;">Congratulations Your Account Has Been Created!!!</h1>
     </ui:define>
 </ui:composition>
