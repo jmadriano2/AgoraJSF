@@ -1,52 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:b="http://bootsfaces.net/ui"
-      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:b="http://bootsfaces.net/ui"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                template="/WEB-INF/templates/loginTemplate.xhtml">
 
-<h:head>
-    <title>Agora - Log In</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <ui:define name="title">Agora - Log In</ui:define>
 
-    <link rel="stylesheet" href="resources/css/loginStyle.css"/>
+    <ui:define name="custom">
+        <link rel="stylesheet" href="resources/css/loginStyle.css"/>
+    </ui:define>
 
-    <link rel="shortcut icon" type="image/x-icon" href="#{resource['images/favicon.ico']}"/>
-
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type=""/>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"/>
-</h:head>
-<h:body>
-    <b:navBar brandImg="resources/images/agora_login.png" brandHref="#" class="top">
-        <h:form class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-                <b:inputText type="text" class="form-control" a:placeholder="Username" value="#{loginBean.username}"/>
-                <b:inputSecret class="form-control" a:placeholder="Password" value="#{loginBean.password}" />
-            </div>
-            <h:commandButton styleClass="btn btn-info" value="Log In" action="#{loginBean.login}"/>
-        </h:form>
-    </b:navBar>
-
-    <b:container fluid="true" class="cont">
+    <ui:define name="content">
         <h:form>
             <b:row>
                 <b:column mediumScreen="5" offset="1">
-                    <br />
-                    <br />
-                    <br />
+                    <br/>
+                    <br/>
+                    <br/>
                     <h:graphicImage value="resources/images/discussion.png" class="img-responsive img-rounded"/>
                 </b:column>
                 <b:column mediumScreen="6">
-                    <br />
-                    <br />
+                    <br/>
+                    <br/>
                     <h1>Create an Account</h1>
                     <h3>Be a Part of Agora!</h3>
                     <b:row class="createUserForm">
@@ -92,6 +70,5 @@
                 </b:column>
             </b:row>
         </h:form>
-    </b:container>
-</h:body>
-</html>
+    </ui:define>
+</ui:composition>
