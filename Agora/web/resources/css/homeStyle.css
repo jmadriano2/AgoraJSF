@@ -5,8 +5,9 @@ html {
     min-height:70px !important;
     border-color: black !important;
     background: #28a745 !important;
-    padding-left: 10% !important;
+    padding-left: 7% !important;
     margin-bottom: 0px !important;
+    width: 100% !important;
 }
 .search_box {
     margin-top: 25px;

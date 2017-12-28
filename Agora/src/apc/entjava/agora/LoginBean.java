@@ -43,7 +43,7 @@ public class LoginBean {
     public String login() {
         if(loginService.login(username,password)){
             authBean.setLoggedUsername(loginService.nickname(username,password));
-            return "protected/home";
+            return "protected/homepage";
         }else{
             return "error";
         }

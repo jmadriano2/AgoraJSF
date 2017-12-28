@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:b="http://bootsfaces.net/ui"
+                xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                template="/WEB-INF/templates/homeTemplate.xhtml">
+
+    <ui:define name="title">Agora - Home</ui:define>
+
+    <ui:define name="custom">
+        <link rel="stylesheet" href="resources/css/homeStyle.css"/>
+    </ui:define>
+
+    <ui:define name="sidebarProfile">
+        <b:navLink href="" value="#{authBean.loggedUsername}" icon="globe" iconAlign="right"/>
+    </ui:define>
+
+    <ui:define name="sidebarActivities">
+        <b:navLink href="" value="My Activities" icon="globe" iconAlign="right"/>
+    </ui:define>
+
+    <ui:define name="myCities">
+        <b:navLink value="City 1"/>
+        <b:navLink value="City 2"/>
+    </ui:define>
+
+    <ui:define name="nearbyCities">
+        <b:navLink value="Nearby City 1"/>
+        <b:navLink value="Nearby City 2"/>
+    </ui:define>
+
+    <ui:define name="myNeighbours">
+        <b:navLink value="Neighbour 1"/>
+        <b:navLink value="Neighbour 2"/>
+        <b:navLink value="Neighbour 3"/>
+    </ui:define>
+</ui:composition>
