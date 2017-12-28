@@ -7,21 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4377c2fb-d321-4d4a-aa1d-17710c142c4c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/protected/homepage.xhtml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/classes/apc/entjava/agora/LoginBean.class" afterPath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/classes/apc/entjava/agora/LoginBean.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/templates/homeTemplate.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/templates/homeTemplate.xhtml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/templates/loginTemplate.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/templates/loginTemplate.xhtml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/protected/home.xhtml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/resources/css/homeStyle.css" afterPath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/resources/css/homeStyle.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/resources/css/loginStyle.css" afterPath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/resources/css/loginStyle.css" />
-      <change beforePath="$PROJECT_DIR$/out/production/Agora/apc/entjava/agora/LoginBean.class" afterPath="$PROJECT_DIR$/out/production/Agora/apc/entjava/agora/LoginBean.class" />
-      <change beforePath="$PROJECT_DIR$/src/apc/entjava/agora/LoginBean.java" afterPath="$PROJECT_DIR$/src/apc/entjava/agora/LoginBean.java" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/templates/homeTemplate.xhtml" afterPath="$PROJECT_DIR$/web/WEB-INF/templates/homeTemplate.xhtml" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/templates/loginTemplate.xhtml" afterPath="$PROJECT_DIR$/web/WEB-INF/templates/loginTemplate.xhtml" />
-      <change beforePath="$PROJECT_DIR$/web/protected/home.xhtml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/resources/css/homeStyle.css" afterPath="$PROJECT_DIR$/web/resources/css/homeStyle.css" />
-      <change beforePath="$PROJECT_DIR$/web/resources/css/loginStyle.css" afterPath="$PROJECT_DIR$/web/resources/css/loginStyle.css" />
+      <change beforePath="$PROJECT_DIR$/web/protected/homepage.xhtml" afterPath="$PROJECT_DIR$/web/protected/homepage.xhtml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,21 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LoginBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/LoginBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="45" column="38" lean-forward="false" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="homepage.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/protected/homepage.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="36" column="40" lean-forward="false" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+            <state relative-caret-position="123">
+              <caret line="20" column="29" lean-forward="false" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -56,8 +33,8 @@
       <file leaf-file-name="homeTemplate.xhtml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/homeTemplate.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="67" column="57" lean-forward="false" selection-start-line="67" selection-start-column="57" selection-end-line="67" selection-end-column="57" />
+            <state relative-caret-position="242">
+              <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -100,6 +77,8 @@
     <findStrings>
       <find>755</find>
       <find>place</find>
+      <find>sear</find>
+      <find>button</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -147,6 +126,7 @@
         <option value="$PROJECT_DIR$/web/protected/home.xhtml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/templates/loginTemplate.xhtml" />
         <option value="$PROJECT_DIR$/src/apc/entjava/agora/LoginBean.java" />
+        <option value="$PROJECT_DIR$/web/protected/homepage.xhtml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/templates/homeTemplate.xhtml" />
       </list>
     </option>
@@ -247,6 +227,19 @@
               <item name="Agora" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="protected" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Agora" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Agora" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Agora" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Agora" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Agora" type="b2602c69:ProjectViewProjectNode" />
@@ -756,12 +749,12 @@
       <workItem from="1514383711839" duration="22000" />
       <workItem from="1514385308896" duration="6209000" />
       <workItem from="1514397855154" duration="11388000" />
-      <workItem from="1514455386754" duration="11748000" />
+      <workItem from="1514455386754" duration="19716000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102501000" />
+    <option name="totallyTimeSpent" value="110469000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1038,22 +1031,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/loginTemplate.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/LoginBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="45" column="38" lean-forward="false" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/dataobjects/CreateUserDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -1105,6 +1082,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/LoginBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="45" column="38" lean-forward="false" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/CreateUserBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1113,18 +1098,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/loginTemplate.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/protected/homepage.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="36" column="40" lean-forward="false" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+        <state relative-caret-position="123">
+          <caret line="20" column="29" lean-forward="false" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/homeTemplate.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="67" column="57" lean-forward="false" selection-start-line="67" selection-start-column="57" selection-end-line="67" selection-end-column="57" />
+        <state relative-caret-position="242">
+          <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
           <folding />
         </state>
       </provider>
