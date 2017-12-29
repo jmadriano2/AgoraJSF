@@ -1,5 +1,7 @@
 package apc.entjava.agora.dataobjects;
 
+import apc.entjava.agora.Budget;
+import apc.entjava.agora.Mood;
 import apc.entjava.agora.Projects;
 import apc.entjava.agora.services.ProjectService;
 
@@ -68,5 +70,75 @@ public class ProjectDao implements ProjectService{
         } finally {
             CreateUserDao.closeConnection(stmt, conn);
         }
+    }
+
+    public List<Budget> getBudget(int project_index) {
+        List<Budget> budget = new ArrayList<>();
+
+        try (Connection conn = ds.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(
+                     "SELECT budget_materials, budget_operations, budget_management, budget_labor, budget_misc " +
+                             "FROM projects WHERE project_id =?"
+             )) {
+
+            stmt.setInt(1, project_index);
+
+            try(ResultSet rs = stmt.executeQuery()) {
+                System.out.println(rs);
+                while (rs.next()){
+
+                    String budget_materials = rs.getString("budget_materials");
+                    String budget_operations = rs.getString("budget_operations");
+                    String budget_management = rs.getString("budget_management");
+                    String budget_labor = rs.getString("budget_labor");
+                    String budget_misc = rs.getString("budget_misc");
+
+                    budget.add(new Budget(budget_materials,budget_operations,budget_management,budget_labor,budget_misc));
+                }
+                return budget;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        } finally {
+            CreateUserDao.closeConnection(stmt, conn);
+        }
+
+    }
+
+    public List<Mood> getMood(int project_index) {
+        List<Mood> mood = new ArrayList<>();
+
+        try (Connection conn = ds.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(
+                     "SELECT mood_happy, mood_sad, mood_angry, mood_disgusted, mood_fearful " +
+                             "FROM projects WHERE project_id =?"
+             )) {
+
+            stmt.setInt(1, project_index);
+
+            try(ResultSet rs = stmt.executeQuery()) {
+                System.out.println(rs);
+                while (rs.next()){
+
+                    String mood_happy = rs.getString("mood_happy");
+                    String mood_sad = rs.getString("mood_sad");
+                    String mood_angry = rs.getString("mood_angry");
+                    String mood_disgusted = rs.getString("mood_disgusted");
+                    String mood_fearful = rs.getString("mood_fearful");
+
+                    mood.add(new Mood(mood_happy,mood_sad,mood_angry,mood_disgusted,mood_fearful));
+                }
+                return mood;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        } finally {
+            CreateUserDao.closeConnection(stmt, conn);
+        }
+
     }
 }
