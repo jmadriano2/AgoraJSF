@@ -5,7 +5,7 @@ html {
 #scrollUpCustom {
     background-image: url("../images/top.png");
     bottom: 65px;
-    right: 18px;
+    right: 28px;
     width: 38px; /* width of the custom image */
     height: 38px; /* height of the custom image */
     outline: none;

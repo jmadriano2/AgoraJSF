@@ -7,26 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4377c2fb-d321-4d4a-aa1d-17710c142c4c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/apc/entjava/agora/ProjectBean.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/apc/entjava/agora/Projects.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/apc/entjava/agora/dataobjects/ProjectDao.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/apc/entjava/agora/services/ProjectService.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/LoginPage.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/LoginPage.xhtml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/templates/homeTemplate.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/templates/homeTemplate.xhtml" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/classes/apc/entjava/agora/dataobjects/CreateUserDao.class" afterPath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/classes/apc/entjava/agora/dataobjects/CreateUserDao.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/classes/apc/entjava/agora/dataobjects/LoginDao.class" afterPath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/classes/apc/entjava/agora/dataobjects/LoginDao.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/classes/apc/entjava/agora/dataobjects/ProjectDao.class" afterPath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/classes/apc/entjava/agora/dataobjects/ProjectDao.class" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/web.xml" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/protected/homepage.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/protected/homepage.xhtml" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/resources/css/homeStyle.css" afterPath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/resources/css/homeStyle.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/resources/images/project_img.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/apc/entjava/agora/dataobjects/CreateUserDao.java" afterPath="$PROJECT_DIR$/src/apc/entjava/agora/dataobjects/CreateUserDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/apc/entjava/agora/dataobjects/LoginDao.java" afterPath="$PROJECT_DIR$/src/apc/entjava/agora/dataobjects/LoginDao.java" />
+      <change beforePath="$PROJECT_DIR$/out/production/Agora/apc/entjava/agora/dataobjects/CreateUserDao.class" afterPath="$PROJECT_DIR$/out/production/Agora/apc/entjava/agora/dataobjects/CreateUserDao.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Agora/apc/entjava/agora/dataobjects/LoginDao.class" afterPath="$PROJECT_DIR$/out/production/Agora/apc/entjava/agora/dataobjects/LoginDao.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Agora/apc/entjava/agora/dataobjects/ProjectDao.class" afterPath="$PROJECT_DIR$/out/production/Agora/apc/entjava/agora/dataobjects/ProjectDao.class" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/templates/homeTemplate.xhtml" afterPath="$PROJECT_DIR$/web/WEB-INF/templates/homeTemplate.xhtml" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/templates/loginTemplate.xhtml" afterPath="$PROJECT_DIR$/web/WEB-INF/templates/loginTemplate.xhtml" />
-      <change beforePath="$PROJECT_DIR$/web/boot.xhtml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/web/loginpage.xhtml" afterPath="$PROJECT_DIR$/web/loginpage.xhtml" />
       <change beforePath="$PROJECT_DIR$/web/protected/homepage.xhtml" afterPath="$PROJECT_DIR$/web/protected/homepage.xhtml" />
       <change beforePath="$PROJECT_DIR$/web/resources/css/homeStyle.css" afterPath="$PROJECT_DIR$/web/resources/css/homeStyle.css" />
-      <change beforePath="$PROJECT_DIR$/web/resources/images/project_img.jpg" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,8 +37,8 @@
       <file leaf-file-name="homepage.xhtml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/protected/homepage.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="52" column="23" lean-forward="true" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
+            <state relative-caret-position="173">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -64,8 +60,8 @@
       <file leaf-file-name="homeTemplate.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/homeTemplate.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="60" />
+            <state relative-caret-position="122">
+              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -94,8 +90,18 @@
       <file leaf-file-name="loginpage.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/loginpage.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="22" column="79" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="79" />
+            <state relative-caret-position="153">
+              <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="homeStyle.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/resources/css/homeStyle.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -123,6 +129,7 @@
       <find>auth</find>
       <find>login</find>
       <find>index</find>
+      <find>scro</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -164,7 +171,6 @@
         <option value="$PROJECT_DIR$/web/resources/css/loginStyle.css" />
         <option value="$PROJECT_DIR$/web/protected/home.xhtml" />
         <option value="$PROJECT_DIR$/src/apc/entjava/agora/HomeBean.java" />
-        <option value="$PROJECT_DIR$/web/resources/css/homeStyle.css" />
         <option value="$PROJECT_DIR$/src/apc/entjava/agora/services/ProjectService.java" />
         <option value="$PROJECT_DIR$/src/apc/entjava/agora/LoginBean.java" />
         <option value="$PROJECT_DIR$/src/apc/entjava/agora/Projects.java" />
@@ -173,9 +179,10 @@
         <option value="$PROJECT_DIR$/src/apc/entjava/agora/dataobjects/CreateUserDao.java" />
         <option value="$PROJECT_DIR$/src/apc/entjava/agora/dataobjects/ProjectDao.java" />
         <option value="$PROJECT_DIR$/src/apc/entjava/agora/dataobjects/LoginDao.java" />
-        <option value="$PROJECT_DIR$/web/loginpage.xhtml" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/templates/homeTemplate.xhtml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/templates/loginTemplate.xhtml" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/templates/homeTemplate.xhtml" />
+        <option value="$PROJECT_DIR$/web/resources/css/homeStyle.css" />
+        <option value="$PROJECT_DIR$/web/loginpage.xhtml" />
         <option value="$PROJECT_DIR$/web/protected/homepage.xhtml" />
       </list>
     </option>
@@ -193,7 +200,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-21" />
     <option name="width" value="1366" />
     <option name="height" value="735" />
@@ -289,14 +296,14 @@
               <item name="Agora" type="b2602c69:ProjectViewProjectNode" />
               <item name="Agora" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Agora" type="b2602c69:ProjectViewProjectNode" />
               <item name="Agora" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -793,15 +800,15 @@
       <workItem from="1514397855154" duration="11388000" />
       <workItem from="1514455386754" duration="37032000" />
       <workItem from="1514522136319" duration="2218000" />
-      <workItem from="1514528376839" duration="4098000" />
+      <workItem from="1514528376839" duration="5417000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134101000" />
+    <option name="totallyTimeSpent" value="135420000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -822,12 +829,12 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32730263" sideWeight="0.49707174" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32730263" sideWeight="0.49707174" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27155825" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1047,14 +1054,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/resources/css/homeStyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="1" lean-forward="false" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/boot.xhtml" />
     <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/LoginBean.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1098,22 +1097,6 @@
             <marker date="1514532215625" expanded="true" signature="1031:1088" ph="SELECT * FRO... users" />
             <marker date="1514532215625" expanded="true" signature="1722:1791" ph="SELECT user_... users" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/loginpage.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="22" column="79" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/loginTemplate.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="60" lean-forward="false" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1175,14 +1158,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/homeTemplate.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/faces-config.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1194,10 +1169,42 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/loginTemplate.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/homeTemplate.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/css/homeStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/loginpage.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/protected/homepage.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="52" column="23" lean-forward="true" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
+        <state relative-caret-position="173">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
