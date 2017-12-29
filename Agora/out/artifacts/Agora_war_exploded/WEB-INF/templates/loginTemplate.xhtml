@@ -20,11 +20,13 @@
 </h:head>
 
 <h:body>
-    <b:navBar brandImg="resources/images/agora_login.png" brandHref="loginpage.jsf" class="top">
+    <b:navBar brandImg="resources/images/agora_login.png" brandHref="index.jsf" class="top">
         <h:form class="navbar-form navbar-right" role="form">
             <div class="form-group">
-                <b:inputText type="text" class="form-control" a:placeholder="Username" value="#{loginBean.username}"/>
-                <b:inputSecret class="form-control" a:placeholder="Password" value="#{loginBean.password}"/>
+                <b:inputText type="text" class="form-control" a:placeholder="Username" value="#{loginBean.username}"
+                             required="true" requiredMessage="Please input username"/>
+                <b:inputSecret class="form-control" a:placeholder="Password" value="#{loginBean.password}"
+                             required="true" requiredMessage="Please input password"/>
             </div>
             <h:commandButton styleClass="btn btn-info" value="Log In" action="#{loginBean.login}"/>
         </h:form>

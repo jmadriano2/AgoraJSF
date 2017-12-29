@@ -40,7 +40,7 @@ public class ProjectDao implements ProjectService{
                              "FROM cities " +
                              "INNER JOIN admins ON admins.city_fk = cities.city_id " +
                              "INNER JOIN projects ON projects.city_fk = admins.city_fk " +
-                             "ORDER BY project_dateposted"
+                             "ORDER BY project_dateposted DESC"
              )) {
             try(ResultSet rs = stmt.executeQuery()) {
                 System.out.println(rs);

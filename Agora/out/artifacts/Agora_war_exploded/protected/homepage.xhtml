@@ -13,30 +13,6 @@
         <link rel="stylesheet" href="resources/css/homeStyle.css"/>
     </ui:define>
 
-    <ui:define name="sidebarProfile">
-        <b:navLink href="" value="#{authBean.loggedUsername}" icon="globe" />
-    </ui:define>
-
-    <ui:define name="sidebarActivities">
-        <b:badge value="0" />
-    </ui:define>
-
-    <ui:define name="myCities">
-        <b:navLink value="City 1"/>
-        <b:navLink value="City 2"/>
-    </ui:define>
-
-    <ui:define name="nearbyCities">
-        <b:navLink value="Nearby City 1"/>
-        <b:navLink value="Nearby City 2"/>
-    </ui:define>
-
-    <ui:define name="myNeighbours">
-        <b:navLink value="Neighbour 1"/>
-        <b:navLink value="Neighbour 2"/>
-        <b:navLink value="Neighbour 3"/>
-    </ui:define>
-
     <ui:define name="panels">
         <ui:repeat value="#{projectBean.project_info}" var="info">
             <b:panel style="margin-bottom: 15px;">

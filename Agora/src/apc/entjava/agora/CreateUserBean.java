@@ -2,8 +2,14 @@ package apc.entjava.agora;
 
 import apc.entjava.agora.dataobjects.CreateUserDao;
 import apc.entjava.agora.services.CreateUserService;
+import sun.security.validator.ValidatorException;
 
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
+import javax.faces.component.UIComponent;
+import javax.faces.component.UIInput;
+import javax.faces.context.FacesContext;
+import javax.faces.event.ComponentSystemEvent;
 
 @ManagedBean
 public class CreateUserBean {
@@ -12,7 +18,6 @@ public class CreateUserBean {
     private String username;
     private String email;
     private String password;
-    private String conpass;
 
     public String getFirstName() {
         return firstName;
@@ -54,24 +59,48 @@ public class CreateUserBean {
         this.password = password;
     }
 
-    public String getConpass() {
-        return conpass;
-    }
+    public void validatePassword(ComponentSystemEvent event) {
 
-    public void setConpass(String conpass) {
-        this.conpass = conpass;
+        FacesContext fc = FacesContext.getCurrentInstance();
+
+        UIComponent components = event.getComponent();
+
+        // get password
+        UIInput uiInputPassword = (UIInput) components.findComponent("password");
+        String password = uiInputPassword.getLocalValue() == null ? ""
+                : uiInputPassword.getLocalValue().toString();
+        String passwordId = uiInputPassword.getClientId();
+
+        // get confirm password
+        UIInput uiInputConfirmPassword = (UIInput) components.findComponent("password2");
+        String confirmPassword = uiInputConfirmPassword.getLocalValue() == null ? ""
+                : uiInputConfirmPassword.getLocalValue().toString();
+
+        // Let required="true" do its job.
+        if (password.isEmpty() || confirmPassword.isEmpty()) {
+            return;
+        }
+
+        if (!password.equals(confirmPassword)) {
+
+            FacesMessage msg = new FacesMessage("Password must match confirm password");
+            msg.setSeverity(FacesMessage.SEVERITY_ERROR);
+            fc.addMessage(passwordId, msg);
+            fc.renderResponse();
+
+        }
+
     }
 
     private CreateUserService createUserService = new CreateUserDao();
 
     public String createUser() {
-        if(password.equals(conpass)){
-            if(createUserService.createUser(firstName, lastName, username, email, password)){
-                return "createUserSuccess";
-            }else{
-                return "error";
-            }
+        if (createUserService.createUser(firstName, lastName, username, email, password)) {
+            return "createUserSuccess";
+        } else {
+            return "error";
         }
-        return null;
     }
+
+
 }

@@ -48,28 +48,33 @@
             <b:column offset="1" span="2" style="padding: 0px; position: sticky; top: 85px;">
                 <b:panel look="success" title="My Neighbourhood" collapsible="false">
                     <b:listLinks>
-                        <ui:insert name="sidebarProfile"/>
+                        <b:navLink href="" value="#{authBean.loggedUsername}" icon="globe" />
+
                         <b:navLink href="" value="My Activities ">
-                            <ui:insert name="sidebarActivities"/>
+                            <b:badge value="0" />
                         </b:navLink>
 
                         <hr style="margin:2px;"/>
                         <b:navLink header="My Cities"/>
                         <hr style="margin:2px;"/>
 
-                        <ui:insert name="myCities"/>
+                        <b:navLink value="City 1"/>
+                        <b:navLink value="City 2"/>
 
                         <hr style="margin:2px;"/>
                         <b:navLink header="Nearby Cities"/>
                         <hr style="margin:2px;"/>
 
-                        <ui:insert name="nearbyCities"/>
+                        <b:navLink value="Nearby City 1"/>
+                        <b:navLink value="Nearby City 2"/>
 
                         <hr style="margin:2px;"/>
                         <b:navLink header="My Neighbours"/>
                         <hr style="margin:2px;"/>
 
-                        <ui:insert name="myNeighbours"/>
+                        <b:navLink value="Neighbour 1"/>
+                        <b:navLink value="Neighbour 2"/>
+                        <b:navLink value="Neighbour 3"/>
                     </b:listLinks>
                 </b:panel>
             </b:column>

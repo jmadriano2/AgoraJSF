@@ -23,7 +23,9 @@ public class AuthBean implements Serializable{
     }
 
     public String logout() {
+        System.out.println("I was here");
         FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
+        System.out.println("I was here too");
         return "Logout";
     }
 }
