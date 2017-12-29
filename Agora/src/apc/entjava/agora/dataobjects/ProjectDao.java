@@ -52,12 +52,12 @@ public class ProjectDao implements ProjectService{
                     String project_imgpath = rs.getString("project_imgpath");
                     String project_admin = rs.getString("admins.admin_fullname");
                     String project_city = rs.getString("cities.city_name");
-                    info.add(new Projects(project_name, project_description,
+                    int project_index = info.size();
+                    info.add(new Projects(project_index, project_name, project_description,
                             project_address, project_dateposted,
                             project_imgpath,project_admin, project_city));
                     System.out.println("inside while loop");
                     System.out.println(rs.getString("project_name"));
-                    System.out.println(info.size());
                 }
                 return info;
             }

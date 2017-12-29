@@ -12,4 +12,20 @@
         </navigation-case>
     </navigation-rule>
 
+    <navigation-rule>
+        <from-view-id>/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Login</from-outcome>
+            <to-view-id>/protected/homepage.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/protected/homepage.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Details</from-outcome>
+            <to-view-id>/protected/details.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
 </faces-config>

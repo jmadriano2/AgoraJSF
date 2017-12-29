@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:b="http://bootsfaces.net/ui"
+                xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                template="/WEB-INF/templates/homeTemplate.xhtml">
+
+    <ui:define name="title">Agora - #{detailBean.detail.project_name}</ui:define>
+
+    <ui:define name="custom">
+        <h:outputStylesheet library="css" name="homeStyle.css"/>
+    </ui:define>
+
+    <ui:define name="details">
+            <b:panel style="margin-bottom: 15px;">
+                <h:outputText value="#{detailBean.detail.project_admin}" style="font-size: 20px;"/>
+                <b:iconAwesome name="caret-right" style="margin:5px;"/>
+                <h:outputText value="#{detailBean.detail.project_city}" style="font-size: 20px;"/>
+                <br style="margin:0px;"/>
+                <h:outputText value="#{detailBean.detail.project_dateposted}"/>
+                <hr/>
+                <h1>#{detailBean.detail.project_name}</h1>
+                <b:image value="../#{detailBean.detail.project_imgpath}" span="12"/>
+                <b:well span="12" style="margin-top: 15px;">
+                    <p>
+                        #{detailBean.detail.project_description}
+                    </p>
+                </b:well>
+            </b:panel>
+    </ui:define>
+
+    <ui:define name="budget">
+
+    </ui:define>
+</ui:composition>

@@ -21,7 +21,6 @@
                 <h:outputText value="#{info.project_city}" style="font-size: 20px;"/>
                 <br style="margin:0px;"/>
                 <h:outputText value="#{info.project_dateposted}"/>
-                <ui:insert name="panels"/>
                 <hr/>
                 <h1>#{info.project_name}</h1>
                 <b:image value="#{info.project_imgpath}" span="12"/>
@@ -31,7 +30,11 @@
                     </p>
                 </b:well>
                 <hr/>
-                <b:button value="Details" size="lg" iconAwesome="angle-right" iconAlign="right" offset="10"/>
+                <b:form>
+                    <!--<h:commandButton value="Details" action="#{projectBean.passDetails(info.project_index)}" />-->
+                    <b:commandButton value="Details" size="lg" iconAwesome="angle-right" iconAlign="right"
+                                     offset="10" action="#{projectBean.passDetails(info.project_index)}"/>
+                </b:form>
             </b:panel>
         </ui:repeat>
     </ui:define>

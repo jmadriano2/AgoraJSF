@@ -5,6 +5,7 @@ import apc.entjava.agora.services.ProjectService;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,5 +32,21 @@ public class ProjectBean {
 
     public void setProject_info(List<Projects> project_info) {
         this.project_info = project_info;
+    }
+
+    @ManagedProperty(value = "#{detailBean}")
+        private DetailBean detailBean;
+
+    public DetailBean getDetailBean() {
+        return detailBean;
+    }
+
+    public void setDetailBean(DetailBean detailBean) {
+        this.detailBean = detailBean;
+    }
+
+    public String passDetails(int project_index) {
+        detailBean.setDetail(project_info.get(project_index));
+        return "Details";
     }
 }

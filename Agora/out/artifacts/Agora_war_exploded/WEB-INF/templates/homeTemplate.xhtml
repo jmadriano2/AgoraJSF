@@ -13,14 +13,14 @@
 
     <ui:insert name="custom"/>
 
-    <link rel="shortcut icon" type="image/x-icon" href="#{resource['images/favicon.ico']}"/>
+    <link rel="shortcut icon" type="image/x-icon" href="#{resource['images/logo2.png']}"/>
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"/>
 </h:head>
 
 <h:body>
-    <b:navBar brandImg="resources/images/agora_login.png" brandHref="#" class="top" fixed="top" sticky="false">
+    <b:navBar brandImg="#{resource['images:agora_login.png']}" brandHref="#" class="top" fixed="top" sticky="false">
         <b:form class="search_box">
             <b:inputText fieldSize="sm" span="6" placeholder="Search">
                 <f:facet name="append">
@@ -80,6 +80,10 @@
             </b:column>
             <b:column span="7">
                 <ui:insert name="panels"/>
+                <ui:insert name="details" />
+                <ui:insert name="budget" />
+                <ui:insert name="mood" />
+                <ui:insert name="comments" />
             </b:column>
         </b:row>
     </b:container>

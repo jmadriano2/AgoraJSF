@@ -1,6 +1,7 @@
 package apc.entjava.agora;
 
 public class Projects {
+    private int project_index;
     private String project_name;
     private String project_description;
     private String project_address;
@@ -9,9 +10,10 @@ public class Projects {
     private String project_admin;
     private String project_city;
 
-    public Projects(String project_name, String project_description, String project_address,
+    public Projects(int project_index, String project_name, String project_description, String project_address,
                        String project_dateposted, String project_imgpath, String project_admin,
                        String project_city) {
+        this.project_index = project_index;
         this.project_name = project_name;
         this.project_description = project_description;
         this.project_address = project_address;
@@ -19,6 +21,14 @@ public class Projects {
         this.project_imgpath = project_imgpath;
         this.project_admin = project_admin;
         this.project_city = project_city;
+    }
+
+    public int getProject_index() {
+        return project_index;
+    }
+
+    public void setProject_index(int project_index) {
+        this.project_index = project_index;
     }
 
     public String getProject_name() {
@@ -80,7 +90,8 @@ public class Projects {
     @Override
     public String toString() {
         return "Projects{" +
-                "project_name='" + project_name + '\'' +
+                "project_index=" + project_index +
+                ", project_name='" + project_name + '\'' +
                 ", project_description='" + project_description + '\'' +
                 ", project_address='" + project_address + '\'' +
                 ", project_dateposted='" + project_dateposted + '\'' +
