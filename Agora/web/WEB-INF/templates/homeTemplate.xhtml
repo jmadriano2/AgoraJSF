@@ -20,7 +20,7 @@
 </h:head>
 
 <h:body>
-    <b:navBar brandImg="resources/images/agora_login.png" brandHref="#" class="top" fixed="top" sticky="false">
+    <b:navBar brandImg="#{resource['images:agora_login.png']}" brandHref="#" class="top" fixed="top" sticky="false">
         <b:form class="search_box">
             <b:inputText fieldSize="sm" span="6" placeholder="Search">
                 <f:facet name="append">
@@ -40,6 +40,8 @@
             <b:navLink value="Log Out" href="#"/>
         </b:dropButton>
     </b:navBar>
+
+    <b:scrollUp distance="200" animation="fade" text="" scrollTitle="false" name="scrollUpCustom" />
 
     <b:container fluid="true" style="background-color: #cffac2; padding:0px; margin-top: 85px;">
         <b:row>
@@ -72,105 +74,7 @@
                 </b:panel>
             </b:column>
             <b:column span="7">
-                <b:panel>
-                    <h:outputText value="Person "/>
-                    <b:iconAwesome name="caret-right"/>
-                    <h:outputText value="City "/>
-                    <br style="margin:0px;"/>
-                    <h:outputText value="date-posted"/>
-                    <ui:insert name="panels"/>
-                    <hr/>
-                    <h1>Project Title</h1>
-                    <b:image value="resources/images/project_img.jpg" span="12"/>
-                    <b:well span="12" style="margin-top: 15px;">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                    </b:well>
-                    <hr/>
-                    <b:form>
-                        <b:button value="Details" size="lg" iconAwesome="angle-right" iconAlign="right" offset="10"/>
-                    </b:form>
-                </b:panel>
-                <br/>
-                <br/>
-                <p>Sed ut perspiciatis...</p>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
+                <ui:insert name="panels"/>
             </b:column>
         </b:row>
     </b:container>

@@ -38,9 +38,25 @@
     </ui:define>
 
     <ui:define name="panels">
-
-
-
-
+        <ui:repeat value="#{projectBean.project_info}" var="info">
+            <b:panel style="margin-bottom: 15px;">
+                <h:outputText value="#{info.project_admin}" style="font-size: 20px;"/>
+                <b:iconAwesome name="caret-right" style="margin:5px;"/>
+                <h:outputText value="#{info.project_city}" style="font-size: 20px;"/>
+                <br style="margin:0px;"/>
+                <h:outputText value="#{info.project_dateposted}"/>
+                <ui:insert name="panels"/>
+                <hr/>
+                <h1>#{info.project_name}</h1>
+                <b:image value="#{info.project_imgpath}" span="12"/>
+                <b:well span="12" style="margin-top: 15px;">
+                    <p>
+                        #{info.project_description}
+                    </p>
+                </b:well>
+                <hr/>
+                <b:button value="Details" size="lg" iconAwesome="angle-right" iconAlign="right" offset="10"/>
+            </b:panel>
+        </ui:repeat>
     </ui:define>
 </ui:composition>

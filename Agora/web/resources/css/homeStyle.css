@@ -1,5 +1,14 @@
 html {
     background: #cffac2;
+    width: 100%;
+}
+#scrollUpCustom {
+    background-image: url("../images/top.png");
+    bottom: 65px;
+    right: 18px;
+    width: 38px; /* width of the custom image */
+    height: 38px; /* height of the custom image */
+    outline: none;
 }
 .top {
     min-height:70px !important;
@@ -7,7 +16,6 @@ html {
     background: #28a745 !important;
     padding-left: 7% !important;
     margin-bottom: 0px !important;
-    width: 100% !important;
 }
 .search_box {
     margin-top: 25px;

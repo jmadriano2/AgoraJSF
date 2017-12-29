@@ -52,12 +52,12 @@ public class CreateUserDao implements CreateUserService {
             e.printStackTrace();
             throw new RuntimeException(e);
         } finally {
-            connCLose(stmt, conn);
+            closeConnection(stmt, conn);
         }
         return i > 0;
     }
 
-    static void connCLose(PreparedStatement stmt, Connection conn) {
+    static void closeConnection(PreparedStatement stmt, Connection conn) {
         try {
             assert conn != null;
             conn.close();

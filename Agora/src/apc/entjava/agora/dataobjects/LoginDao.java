@@ -44,6 +44,8 @@ public class LoginDao implements LoginService {
         } catch (SQLException e) {
             e.printStackTrace();
             throw new RuntimeException(e);
+        } finally {
+            CreateUserDao.closeConnection(stmt, conn);
         }
     }
 
@@ -68,11 +70,9 @@ public class LoginDao implements LoginService {
         } catch (SQLException e) {
             e.printStackTrace();
             throw new RuntimeException(e);
+        } finally {
+            CreateUserDao.closeConnection(stmt, conn);
         }
         return name;
-    }
-
-    private void closeConn() {
-        CreateUserDao.connCLose(stmt, conn);
     }
 }
