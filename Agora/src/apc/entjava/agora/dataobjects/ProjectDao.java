@@ -16,7 +16,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProjectDao implements ProjectService{
+public class ProjectDao implements ProjectService {
     private DataSource ds;
     private PreparedStatement stmt = null;
     private Connection conn = null;
@@ -44,9 +44,10 @@ public class ProjectDao implements ProjectService{
                              "INNER JOIN projects ON projects.city_fk = admins.city_fk " +
                              "ORDER BY project_dateposted DESC"
              )) {
-            try(ResultSet rs = stmt.executeQuery()) {
+            try (ResultSet rs = stmt.executeQuery()) {
                 System.out.println(rs);
-                while (rs.next()){
+                while (rs.next()) {
+                    int project_id = rs.getInt("project_id");
                     String project_name = rs.getString("project_name");
                     String project_description = rs.getString("project_description");
                     String project_address = rs.getString("project_address");
@@ -55,9 +56,9 @@ public class ProjectDao implements ProjectService{
                     String project_admin = rs.getString("admins.admin_fullname");
                     String project_city = rs.getString("cities.city_name");
                     int project_index = info.size();
-                    info.add(new Projects(project_index, project_name, project_description,
+                    info.add(new Projects(project_index, project_id, project_name, project_description,
                             project_address, project_dateposted,
-                            project_imgpath,project_admin, project_city));
+                            project_imgpath, project_admin, project_city));
                     System.out.println("inside while loop");
                     System.out.println(rs.getString("project_name"));
                 }
@@ -72,8 +73,9 @@ public class ProjectDao implements ProjectService{
         }
     }
 
-    public List<Budget> getBudget(int project_index) {
-        List<Budget> budget = new ArrayList<>();
+    public Budget getBudget(int project_index) {
+        Budget budget = null;
+        System.out.println(project_index);
 
         try (Connection conn = ds.getConnection();
              PreparedStatement stmt = conn.prepareStatement(
@@ -83,9 +85,9 @@ public class ProjectDao implements ProjectService{
 
             stmt.setInt(1, project_index);
 
-            try(ResultSet rs = stmt.executeQuery()) {
+            try (ResultSet rs = stmt.executeQuery()) {
                 System.out.println(rs);
-                while (rs.next()){
+                while (rs.next()) {
 
                     String budget_materials = rs.getString("budget_materials");
                     String budget_operations = rs.getString("budget_operations");
@@ -93,7 +95,7 @@ public class ProjectDao implements ProjectService{
                     String budget_labor = rs.getString("budget_labor");
                     String budget_misc = rs.getString("budget_misc");
 
-                    budget.add(new Budget(budget_materials,budget_operations,budget_management,budget_labor,budget_misc));
+                    budget = new Budget(budget_materials, budget_operations, budget_management, budget_labor, budget_misc);
                 }
                 return budget;
             }
@@ -107,8 +109,8 @@ public class ProjectDao implements ProjectService{
 
     }
 
-    public List<Mood> getMood(int project_index) {
-        List<Mood> mood = new ArrayList<>();
+    public Mood getMood(int project_index) {
+        Mood mood = null;
 
         try (Connection conn = ds.getConnection();
              PreparedStatement stmt = conn.prepareStatement(
@@ -118,9 +120,9 @@ public class ProjectDao implements ProjectService{
 
             stmt.setInt(1, project_index);
 
-            try(ResultSet rs = stmt.executeQuery()) {
+            try (ResultSet rs = stmt.executeQuery()) {
                 System.out.println(rs);
-                while (rs.next()){
+                while (rs.next()) {
 
                     String mood_happy = rs.getString("mood_happy");
                     String mood_sad = rs.getString("mood_sad");
@@ -128,7 +130,7 @@ public class ProjectDao implements ProjectService{
                     String mood_disgusted = rs.getString("mood_disgusted");
                     String mood_fearful = rs.getString("mood_fearful");
 
-                    mood.add(new Mood(mood_happy,mood_sad,mood_angry,mood_disgusted,mood_fearful));
+                    mood = new Mood(mood_happy, mood_sad, mood_angry, mood_disgusted, mood_fearful);
                 }
                 return mood;
             }

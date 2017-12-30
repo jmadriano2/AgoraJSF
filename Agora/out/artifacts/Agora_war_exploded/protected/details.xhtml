@@ -11,6 +11,12 @@
 
     <ui:define name="custom">
         <h:outputStylesheet library="css" name="homeStyle.css"/>
+
+        <script src="https://www.amcharts.com/lib/3/amcharts.js" />
+        <script src="https://www.amcharts.com/lib/3/serial.js" />
+        <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js" />
+        <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+        <script src="https://www.amcharts.com/lib/3/themes/light.js" />
     </ui:define>
 
     <ui:define name="details">
@@ -32,6 +38,19 @@
     </ui:define>
 
     <ui:define name="budget">
+        <b:panel>
+            <h1>Budget for this project:</h1>
+            <p id="budget_materials" style="display: none;">#{detailBean.budget.budget_materials}</p>
+            <p id="budget_operations" style="display: none;">#{detailBean.budget.budget_operations}</p>
+            <p id="budget_management" style="display: none;">#{detailBean.budget.budget_management}</p>
+            <p id="budget_labor" style="display: none;">#{detailBean.budget.budget_labor}</p>
+            <p id="budget_misc" style="display: none;">#{detailBean.budget.budget_misc}</p>
+            <b:well>
+                <h:outputScript library="js" name="budget.js" />
 
+                <!-- HTML -->
+                <div id="chartdiv" style="width: 100%; height: 300px;"/>
+            </b:well>
+        </b:panel>
     </ui:define>
 </ui:composition>

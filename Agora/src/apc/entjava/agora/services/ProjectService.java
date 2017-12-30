@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface ProjectService {
     List<Projects> getProjectInfo();
-    List<Budget> getBudget(int project_index);
-    List<Mood> getMood(int project_index);
+    Budget getBudget(int project_index);
+    Mood getMood(int project_index);
 }
