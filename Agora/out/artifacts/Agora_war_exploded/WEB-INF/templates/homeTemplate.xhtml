@@ -7,11 +7,6 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 
-<f:metadata>
-    <f:viewParam name="username" value="#{loginBean.user}" />
-    <f:event listener="#{loginBean.loadUser()}" type="preRenderView"/>
-</f:metadata>
-
 <h:head>
     <title><ui:insert name="title">Agora</ui:insert></title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>

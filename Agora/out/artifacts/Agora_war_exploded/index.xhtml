@@ -11,41 +11,7 @@
 
     <ui:define name="custom">
         <link rel="stylesheet" href="resources/css/loginStyle.css"/>
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-        <script type="text/javascript">
-            google.charts.load('current', {'packages':['corechart']});
-            google.charts.setOnLoadCallback(drawChart);
-
-            function drawChart() {
-                var data = google.visualization.arrayToDataTable([
-                    ['Task', 'Hours per Day'],
-                    ['Sad', 1],
-                    ['Anger', 1],
-                    ['Joy', 1],
-                    ['Disgust', 1],
-                    ['Fear', 1]
-                ]);
-
-                var options = {
-                    title: 'How People Feel About It',
-                    pieHole: 0.5,
-                };
-                var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
-                chart.draw(data, options);
-
-                function selectHandler() {
-                    var selectedItem = chart.getSelection()[0];
-                    if (selectedItem) {
-                        var toppings = data.getValue(selectedItem.row, 1);
-                        toppings++;
-                    }
-                    data.setValue(selectedItem.row, 1, toppings);
-                    chart.draw(data, options);
-                }
-                google.visualization.events.addListener(chart, 'select', selectHandler);
-                chart.draw(data, options);
-            }
-        </script>
+        <link rel="script" href="https://www.gstatic.com/charts/loader.js" />
     </ui:define>
 
     <ui:define name="content">
@@ -132,10 +98,39 @@
         </b:row>
 
         <b:panel>
-            <b:well id="donutchart" style="width: 900px; height: 500px;">
+            <script type="text/javascript">
+                drawChart();
+                function drawChart() {
+                    var data = google.visualization.arrayToDataTable([
+                        ['Task', 'Hours per Day'],
+                        ['Sad',     1],
+                        ['Anger',      1],
+                        ['Joy',  1],
+                        ['Disgust', 1],
+                        ['Fear',    1]
+                    ]);
 
-            </b:well>
-            <!--<div id="donutchart" style="width: 900px; height: 500px;"></div>-->
+                    var options = {
+                        title: 'How People Feel About It',
+                        pieHole: 0.5,
+                    };
+                    var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+                    chart.draw(data, options);
+
+                    function selectHandler() {
+                        var selectedItem = chart.getSelection()[0];
+                        if (selectedItem) {
+                            var toppings = data.getValue(selectedItem.row, 1);
+                            toppings++;
+                        }
+                        data.setValue(selectedItem.row, 1, toppings);
+                        chart.draw(data, options);
+                    }
+                    google.visualization.events.addListener(chart, 'select', selectHandler);
+                    chart.draw(data, options);
+                }
+            </script>
+            <div id="donutchart" style="width: 500px; height: 300px;" />
         </b:panel>
     </ui:define>
 </ui:composition>

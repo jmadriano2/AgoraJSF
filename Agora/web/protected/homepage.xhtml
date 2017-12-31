@@ -10,9 +10,7 @@
     <ui:define name="title">Agora - Home</ui:define>
 
     <ui:define name="custom">
-        <h:outputStylesheet library="css" name="homeStyle.css"/>
-        <link rel="script" href="https://www.gstatic.com/charts/loader.js"/>
-        <link rel="script" href="resources/js/mood.js"/>
+        <link rel="stylesheet" href="resources/css/homeStyle.css"/>
     </ui:define>
 
     <ui:define name="panels">
@@ -25,7 +23,7 @@
                 <h:outputText value="#{info.project_dateposted}"/>
                 <hr/>
                 <h1>#{info.project_name}</h1>
-                <b:image value="../#{info.project_imgpath}" span="12"/>
+                <b:image value="#{info.project_imgpath}" span="12"/>
                 <b:well span="12" style="margin-top: 15px;">
                     <p>
                         #{info.project_description}

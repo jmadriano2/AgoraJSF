@@ -17,7 +17,6 @@
         <navigation-case>
             <from-outcome>Login</from-outcome>
             <to-view-id>/protected/homepage.xhtml</to-view-id>
-            <redirect include-view-params="true" />
         </navigation-case>
     </navigation-rule>
 

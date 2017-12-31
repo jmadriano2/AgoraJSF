@@ -1,6 +1,5 @@
 package apc.entjava.agora.dataobjects;
 
-import apc.entjava.agora.User;
 import apc.entjava.agora.services.LoginService;
 
 import javax.naming.Context;
@@ -50,29 +49,21 @@ public class LoginDao implements LoginService {
         }
     }
 
-    public User queryUser(String username) {
-        User user = null;
+    public String nickname(String username, String password) {
+        String name = "";
 
         try (Connection conn = ds.getConnection();
              PreparedStatement stmt = conn.prepareStatement(
-                     "SELECT * FROM users WHERE user_name=?"
+                     "SELECT user_nickname FROM users WHERE user_name=? AND user_password=?"
              )) {
 
             stmt.setString(1, username);
+            stmt.setString(2, password);
 
             try(ResultSet rs = stmt.executeQuery()) {
                 if(rs.next()) {
-                    int user_id = rs.getInt("user_id");
-                    String user_name = rs.getString("user_name");
-                    String user_fname = rs.getString("user_fname");
-                    String user_lname = rs.getString("user_lname");
-                    String user_password = rs.getString("user_password");
-                    String user_dateJoined = rs.getString("user_dateJoined");
-                    String user_email = rs.getString("user_email");
-                    String user_nickname = rs.getString("user_nickname");
-
-                    user = new User(user_id, user_name, user_fname, user_lname, user_password, user_dateJoined, user_email, user_nickname);
-                    return user;
+                    name = rs.getString("user_nickname");
+                    return name;
                 }
             }
 
@@ -82,6 +73,6 @@ public class LoginDao implements LoginService {
         } finally {
             CreateUserDao.closeConnection(stmt, conn);
         }
-        return user;
+        return name;
     }
 }
