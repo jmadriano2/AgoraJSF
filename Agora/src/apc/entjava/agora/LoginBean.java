@@ -10,6 +10,7 @@ import javax.faces.bean.ManagedProperty;
 public class LoginBean {
     private String username;
     private String password;
+    private User user;
 
     @ManagedProperty(value = "#{authBean}")
     private AuthBean authBean;
@@ -38,14 +39,34 @@ public class LoginBean {
         this.authBean = authBean;
     }
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
     private LoginService loginService = new LoginDao();
 
     public String login() {
         if(loginService.login(username,password)){
-            authBean.setLoggedUsername(loginService.nickname(username,password));
+            user = loginService.queryUser(username);
+            authBean.setLoggedUsername(user.getUser_nickname());
             return "Login";
         }else{
             return "error";
         }
+    }
+
+    public void loadUser() {
+        //Look up User from database
+        System.out.println("Loading User by Username: " + username);
+        user = lookupUser(username);
+    }
+    public User lookupUser(String username) {
+        //Use DAO to retrieve customer data
+        //...
+        return loginService.queryUser(username);
     }
 }
