@@ -1,8 +1,8 @@
 package apc.entjava.agora.services;
 
-import apc.entjava.agora.Budget;
-import apc.entjava.agora.Mood;
-import apc.entjava.agora.Projects;
+import apc.entjava.agora.objects.Budget;
+import apc.entjava.agora.objects.Mood;
+import apc.entjava.agora.objects.Projects;
 
 import java.util.List;
 

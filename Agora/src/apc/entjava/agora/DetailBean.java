@@ -1,5 +1,9 @@
 package apc.entjava.agora;
 
+import apc.entjava.agora.objects.Budget;
+import apc.entjava.agora.objects.Mood;
+import apc.entjava.agora.objects.Projects;
+
 import javax.faces.bean.ManagedBean;
 
 @ManagedBean

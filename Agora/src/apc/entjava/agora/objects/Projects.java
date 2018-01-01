@@ -1,4 +1,4 @@
-package apc.entjava.agora;
+package apc.entjava.agora.objects;
 
 public class Projects {
     private int project_index;

@@ -1,4 +1,4 @@
-package apc.entjava.agora;
+package apc.entjava.agora.objects;
 
 public class Mood {
     private String mood_happy;

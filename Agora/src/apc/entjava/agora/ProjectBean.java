@@ -1,12 +1,12 @@
 package apc.entjava.agora;
 
 import apc.entjava.agora.dataobjects.ProjectDao;
+import apc.entjava.agora.objects.Projects;
 import apc.entjava.agora.services.ProjectService;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
-import java.util.ArrayList;
 import java.util.List;
 
 @ManagedBean

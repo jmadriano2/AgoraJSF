@@ -17,6 +17,9 @@
         <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js" />
         <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
         <script src="https://www.amcharts.com/lib/3/themes/light.js" />
+
+        <h:outputScript library="js" name="loader.js"/>
+        <h:outputScript library="js" name="mood.js"/>
     </ui:define>
 
     <ui:define name="details">
@@ -51,6 +54,13 @@
                 <!-- HTML -->
                 <div id="chartdiv" style="width: 100%; height: 300px;"/>
             </b:well>
+            <h1>How people feel about this project:</h1>
+            <p id="mood_happy" style="display: none;">#{detailBean.mood.mood_happy}</p>
+            <p id="mood_sad" style="display: none;">#{detailBean.mood.mood_sad}</p>
+            <p id="mood_angry" style="display: none;">#{detailBean.mood.mood_angry}</p>
+            <p id="mood_disgusted" style="display: none;">#{detailBean.mood.mood_disgusted}</p>
+            <p id="mood_fearful" style="display: none;">#{detailBean.mood.mood_fearful}</p>
+            <b:well id="donutchart" style="height: 500px;"/>
         </b:panel>
     </ui:define>
 </ui:composition>

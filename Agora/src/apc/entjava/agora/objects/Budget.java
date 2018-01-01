@@ -1,4 +1,4 @@
-package apc.entjava.agora;
+package apc.entjava.agora.objects;
 
 public class Budget {
     private String budget_materials;
