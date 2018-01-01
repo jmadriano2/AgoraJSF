@@ -92,6 +92,34 @@ public class CreateUserBean {
 
     }
 
+    public void validateUsername(ComponentSystemEvent event) {
+
+        FacesContext fc = FacesContext.getCurrentInstance();
+
+        UIComponent components = event.getComponent();
+
+        // get password
+        UIInput uiInputUsername = (UIInput) components.findComponent("username");
+        String username = uiInputUsername.getLocalValue() == null ? ""
+                : uiInputUsername.getLocalValue().toString();
+        String usernameId = uiInputUsername.getClientId();
+
+        // Let required="true" do its job.
+        if (username.isEmpty()) {
+            return;
+        }
+
+        if (createUserService.duplicateUsername(username)) {
+
+            FacesMessage msg = new FacesMessage("This username is already taken");
+            msg.setSeverity(FacesMessage.SEVERITY_ERROR);
+            fc.addMessage(usernameId, msg);
+            fc.renderResponse();
+
+        }
+
+    }
+
     private CreateUserService createUserService = new CreateUserDao();
 
     public String createUser() {

@@ -61,6 +61,13 @@ function drawChart() {
                 data.setValue(selectedMood, 1, votes);
             }
         }
+
+        document.getElementById("j_idt65:hidden_sad").value = data.getValue(0,1);
+        document.getElementById("j_idt65:hidden_angry").value = data.getValue(1,1);
+        document.getElementById("j_idt65:hidden_happy").value = data.getValue(2,1);
+        document.getElementById("j_idt65:hidden_disgusted").value = data.getValue(3,1);
+        document.getElementById("j_idt65:hidden_fearful").value = data.getValue(4,1);
+
         chart.draw(data, options);
     }
 

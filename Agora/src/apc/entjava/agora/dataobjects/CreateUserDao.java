@@ -57,6 +57,24 @@ public class CreateUserDao implements CreateUserService {
         return i > 0;
     }
 
+    public boolean duplicateUsername(String username){
+        try (Connection conn = ds.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(
+                     "SELECT * FROM users WHERE user_name=?"
+             )) {
+
+            stmt.setString(1, username);
+
+            try (ResultSet rs = stmt.executeQuery()) {
+                return rs.next();
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+    }
+
     static void closeConnection(PreparedStatement stmt, Connection conn) {
         try {
             assert conn != null;

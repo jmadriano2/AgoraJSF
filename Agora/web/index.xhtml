@@ -30,6 +30,7 @@
                 <h3>Be a Part of Agora!</h3>
                 <h:form id="createUserForm">
                     <f:event listener="#{createUserBean.validatePassword}" type="postValidate" />
+                    <f:event listener="#{createUserBean.validateUsername}" type="postValidate" />
                     <b:row class="createUserForm">
                         <b:column mediumScreen="4">
                             <h:inputText styleClass="form-control" a:placeholder="First Name"

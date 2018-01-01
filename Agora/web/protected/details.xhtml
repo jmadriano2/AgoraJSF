@@ -59,13 +59,19 @@
             <h1>How you feel about this project:</h1>
             <h:form>
                 <b:commandButton id="my-mood" value="Neutral" span="4" offset="4" tooltip="Click to Confirm" ajax="true"
-                                 action ="#{reactionBean.updateMood(hiddenInput.value)}"
+                                 action="#{reactionBean.updateMood(hiddenInput.value, hidden_happy.value, hidden_sad.value,
+                                                        hidden_angry.value, hidden_disgusted.value, hidden_fearful.value)}"
                                  style="height:50px; font-size: 24px; font-weight: bold;"/>
                 <br/>
                 <br/>
                 <br/>
 
                 <h:inputHidden id="hidden" binding="#{hiddenInput}"/>
+                <h:inputHidden id="hidden_happy" binding="#{hidden_happy}"/>
+                <h:inputHidden id="hidden_sad" binding="#{hidden_sad}"/>
+                <h:inputHidden id="hidden_angry" binding="#{hidden_angry}"/>
+                <h:inputHidden id="hidden_disgusted" binding="#{hidden_disgusted}"/>
+                <h:inputHidden id="hidden_fearful" binding="#{hidden_fearful}"/>
                 <p class="happy" id="mood_happy" style="display: none;">#{detailBean.mood.mood_happy}</p>
                 <p class="sad" id="mood_sad" style="display: none;">#{detailBean.mood.mood_sad}</p>
                 <p class="angry" id="mood_angry" style="display: none;">#{detailBean.mood.mood_angry}</p>

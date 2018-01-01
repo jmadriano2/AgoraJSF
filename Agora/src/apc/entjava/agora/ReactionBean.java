@@ -43,9 +43,16 @@ public class ReactionBean {
         this.detailBean = detailBean;
     }
 
-    public void updateMood(String input){
+    public void updateMood(String input, String happy, String sad, String angry, String disgusted, String fearful) {
         UIViewRoot view = FacesContext.getCurrentInstance().getViewRoot();
         int mood = 5;
+        int user_id = authBean.getLoggedUser().getUser_id();
+        int project_id = detailBean.getDetail().getProject_id();
+        int h = Integer.parseInt(happy);
+        int s = Integer.parseInt(sad);
+        int a = Integer.parseInt(angry);
+        int d = Integer.parseInt(disgusted);
+        int f = Integer.parseInt(fearful);
         switch (input) {
             case "Sad":
                 mood = 0;
@@ -67,6 +74,12 @@ public class ReactionBean {
         System.out.println("mood: " + mood);
         System.out.println("user-id: " + authBean.getLoggedUser().getUser_id());
         System.out.println("project-id: " + detailBean.getDetail().getProject_id());
-        reactionService.updateMood(mood, authBean.getLoggedUser().getUser_id(), detailBean.getDetail().getProject_id());
+        System.out.println("Happy votes: " + happy);
+        System.out.println("Sad votes: " + sad);
+        System.out.println("Angry votes: " + angry);
+        System.out.println("Disgusted votes: " + disgusted);
+        System.out.println("Fearful votes: " + fearful);
+        reactionService.updateMood(mood, user_id, project_id);
+        reactionService.updateMoodVotes(project_id, h, s, a, d, f);
     }
 }

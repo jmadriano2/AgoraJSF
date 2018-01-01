@@ -118,4 +118,31 @@ public class ReactionDao implements ReactionService {
         }
         return i > 0;
     }
+
+    public boolean updateMoodVotes(int project_id, int happy, int sad, int angry, int disgusted, int fearful){
+        int i = 0;
+        PreparedStatement stmt = null;
+        Connection conn = null;
+
+        try {
+            conn = ds.getConnection();
+            stmt = conn.prepareStatement(
+                    "UPDATE projects SET mood_happy=?, mood_sad=?, mood_angry=?, mood_disgusted=?, mood_fearful=? " +
+                            "WHERE project_id=?");
+            stmt.setInt(1, happy);
+            stmt.setInt(2, sad);
+            stmt.setInt(3, angry);
+            stmt.setInt(4, disgusted);
+            stmt.setInt(5, fearful);
+            stmt.setInt(6, project_id);
+            i = stmt.executeUpdate();
+            System.out.println("Data Updated Successfully");
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        } finally {
+            CreateUserDao.closeConnection(stmt, conn);
+        }
+        return i > 0;
+    }
 }
