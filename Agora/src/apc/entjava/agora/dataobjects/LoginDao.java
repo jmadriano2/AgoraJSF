@@ -1,5 +1,6 @@
 package apc.entjava.agora.dataobjects;
 
+import apc.entjava.agora.objects.User;
 import apc.entjava.agora.services.LoginService;
 
 import javax.naming.Context;
@@ -37,7 +38,7 @@ public class LoginDao implements LoginService {
             stmt.setString(1, username);
             stmt.setString(2, password);
 
-            try(ResultSet rs = stmt.executeQuery()) {
+            try (ResultSet rs = stmt.executeQuery()) {
                 return rs.next();
             }
 
@@ -49,21 +50,28 @@ public class LoginDao implements LoginService {
         }
     }
 
-    public String nickname(String username, String password) {
-        String name = "";
+    public User loggedUser(String username) {
+        User user = null;
 
         try (Connection conn = ds.getConnection();
              PreparedStatement stmt = conn.prepareStatement(
-                     "SELECT user_nickname FROM users WHERE user_name=? AND user_password=?"
+                     "SELECT * FROM users WHERE user_name=?"
              )) {
 
             stmt.setString(1, username);
-            stmt.setString(2, password);
 
-            try(ResultSet rs = stmt.executeQuery()) {
-                if(rs.next()) {
-                    name = rs.getString("user_nickname");
-                    return name;
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    int user_id = rs.getInt("user_id");
+                    String user_name = rs.getString("user_name");
+                    String user_fname = rs.getString("user_fname");
+                    String user_lname = rs.getString("user_lname");
+                    String user_dateJoined = rs.getString("user_dateJoined");
+                    String user_email = rs.getString("user_email");
+                    String user_nickname = rs.getString("user_nickname");
+
+                    user = new User(user_id, user_name, user_fname, user_lname, user_dateJoined, user_email, user_nickname);
+                    return user;
                 }
             }
 
@@ -73,6 +81,6 @@ public class LoginDao implements LoginService {
         } finally {
             CreateUserDao.closeConnection(stmt, conn);
         }
-        return name;
+        return user;
     }
 }

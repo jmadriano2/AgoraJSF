@@ -5,8 +5,10 @@ import apc.entjava.agora.objects.Mood;
 import apc.entjava.agora.objects.Projects;
 
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 
 @ManagedBean
+@SessionScoped
 public class DetailBean {
     private Projects detail;
     private Budget budget;

@@ -58,22 +58,24 @@
 
             <h1>How you feel about this project:</h1>
             <h:form>
-                <b:commandButton id="my-mood" value="Neutral" span="4" offset="4"
+                <b:commandButton id="my-mood" value="Neutral" span="4" offset="4" tooltip="Click to Confirm" ajax="true"
+                                 action ="#{reactionBean.updateMood(hiddenInput.value)}"
                                  style="height:50px; font-size: 24px; font-weight: bold;"/>
                 <br/>
                 <br/>
                 <br/>
+
+                <h:inputHidden id="hidden" binding="#{hiddenInput}"/>
+                <p class="happy" id="mood_happy" style="display: none;">#{detailBean.mood.mood_happy}</p>
+                <p class="sad" id="mood_sad" style="display: none;">#{detailBean.mood.mood_sad}</p>
+                <p class="angry" id="mood_angry" style="display: none;">#{detailBean.mood.mood_angry}</p>
+                <p class="disgusted" id="mood_disgusted" style="display: none;">#{detailBean.mood.mood_disgusted}</p>
+                <p class="fearful" id="mood_fearful" style="display: none;">#{detailBean.mood.mood_fearful}</p>
+                <p id="selected-mood" style="display: none;">#{reactionBean.user_mood}</p>
+
+                <b:well id="mood" style="width:100%; height: 500px;"/>
+
             </h:form>
-
-            <p class="happy" id="mood_happy" style="display: none;">#{detailBean.mood.mood_happy}</p>
-            <p class="sad" id="mood_sad" style="display: none;">#{detailBean.mood.mood_sad}</p>
-            <p class="angry" id="mood_angry" style="display: none;">#{detailBean.mood.mood_angry}</p>
-            <p class="disgusted" id="mood_disgusted" style="display: none;">#{detailBean.mood.mood_disgusted}</p>
-            <p class="fearful" id="mood_fearful" style="display: none;">#{detailBean.mood.mood_fearful}</p>
-            <p id="selected-mood" style="display: none;">5</p>
-
-            <b:well id="mood" style="width:100%; height: 500px;"/>
-
         </b:panel>
     </ui:define>
 </ui:composition>

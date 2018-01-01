@@ -42,7 +42,8 @@ public class LoginBean {
 
     public String login() {
         if(loginService.login(username,password)){
-            authBean.setLoggedUsername(loginService.nickname(username,password));
+            authBean.setLoggedUser(loginService.loggedUser(username));
+            authBean.setLoggedUsername(authBean.getLoggedUser().getUser_nickname());
             return "Login";
         }else{
             return "error";
