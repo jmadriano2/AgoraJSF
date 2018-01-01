@@ -124,11 +124,11 @@ public class ProjectDao implements ProjectService {
                 System.out.println(rs);
                 while (rs.next()) {
 
-                    String mood_happy = rs.getString("mood_happy");
-                    String mood_sad = rs.getString("mood_sad");
-                    String mood_angry = rs.getString("mood_angry");
-                    String mood_disgusted = rs.getString("mood_disgusted");
-                    String mood_fearful = rs.getString("mood_fearful");
+                    int mood_happy = rs.getInt("mood_happy");
+                    int mood_sad = rs.getInt("mood_sad");
+                    int mood_angry = rs.getInt("mood_angry");
+                    int mood_disgusted = rs.getInt("mood_disgusted");
+                    int mood_fearful = rs.getInt("mood_fearful");
 
                     mood = new Mood(mood_happy, mood_sad, mood_angry, mood_disgusted, mood_fearful);
                 }

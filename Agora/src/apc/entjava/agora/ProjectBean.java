@@ -48,8 +48,16 @@ public class ProjectBean {
     public String passDetails(int project_index, int project_id) {
         detailBean.setDetail(project_info.get(project_index));
         Projects detail = detailBean.getDetail();
-        detailBean.setBudget(projectService.getBudget(project_id));
-        detailBean.setMood(projectService.getMood(project_id));
+        setDetailBudget(project_id);
+        setDetailMood(project_id);
         return "Details";
+    }
+
+    public void setDetailMood(int project_id){
+        detailBean.setMood(projectService.getMood(project_id));
+    }
+
+    public void setDetailBudget(int project_id){
+        detailBean.setBudget(projectService.getBudget(project_id));
     }
 }
