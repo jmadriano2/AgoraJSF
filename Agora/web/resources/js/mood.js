@@ -24,7 +24,7 @@ function drawChart() {
         title: 'How People Feel About It',
         pieHole: 0.5
     };
-    var chart = new google.visualization.PieChart(document.getElementById('j_idt65:mood'));
+    var chart = new google.visualization.PieChart(document.getElementById('update:mood'));
     chart.draw(data, options);
 
     function selectHandler() {
@@ -62,11 +62,11 @@ function drawChart() {
             }
         }
 
-        document.getElementById("j_idt65:hidden_sad").value = data.getValue(0,1);
-        document.getElementById("j_idt65:hidden_angry").value = data.getValue(1,1);
-        document.getElementById("j_idt65:hidden_happy").value = data.getValue(2,1);
-        document.getElementById("j_idt65:hidden_disgusted").value = data.getValue(3,1);
-        document.getElementById("j_idt65:hidden_fearful").value = data.getValue(4,1);
+        document.getElementById("update:hidden_sad").value = data.getValue(0,1);
+        document.getElementById("update:hidden_angry").value = data.getValue(1,1);
+        document.getElementById("update:hidden_happy").value = data.getValue(2,1);
+        document.getElementById("update:hidden_disgusted").value = data.getValue(3,1);
+        document.getElementById("update:hidden_fearful").value = data.getValue(4,1);
 
         chart.draw(data, options);
     }
@@ -76,25 +76,25 @@ function drawChart() {
 
 function changeButton(currentMood) {
     if (currentMood == 0) {
-        document.getElementById("j_idt65:my-mood").firstChild.innerHTML = "Sad";
-        document.getElementById("j_idt65:hidden").value = "Sad";
-        document.getElementById("j_idt65:my-mood").childNodes[0].setAttribute("style", "height:50px; font-size: 24px; font-weight: bold; background: #3366cc; color: white;")
+        document.getElementById("update:my-mood").firstChild.innerHTML = "Sad";
+        document.getElementById("update:hidden").value = "Sad";
+        document.getElementById("update:my-mood").childNodes[0].setAttribute("style", "height:50px; font-size: 24px; font-weight: bold; background: #3366cc; color: white;")
     } else if (currentMood == 1) {
-        document.getElementById("j_idt65:my-mood").firstChild.innerHTML = "Angry";
-        document.getElementById("j_idt65:hidden").value = "Angry";
-        document.getElementById("j_idt65:my-mood").childNodes[0].setAttribute("style", "height:50px; font-size: 24px; font-weight: bold; background: #dc3912; color: white;")
+        document.getElementById("update:my-mood").firstChild.innerHTML = "Angry";
+        document.getElementById("update:hidden").value = "Angry";
+        document.getElementById("update:my-mood").childNodes[0].setAttribute("style", "height:50px; font-size: 24px; font-weight: bold; background: #dc3912; color: white;")
     } else if (currentMood == 2) {
-        document.getElementById("j_idt65:my-mood").firstChild.innerHTML = "Happy";
-        document.getElementById("j_idt65:hidden").value = "Happy";
-        document.getElementById("j_idt65:my-mood").childNodes[0].setAttribute("style", "height:50px; font-size: 24px; font-weight: bold; background: #ff9900; color: white;")
+        document.getElementById("update:my-mood").firstChild.innerHTML = "Happy";
+        document.getElementById("update:hidden").value = "Happy";
+        document.getElementById("update:my-mood").childNodes[0].setAttribute("style", "height:50px; font-size: 24px; font-weight: bold; background: #ff9900; color: white;")
     } else if (currentMood == 3) {
-        document.getElementById("j_idt65:my-mood").firstChild.innerHTML = "Disgusted";
-        document.getElementById("j_idt65:hidden").value = "Disgusted";
-        document.getElementById("j_idt65:my-mood").childNodes[0].setAttribute("style", "height:50px; font-size: 24px; font-weight: bold; background: #109618; color: white;")
+        document.getElementById("update:my-mood").firstChild.innerHTML = "Disgusted";
+        document.getElementById("update:hidden").value = "Disgusted";
+        document.getElementById("update:my-mood").childNodes[0].setAttribute("style", "height:50px; font-size: 24px; font-weight: bold; background: #109618; color: white;")
     } else if (currentMood == 4) {
-        document.getElementById("j_idt65:my-mood").firstChild.innerHTML = "Fearful";
-        document.getElementById("j_idt65:hidden").value = "Fearful";
-        document.getElementById("j_idt65:my-mood").childNodes[0].setAttribute("style", "height:50px; font-size: 24px; font-weight: bold; background: #990099; color: white;")
+        document.getElementById("update:my-mood").firstChild.innerHTML = "Fearful";
+        document.getElementById("update:hidden").value = "Fearful";
+        document.getElementById("update:my-mood").childNodes[0].setAttribute("style", "height:50px; font-size: 24px; font-weight: bold; background: #990099; color: white;")
     }
 }
 

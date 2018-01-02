@@ -3,10 +3,14 @@ package apc.entjava.agora;
 import apc.entjava.agora.dataobjects.ReactionDao;
 import apc.entjava.agora.services.ReactionService;
 
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
+import javax.faces.component.UIComponent;
+import javax.faces.component.UIInput;
 import javax.faces.component.UIViewRoot;
 import javax.faces.context.FacesContext;
+import javax.faces.event.ComponentSystemEvent;
 
 @ManagedBean
 public class ReactionBean {
@@ -20,6 +24,10 @@ public class ReactionBean {
 
     public void setUser_mood(int user_mood) {
         this.user_mood = user_mood;
+    }
+
+    public ReactionService getReactionService() {
+        return reactionService;
     }
 
     @ManagedProperty(value = "#{authBean}")
@@ -43,16 +51,10 @@ public class ReactionBean {
         this.detailBean = detailBean;
     }
 
-    public void updateMood(String input, String happy, String sad, String angry, String disgusted, String fearful) {
-        UIViewRoot view = FacesContext.getCurrentInstance().getViewRoot();
+    public void updateMood(String input, int h, int s, int a, int d, int f) {
         int mood = 5;
         int user_id = authBean.getLoggedUser().getUser_id();
         int project_id = detailBean.getDetail().getProject_id();
-        int h = Integer.parseInt(happy);
-        int s = Integer.parseInt(sad);
-        int a = Integer.parseInt(angry);
-        int d = Integer.parseInt(disgusted);
-        int f = Integer.parseInt(fearful);
         switch (input) {
             case "Sad":
                 mood = 0;
@@ -74,12 +76,21 @@ public class ReactionBean {
         System.out.println("mood: " + mood);
         System.out.println("user-id: " + authBean.getLoggedUser().getUser_id());
         System.out.println("project-id: " + detailBean.getDetail().getProject_id());
-        System.out.println("Happy votes: " + happy);
-        System.out.println("Sad votes: " + sad);
-        System.out.println("Angry votes: " + angry);
-        System.out.println("Disgusted votes: " + disgusted);
-        System.out.println("Fearful votes: " + fearful);
+        System.out.println("Happy votes: " + h);
+        System.out.println("Sad votes: " + s);
+        System.out.println("Angry votes: " + a);
+        System.out.println("Disgusted votes: " + d);
+        System.out.println("Fearful votes: " + f);
         reactionService.updateMood(mood, user_id, project_id);
         reactionService.updateMoodVotes(project_id, h, s, a, d, f);
+    }
+
+    public void updateSuccess() {
+
+        FacesContext fc = FacesContext.getCurrentInstance();
+
+        FacesMessage msg = new FacesMessage("Your Feelings are Heard", "Your Feelings are Heard");
+        msg.setSeverity(FacesMessage.SEVERITY_INFO);
+        fc.addMessage("update:my-mood", msg);
     }
 }

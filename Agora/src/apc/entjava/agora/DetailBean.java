@@ -37,9 +37,4 @@ public class DetailBean {
     public void setMood(Mood mood) {
         this.mood = mood;
     }
-
-    public void changeMood() {
-        int angry = mood.getMood_angry() + 1;
-        mood.setMood_angry(angry);
-    }
 }
