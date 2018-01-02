@@ -59,8 +59,6 @@ public class ProjectDao implements ProjectService {
                     info.add(new Projects(project_index, project_id, project_name, project_description,
                             project_address, project_dateposted,
                             project_imgpath, project_admin, project_city));
-                    System.out.println("inside while loop");
-                    System.out.println(rs.getString("project_name"));
                 }
                 return info;
             }

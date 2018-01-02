@@ -1,10 +1,10 @@
 html {
-    background: #cffac2;
+    background: #e9fae8;
 }
-.top {
+#j_idt11 {
     min-height:100px !important;
     border-color: black !important;
-    background: #28a745 !important;
+    background: linear-gradient(to bottom right, #28a745, #75ff74) !important;
     padding-top: 10px !important;
     padding-left: 7% !important;
     margin-bottom: 0px !important;

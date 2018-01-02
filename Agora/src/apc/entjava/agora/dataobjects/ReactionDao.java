@@ -28,8 +28,7 @@ public class ReactionDao implements ReactionService {
     }
 
     @Override
-    public boolean createMood(int user_id, int project_id) {
-        int i = 0;
+    public void createMood(int user_id, int project_id) {
         PreparedStatement stmt = null;
         Connection conn = null;
 
@@ -39,7 +38,7 @@ public class ReactionDao implements ReactionService {
                     "INSERT INTO user_has_mood(id, user_fk, project_fk, user_mood) VALUES(NULL, ?, ?, 5 )");
             stmt.setInt(1, user_id);
             stmt.setInt(2, project_id);
-            i = stmt.executeUpdate();
+            stmt.executeUpdate();
             System.out.println("Data Added Successfully");
         } catch (Exception e) {
             e.printStackTrace();
@@ -47,7 +46,6 @@ public class ReactionDao implements ReactionService {
         } finally {
             CreateUserDao.closeConnection(stmt, conn);
         }
-        return i > 0;
     }
 
     public boolean userHasMood(int user_id, int project_id) {
@@ -96,8 +94,7 @@ public class ReactionDao implements ReactionService {
         }
     }
 
-    public boolean updateMood(int user_mood, int user_id, int project_id) {
-        int i = 0;
+    public void updateMood(int user_mood, int user_id, int project_id) {
         PreparedStatement stmt = null;
         Connection conn = null;
 
@@ -108,7 +105,7 @@ public class ReactionDao implements ReactionService {
             stmt.setInt(1, user_mood);
             stmt.setInt(2, user_id);
             stmt.setInt(3, project_id);
-            i = stmt.executeUpdate();
+            stmt.executeUpdate();
             System.out.println("Data Updated Successfully");
         } catch (Exception e) {
             e.printStackTrace();
@@ -116,11 +113,9 @@ public class ReactionDao implements ReactionService {
         } finally {
             CreateUserDao.closeConnection(stmt, conn);
         }
-        return i > 0;
     }
 
-    public boolean updateMoodVotes(int project_id, int happy, int sad, int angry, int disgusted, int fearful){
-        int i = 0;
+    public void updateMoodVotes(int project_id, int happy, int sad, int angry, int disgusted, int fearful){
         PreparedStatement stmt = null;
         Connection conn = null;
 
@@ -135,7 +130,7 @@ public class ReactionDao implements ReactionService {
             stmt.setInt(4, disgusted);
             stmt.setInt(5, fearful);
             stmt.setInt(6, project_id);
-            i = stmt.executeUpdate();
+            stmt.executeUpdate();
             System.out.println("Data Updated Successfully");
         } catch (Exception e) {
             e.printStackTrace();
@@ -143,6 +138,5 @@ public class ReactionDao implements ReactionService {
         } finally {
             CreateUserDao.closeConnection(stmt, conn);
         }
-        return i > 0;
     }
 }

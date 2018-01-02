@@ -64,7 +64,7 @@ public class ProjectBean {
     }
 
     public String passDetails(int project_index, int project_id) {
-        detailBean.setDetail(project_info.get(project_index));
+        setDetail(project_index);
         setDetailBudget(project_id);
         setDetailMood(project_id);
 
@@ -78,7 +78,7 @@ public class ProjectBean {
         return "Details";
     }
 
-    private void setUserMood(int user_id, int project_id){
+    private void setUserMood(int user_id, int project_id) {
         reactionBean.setUser_mood(reactionService.userMood(user_id, project_id));
     }
 
@@ -92,5 +92,9 @@ public class ProjectBean {
 
     private void setDetailBudget(int project_id) {
         detailBean.setBudget(projectService.getBudget(project_id));
+    }
+
+    private void setDetail(int project_index) {
+        detailBean.setDetail(project_info.get(project_index));
     }
 }

@@ -43,7 +43,7 @@
 
     <b:scrollUp distance="200" animation="fade" text="" scrollTitle="false" name="scrollUpCustom" />
 
-    <b:container fluid="true" style="background-color: #cffac2; padding:0px; margin-top: 85px;">
+    <b:container fluid="true" styleClass="cont">
         <b:row>
             <b:column offset="1" span="2" style="padding: 0px; position: sticky; top: 85px;">
                 <b:panel look="success" title="My Neighbourhood" collapsible="false">
@@ -79,10 +79,10 @@
                 </b:panel>
             </b:column>
             <b:column span="7">
+                <ui:insert name="cities" />
                 <ui:insert name="panels"/>
                 <ui:insert name="details" />
-                <ui:insert name="budget" />
-                <ui:insert name="mood" />
+                <ui:insert name="budgert_and_mood"/>
                 <ui:insert name="comments" />
             </b:column>
         </b:row>

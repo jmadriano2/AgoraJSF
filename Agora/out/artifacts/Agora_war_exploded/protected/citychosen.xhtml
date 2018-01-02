@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:b="http://bootsfaces.net/ui"
+                xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                template="/WEB-INF/templates/homeTemplate.xhtml">
+
+    <ui:define name="title">Agora - Choose your home</ui:define>
+
+    <ui:define name="custom">
+        <h:outputStylesheet library="css" name="homeStyle.css"/>
+    </ui:define>
+
+    <ui:define name="cities">
+        <b:modal  styleClass="modalPseudoClass" style="top:200px">
+            <h3>Would you like to see other cities?</h3>
+            <f:facet name="footer">
+                <b:button value="Skip" dismiss="modal" />
+                <b:button value="Yes" look="primary" dismiss="modal" />
+            </f:facet>
+        </b:modal>
+
+        <b:panel style="padding-top:0px;">
+            <b:row>
+                <h1 style="text-align: center; font-weight: bold; margin-top:0px;">Is This Your Home City?</h1>
+            </b:row>
+            <b:row>
+                <b:column span="3"/>
+                <b:well span="6" style="height: 380px;padding-top:0px"
+                        styleClass="chosen-well">
+                    <h2 style="padding: 0px; text-align: center;">#{cityBean.chosenCity.city_name}</h2>
+                    <br/>
+                    <b:image value="../#{cityBean.chosenCity.city_imgpath}" height="250" span="12"
+                             style="padding: 0px;"/>
+                </b:well>
+            </b:row>
+            <b:row>
+                <b:column span="3">
+                    <b:button span="12" size="lg" href="/protected/cities.jsf" value="Go Back"
+                              iconAwesome="angle-left" look="info"/>
+                </b:column>
+                <b:column offset="6" span="3">
+                    <b:button span="12" size="lg" look="success" value="Confirm" iconAwesome="angle-right"
+                                     iconAlign="right" onclick="$('.modalPseudoClass').modal()"/>
+                </b:column>
+            </b:row>
+        </b:panel>
+    </ui:define>
+</ui:composition>

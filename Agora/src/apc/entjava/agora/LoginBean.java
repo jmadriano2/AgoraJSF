@@ -1,6 +1,8 @@
 package apc.entjava.agora;
 
+import apc.entjava.agora.dataobjects.CityDao;
 import apc.entjava.agora.dataobjects.LoginDao;
+import apc.entjava.agora.services.CityService;
 import apc.entjava.agora.services.LoginService;
 
 import javax.faces.bean.ManagedBean;
@@ -39,11 +41,15 @@ public class LoginBean {
     }
 
     private LoginService loginService = new LoginDao();
+    private CityService cityService = new CityDao();
 
     public String login() {
         if(loginService.login(username,password)){
             authBean.setLoggedUser(loginService.loggedUser(username));
             authBean.setLoggedUsername(authBean.getLoggedUser().getUser_nickname());
+            if (!cityService.userHasCity(username)){
+                return "CityList";
+            }
             return "Login";
         }else{
             return "error";

@@ -12,27 +12,27 @@ var chart = AmCharts.makeChart("chartdiv",
             "name": "Materials",
             "points": budget_materials,
             "color": "#98fb98",
-            "bullet": "../resources/images/materials.png"
+            "bullet": "../resources/images/budget_icons/materials.png"
         }, {
             "name": "Operations",
             "points": budget_operations,
             "color": "#FEC514",
-            "bullet": "../resources/images/operations.png"
+            "bullet": "../resources/images/budget_icons/operations.png"
         }, {
             "name": "Management",
             "points": budget_management,
             "color": "#7F8DA9",
-            "bullet": "../resources/images/management.png"
+            "bullet": "../resources/images/budget_icons/management.png"
         }, {
             "name": "Labor",
             "points": budget_labor,
             "color": "#DB4C3C",
-            "bullet": "../resources/images/labor.png"
+            "bullet": "../resources/images/budget_icons/labor.png"
         }, {
             "name": "Miscellaneous",
             "points": budget_misc,
             "color": "#DAF0FD",
-            "bullet": "../resources/images/misc.png"
+            "bullet": "../resources/images/budget_icons/misc.png"
         }],
         "valueAxes": [{
             "maximum": 1500000,

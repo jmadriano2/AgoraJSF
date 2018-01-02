@@ -2,6 +2,7 @@ html {
     background: #cffac2;
     width: 100%;
 }
+
 #scrollUpCustom {
     background-image: url("../images/top.png");
     bottom: 65px;
@@ -10,16 +11,42 @@ html {
     height: 38px; /* height of the custom image */
     outline: none;
 }
+
 .top {
-    min-height:70px !important;
+    min-height: 70px !important;
     border-color: black !important;
-    background: #28a745 !important;
-    padding-left: 7% !important;
+    background: linear-gradient(to bottom right, #28a745, #75ff74) !important;
     margin-bottom: 0px !important;
 }
+
+.cont {
+    background-color: #cffac2;
+    padding: 0px !important;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    width: 100% !important;
+    margin-top: 85px !important;
+}
+
 .search_box {
     margin-top: 25px;
 }
+
 .search_btn {
     height: 30px;
+}
+.well.city-well.col-md-5 {
+    background: #cadcfa;
+    border-color: #28a745;
+}
+
+.well.city-well.col-md-5:hover {
+    background: #3366cc;
+    color: #cffac2;
+    border-color: #cffac2;
+}
+
+.well.chosen-well.col-md-6 {
+    background: #cadcfa;
+    border-color: #28a745;
 }
