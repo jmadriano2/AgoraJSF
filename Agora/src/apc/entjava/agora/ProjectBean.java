@@ -9,19 +9,40 @@ import apc.entjava.agora.services.ReactionService;
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
+import java.util.LinkedList;
 import java.util.List;
 
 @ManagedBean
 public class ProjectBean {
 
     private List<Projects> project_info;
+    private List<String> user_cities;
 
     private ProjectService projectService = new ProjectDao();
     private ReactionService reactionService = new ReactionDao();
 
+    @ManagedProperty(value = "#{detailBean}")
+    private DetailBean detailBean;
+    @ManagedProperty(value = "#{reactionBean}")
+    private ReactionBean reactionBean;
+    @ManagedProperty(value = "#{authBean}")
+    private AuthBean authBean;
+
+
     @PostConstruct
     public void init() {
-        project_info = projectService.getProjectInfo();
+        String username = authBean.getLoggedUser().getUser_name();
+        String homeCity = projectService.getHomeCity(username);
+        
+        project_info = projectService.getHomeProjectInfo(username, homeCity);
+
+        if(projectService.userHasCities(username)){
+            System.out.println("User Has City");
+            user_cities = projectService.getUserCities(username);
+            for (String city: user_cities) {
+                project_info.addAll(projectService.getProjectInfo(username, city));
+            }
+        }
     }
 
     public List<Projects> getProject_info() {
@@ -31,13 +52,6 @@ public class ProjectBean {
     public void setProject_info(List<Projects> project_info) {
         this.project_info = project_info;
     }
-
-    @ManagedProperty(value = "#{detailBean}")
-    private DetailBean detailBean;
-    @ManagedProperty(value = "#{reactionBean}")
-    private ReactionBean reactionBean;
-    @ManagedProperty(value = "#{authBean}")
-    private AuthBean authBean;
 
     public DetailBean getDetailBean() {
         return detailBean;

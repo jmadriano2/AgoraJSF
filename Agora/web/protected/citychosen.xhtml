@@ -18,8 +18,8 @@
             <h3>Would you like to see other cities?</h3>
             <f:facet name="footer">
                 <b:form>
-                    <b:commandButton value="Skip" dismiss="modal" />
-                    <b:commandButton value="Yes" look="primary" dismiss="modal" />
+                    <b:commandButton value="Skip" action="#{cityBean.skip}" dismiss="modal" />
+                    <b:commandButton value="Yes" look="primary" action="#{cityBean.moreCities}" dismiss="modal" />
                 </b:form>
             </f:facet>
         </b:modal>

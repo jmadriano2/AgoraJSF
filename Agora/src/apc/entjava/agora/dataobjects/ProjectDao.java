@@ -33,19 +33,54 @@ public class ProjectDao implements ProjectService {
     }
 
     @Override
-    public List<Projects> getProjectInfo() {
+    public String getHomeCity(String username) {
+        String homeCity;
+
+        try (Connection conn = ds.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(
+                     "SELECT city_fk FROM users_has_cities WHERE user_fk=? AND is_home=1"
+             )) {
+            stmt.setString(1, username);
+
+            try (ResultSet rs = stmt.executeQuery()) {
+                rs.next();
+                homeCity = rs.getString("city_fk");
+                return homeCity;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        } finally {
+            CreateUserDao.closeConnection(stmt, conn);
+        }
+    }
+
+    public List<Projects> getHomeProjectInfo(String username, String homeCity) {
         List<Projects> info = new ArrayList<>();
 
+        return getProjects(homeCity, info);
+    }
+
+    public List<Projects> getProjectInfo(String username, String city) {
+        List<Projects> info = new ArrayList<>();
+
+        return getProjects(city, info);
+    }
+
+    private List<Projects> getProjects(String city, List<Projects> info) {
         try (Connection conn = ds.getConnection();
              PreparedStatement stmt = conn.prepareStatement(
                      "SELECT projects.*, admins.admin_fullname, cities.city_name " +
                              "FROM cities " +
                              "INNER JOIN admins ON admins.city_fk = cities.city_id " +
                              "INNER JOIN projects ON projects.city_fk = admins.city_fk " +
+                             "WHERE cities.city_name=?" +
                              "ORDER BY project_dateposted DESC"
              )) {
+            stmt.setString(1, city);
+
             try (ResultSet rs = stmt.executeQuery()) {
-                System.out.println(rs);
                 while (rs.next()) {
                     int project_id = rs.getInt("project_id");
                     String project_name = rs.getString("project_name");
@@ -61,6 +96,49 @@ public class ProjectDao implements ProjectService {
                             project_imgpath, project_admin, project_city));
                 }
                 return info;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        } finally {
+            CreateUserDao.closeConnection(stmt, conn);
+        }
+    }
+
+    public boolean userHasCities(String username) {
+        try (Connection conn = ds.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(
+                     "SELECT city_fk FROM users_has_cities WHERE user_fk=? AND is_home!=1"
+             )) {
+
+            stmt.setString(1, username);
+
+            try (ResultSet rs = stmt.executeQuery()) {
+                return rs.next();
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+    }
+
+    public List<String> getUserCities(String username) {
+        List<String> userCities = new ArrayList<>();
+
+        try (Connection conn = ds.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(
+                     "SELECT city_fk FROM users_has_cities WHERE user_fk=? AND is_home!=1"
+             )) {
+            stmt.setString(1, username);
+
+            try (ResultSet rs = stmt.executeQuery()) {
+                while (rs.next()) {
+                    String city = rs.getString("city_fk");
+                    userCities.add(city);
+                }
+                return userCities;
             }
 
         } catch (SQLException e) {

@@ -49,6 +49,7 @@ public class CityDao implements CityService {
 
                     cities.add(new Cities(index, city_id,city_name,city_imgpath));
                     index++;
+                    System.out.println("inside while loop");
                 }
                 return cities;
             }
@@ -76,6 +77,26 @@ public class CityDao implements CityService {
         } catch (SQLException e) {
             e.printStackTrace();
             throw new RuntimeException(e);
+        }
+    }
+
+    public void insertHomeCity(String username, String city_name){
+        PreparedStatement stmt = null;
+        Connection conn = null;
+
+        try {
+            conn = ds.getConnection();
+            stmt = conn.prepareStatement(
+                    "INSERT INTO users_has_cities(id, user_fk, city_fk, is_home) VALUES(NULL, ?, ?, 1 )");
+            stmt.setString(1, username);
+            stmt.setString(2, city_name);
+            stmt.executeUpdate();
+            System.out.println("Data Added Successfully");
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        } finally {
+            CreateUserDao.closeConnection(stmt, conn);
         }
     }
 }

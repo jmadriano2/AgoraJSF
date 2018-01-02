@@ -7,49 +7,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4377c2fb-d321-4d4a-aa1d-17710c142c4c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/apc/entjava/agora/CityBean.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/apc/entjava/agora/dataobjects/CityDao.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/apc/entjava/agora/objects/Cities.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/apc/entjava/agora/services/CityService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/protected/cities.xhtml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/protected/citychosen.xhtml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/protected/moreCities.xhtml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/classes/apc/entjava/agora/LoginBean.class" afterPath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/classes/apc/entjava/agora/LoginBean.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/classes/apc/entjava/agora/ProjectBean.class" afterPath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/classes/apc/entjava/agora/ProjectBean.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/classes/apc/entjava/agora/ReactionBean.class" afterPath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/classes/apc/entjava/agora/ReactionBean.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/classes/apc/entjava/agora/dataobjects/ProjectDao.class" afterPath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/classes/apc/entjava/agora/dataobjects/ProjectDao.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/classes/apc/entjava/agora/dataobjects/ReactionDao.class" afterPath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/classes/apc/entjava/agora/dataobjects/ReactionDao.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/classes/apc/entjava/agora/services/ReactionService.class" afterPath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/classes/apc/entjava/agora/services/ReactionService.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/faces-config.xml" afterPath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/faces-config.xml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/templates/homeTemplate.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/WEB-INF/templates/homeTemplate.xhtml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/protected/details.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/protected/details.xhtml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/protected/homepage.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/protected/homepage.xhtml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/resources/css/homeStyle.css" afterPath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/resources/css/homeStyle.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/resources/images/labor.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/resources/images/management.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/resources/images/materials.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/resources/images/misc.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/resources/images/operations.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/resources/js/budget.js" afterPath="$PROJECT_DIR$/out/artifacts/Agora_war_exploded/resources/js/budget.js" />
-      <change beforePath="$PROJECT_DIR$/out/production/Agora/apc/entjava/agora/LoginBean.class" afterPath="$PROJECT_DIR$/out/production/Agora/apc/entjava/agora/LoginBean.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Agora/apc/entjava/agora/CityBean.class" afterPath="$PROJECT_DIR$/out/production/Agora/apc/entjava/agora/CityBean.class" />
       <change beforePath="$PROJECT_DIR$/out/production/Agora/apc/entjava/agora/ProjectBean.class" afterPath="$PROJECT_DIR$/out/production/Agora/apc/entjava/agora/ProjectBean.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Agora/apc/entjava/agora/ReactionBean.class" afterPath="$PROJECT_DIR$/out/production/Agora/apc/entjava/agora/ReactionBean.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Agora/apc/entjava/agora/dataobjects/CityDao.class" afterPath="$PROJECT_DIR$/out/production/Agora/apc/entjava/agora/dataobjects/CityDao.class" />
       <change beforePath="$PROJECT_DIR$/out/production/Agora/apc/entjava/agora/dataobjects/ProjectDao.class" afterPath="$PROJECT_DIR$/out/production/Agora/apc/entjava/agora/dataobjects/ProjectDao.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Agora/apc/entjava/agora/dataobjects/ReactionDao.class" afterPath="$PROJECT_DIR$/out/production/Agora/apc/entjava/agora/dataobjects/ReactionDao.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Agora/apc/entjava/agora/services/ReactionService.class" afterPath="$PROJECT_DIR$/out/production/Agora/apc/entjava/agora/services/ReactionService.class" />
-      <change beforePath="$PROJECT_DIR$/src/apc/entjava/agora/LoginBean.java" afterPath="$PROJECT_DIR$/src/apc/entjava/agora/LoginBean.java" />
+      <change beforePath="$PROJECT_DIR$/out/production/Agora/apc/entjava/agora/services/CityService.class" afterPath="$PROJECT_DIR$/out/production/Agora/apc/entjava/agora/services/CityService.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Agora/apc/entjava/agora/services/ProjectService.class" afterPath="$PROJECT_DIR$/out/production/Agora/apc/entjava/agora/services/ProjectService.class" />
+      <change beforePath="$PROJECT_DIR$/src/apc/entjava/agora/CityBean.java" afterPath="$PROJECT_DIR$/src/apc/entjava/agora/CityBean.java" />
       <change beforePath="$PROJECT_DIR$/src/apc/entjava/agora/ProjectBean.java" afterPath="$PROJECT_DIR$/src/apc/entjava/agora/ProjectBean.java" />
+      <change beforePath="$PROJECT_DIR$/src/apc/entjava/agora/dataobjects/CityDao.java" afterPath="$PROJECT_DIR$/src/apc/entjava/agora/dataobjects/CityDao.java" />
       <change beforePath="$PROJECT_DIR$/src/apc/entjava/agora/dataobjects/ProjectDao.java" afterPath="$PROJECT_DIR$/src/apc/entjava/agora/dataobjects/ProjectDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/apc/entjava/agora/dataobjects/ReactionDao.java" afterPath="$PROJECT_DIR$/src/apc/entjava/agora/dataobjects/ReactionDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/apc/entjava/agora/services/CityService.java" afterPath="$PROJECT_DIR$/src/apc/entjava/agora/services/CityService.java" />
+      <change beforePath="$PROJECT_DIR$/src/apc/entjava/agora/services/ProjectService.java" afterPath="$PROJECT_DIR$/src/apc/entjava/agora/services/ProjectService.java" />
       <change beforePath="$PROJECT_DIR$/src/apc/entjava/agora/services/ReactionService.java" afterPath="$PROJECT_DIR$/src/apc/entjava/agora/services/ReactionService.java" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/faces-config.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/faces-config.xml" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/templates/homeTemplate.xhtml" afterPath="$PROJECT_DIR$/web/WEB-INF/templates/homeTemplate.xhtml" />
+      <change beforePath="$PROJECT_DIR$/web/protected/citychosen.xhtml" afterPath="$PROJECT_DIR$/web/protected/citychosen.xhtml" />
       <change beforePath="$PROJECT_DIR$/web/protected/details.xhtml" afterPath="$PROJECT_DIR$/web/protected/details.xhtml" />
-      <change beforePath="$PROJECT_DIR$/web/protected/homepage.xhtml" afterPath="$PROJECT_DIR$/web/protected/homepage.xhtml" />
-      <change beforePath="$PROJECT_DIR$/web/resources/css/homeStyle.css" afterPath="$PROJECT_DIR$/web/resources/css/homeStyle.css" />
-      <change beforePath="$PROJECT_DIR$/web/resources/css/loginStyle.css" afterPath="$PROJECT_DIR$/web/resources/css/loginStyle.css" />
-      <change beforePath="$PROJECT_DIR$/web/resources/images/cities/manila.jpg" afterPath="$PROJECT_DIR$/web/resources/images/cities/manila.jpg" />
-      <change beforePath="$PROJECT_DIR$/web/resources/images/cities/quezoncity.jpg" afterPath="$PROJECT_DIR$/web/resources/images/cities/quezoncity.jpg" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,21 +37,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.xhtml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="68">
               <caret line="55" column="33" lean-forward="false" selection-start-line="55" selection-start-column="33" selection-end-line="55" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homepage.xhtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/protected/homepage.xhtml">
+      <file leaf-file-name="cities.xhtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/protected/cities.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+            <state relative-caret-position="-253">
+              <caret line="5" column="17" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="moreCities.xhtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/protected/moreCities.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -84,17 +70,33 @@
       <file leaf-file-name="CityBean.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/CityBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="36" column="28" lean-forward="false" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+            <state relative-caret-position="308">
+              <caret line="34" column="45" lean-forward="true" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#560#561#0" expanded="true" />
-                <element signature="e#593#594#0" expanded="true" />
-                <element signature="e#651#652#0" expanded="true" />
+                <element signature="e#664#665#0" expanded="true" />
                 <element signature="e#695#696#0" expanded="true" />
-                <element signature="e#732#733#0" expanded="true" />
-                <element signature="e#765#766#0" expanded="true" />
+                <element signature="e#745#746#0" expanded="true" />
+                <element signature="e#785#786#0" expanded="true" />
+                <element signature="e#830#831#0" expanded="true" />
+                <element signature="e#882#883#0" expanded="true" />
+                <element signature="e#925#926#0" expanded="true" />
+                <element signature="e#958#959#0" expanded="true" />
+                <element signature="e#1016#1017#0" expanded="true" />
+                <element signature="e#1060#1061#0" expanded="true" />
+                <element signature="e#1097#1098#0" expanded="true" />
+                <element signature="e#1130#1131#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CityService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/services/CityService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="11" column="59" lean-forward="true" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -152,7 +154,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/WEB-INF/templates/master.xhtml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/templates/template.xhtml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/templates/bootsfaces.xhtml" />
         <option value="$PROJECT_DIR$/web/userLogin.xhtml" />
@@ -170,7 +171,6 @@
         <option value="$PROJECT_DIR$/web/resources/css/detailStyle.css" />
         <option value="$PROJECT_DIR$/src/apc/entjava/agora/Mood.java" />
         <option value="$PROJECT_DIR$/src/apc/entjava/agora/Budget.java" />
-        <option value="$PROJECT_DIR$/src/apc/entjava/agora/services/ProjectService.java" />
         <option value="$PROJECT_DIR$/src/apc/entjava/agora/Projects.java" />
         <option value="$PROJECT_DIR$/src/apc/entjava/agora/objects/Mood.java" />
         <option value="$PROJECT_DIR$/src/apc/entjava/agora/objects/User.java" />
@@ -185,24 +185,26 @@
         <option value="$PROJECT_DIR$/src/apc/entjava/agora/CreateUserBean.java" />
         <option value="$PROJECT_DIR$/web/resources/js/mood.js" />
         <option value="$PROJECT_DIR$/src/apc/entjava/agora/ReactionBean.java" />
-        <option value="$PROJECT_DIR$/web/protected/details.xhtml" />
         <option value="$PROJECT_DIR$/web/resources/js/budget.js" />
-        <option value="$PROJECT_DIR$/src/apc/entjava/agora/services/ReactionService.java" />
         <option value="$PROJECT_DIR$/src/apc/entjava/agora/dataobjects/ReactionDao.java" />
-        <option value="$PROJECT_DIR$/src/apc/entjava/agora/dataobjects/ProjectDao.java" />
         <option value="$PROJECT_DIR$/web/protected/homepage.xhtml" />
-        <option value="$PROJECT_DIR$/src/apc/entjava/agora/services/CityService.java" />
         <option value="$PROJECT_DIR$/src/apc/entjava/agora/LoginBean.java" />
-        <option value="$PROJECT_DIR$/src/apc/entjava/agora/ProjectBean.java" />
         <option value="$PROJECT_DIR$/src/apc/entjava/agora/objects/Cities.java" />
-        <option value="$PROJECT_DIR$/src/apc/entjava/agora/dataobjects/CityDao.java" />
         <option value="$PROJECT_DIR$/web/protected/cities.xhtml" />
-        <option value="$PROJECT_DIR$/src/apc/entjava/agora/CityBean.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/faces-config.xml" />
         <option value="$PROJECT_DIR$/web/resources/css/loginStyle.css" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/templates/homeTemplate.xhtml" />
         <option value="$PROJECT_DIR$/web/resources/css/homeStyle.css" />
+        <option value="$PROJECT_DIR$/src/apc/entjava/agora/services/ProjectService.java" />
+        <option value="$PROJECT_DIR$/src/apc/entjava/agora/ProjectBean.java" />
+        <option value="$PROJECT_DIR$/src/apc/entjava/agora/services/CityService.java" />
+        <option value="$PROJECT_DIR$/src/apc/entjava/agora/dataobjects/CityDao.java" />
         <option value="$PROJECT_DIR$/web/protected/citychosen.xhtml" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/faces-config.xml" />
+        <option value="$PROJECT_DIR$/src/apc/entjava/agora/services/ReactionService.java" />
+        <option value="$PROJECT_DIR$/src/apc/entjava/agora/dataobjects/ProjectDao.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/templates/homeTemplate.xhtml" />
+        <option value="$PROJECT_DIR$/web/protected/details.xhtml" />
+        <option value="$PROJECT_DIR$/web/protected/moreCities.xhtml" />
+        <option value="$PROJECT_DIR$/src/apc/entjava/agora/CityBean.java" />
       </list>
     </option>
   </component>
@@ -322,6 +324,19 @@
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Agora" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Agora" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Agora" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Agora" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -832,12 +847,12 @@
       <workItem from="1514716060769" duration="1412000" />
       <workItem from="1514729007155" duration="2173000" />
       <workItem from="1514794584913" duration="46311000" />
-      <workItem from="1514858842215" duration="36060000" />
+      <workItem from="1514858842215" duration="44763000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="255532000" />
+    <option name="totallyTimeSpent" value="264235000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -893,13 +908,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/resources/js/jquery-3.2.1.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="1" column="2155" lean-forward="true" selection-start-line="1" selection-start-column="2155" selection-end-line="1" selection-end-column="2155" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/resources/css/login.css" />
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/bootsfaces.xhtml" />
     <entry file="file://$PROJECT_DIR$/web/resources/css/loginCustom.css" />
@@ -1004,18 +1012,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/AuthBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="27" column="33" lean-forward="false" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
-          <folding>
-            <element signature="e#614#615#0" expanded="false" />
-            <element signature="e#664#665#0" expanded="false" />
-            <element signature="e#708#709#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/services/AuthFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -1113,32 +1109,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/dataobjects/ReactionDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
-          <folding>
-            <marker date="1514873618326" expanded="true" signature="1094:1178" ph="INSERT INTO user_has_mood... " />
-            <marker date="1514873618326" expanded="true" signature="1748:1808" ph="SELECT * FRO... user_has_mood" />
-            <marker date="1514873618326" expanded="true" signature="2427:2495" ph="SELECT user_... user_has_mood" />
-            <marker date="1514873618326" expanded="true" signature="3241:3312" ph="UPDATE user_has_mood... " />
-            <marker date="1514873618326" expanded="true" signature="4023:4167" ph="UPDATE projects... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/objects/Projects.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-629">
           <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/services/ReactionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -1148,57 +1122,6 @@
         <state relative-caret-position="246">
           <caret line="594" column="40" lean-forward="false" selection-start-line="594" selection-start-column="40" selection-end-line="594" selection-end-column="40" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/services/CityService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/services/ProjectService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/dataobjects/ProjectDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1307">
-          <caret line="52" column="52" lean-forward="false" selection-start-line="52" selection-start-column="52" selection-end-line="52" selection-end-column="52" />
-          <folding>
-            <marker date="1514875393803" expanded="true" signature="1247:1596" ph="SELECT proje... cities" />
-            <marker date="1514875393803" expanded="true" signature="3185:3341" ph="SELECT budge... projects" />
-            <marker date="1514875393803" expanded="true" signature="4523:4660" ph="SELECT mood_... projects" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/dataobjects/CreateUserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="74" column="9" lean-forward="true" selection-start-line="60" selection-start-column="8" selection-end-line="74" selection-end-column="9" />
-          <folding>
-            <marker date="1514843197591" expanded="true" signature="1253:1490" ph="INSERT INTO users... " />
-            <marker date="1514843197591" expanded="true" signature="2222:2259" ph="SELECT * FRO... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/LoginBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="49" column="52" lean-forward="false" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="52" />
-          <folding>
-            <marker date="1514876694452" expanded="true" signature="1462:1468" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1217,37 +1140,6 @@
         <state relative-caret-position="17">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/ProjectBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-          <folding>
-            <element signature="e#2695#2696#0" expanded="false" />
-            <element signature="e#2764#2765#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/details.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="71" column="21" lean-forward="true" selection-start-line="71" selection-start-column="21" selection-end-line="71" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/dataobjects/CityDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="50" column="28" lean-forward="false" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1514887447524" expanded="true" signature="1210:1231" ph="SELECT * FRO... cities" />
-            <marker date="1514887447524" expanded="true" signature="2139:2185" ph="SELECT * FRO... users_has_cities" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1276,37 +1168,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/faces-config.xml">
-      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="34" column="51" lean-forward="false" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/loginTemplate.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="30" column="85" lean-forward="true" selection-start-line="30" selection-start-column="85" selection-end-line="30" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/resources/css/loginStyle.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="8" lean-forward="false" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/homeTemplate.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="47" column="33" lean-forward="true" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -1319,50 +1184,205 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/citychosen.xhtml">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/loginTemplate.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="20" column="58" lean-forward="true" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
+        <state relative-caret-position="221">
+          <caret line="30" column="85" lean-forward="true" selection-start-line="30" selection-start-column="85" selection-end-line="30" selection-end-column="85" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/protected/cities.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/CityBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="36" column="28" lean-forward="false" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#560#561#0" expanded="true" />
-            <element signature="e#593#594#0" expanded="true" />
-            <element signature="e#651#652#0" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
-            <element signature="e#732#733#0" expanded="true" />
-            <element signature="e#765#766#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/protected/homepage.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="289">
           <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/services/ProjectService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="17" column="63" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/dataobjects/CreateUserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-221">
+          <caret line="65" column="27" lean-forward="true" selection-start-line="60" selection-start-column="8" selection-end-line="74" selection-end-column="9" />
+          <folding>
+            <marker date="1514843197591" expanded="true" signature="1253:1490" ph="INSERT INTO users... " />
+            <marker date="1514843197591" expanded="true" signature="2222:2259" ph="SELECT * FRO... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/dataobjects/ReactionDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="47" column="9" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="47" selection-end-column="9" />
+          <folding>
+            <marker date="1514873618326" expanded="true" signature="1094:1178" ph="INSERT INTO user_has_mood... " />
+            <marker date="1514873618326" expanded="true" signature="1748:1808" ph="SELECT * FRO... user_has_mood" />
+            <marker date="1514873618326" expanded="true" signature="2427:2495" ph="SELECT user_... user_has_mood" />
+            <marker date="1514873618326" expanded="true" signature="3241:3312" ph="UPDATE user_has_mood... " />
+            <marker date="1514873618326" expanded="true" signature="4023:4167" ph="UPDATE projects... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/dataobjects/CityDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="91" column="27" lean-forward="false" selection-start-line="91" selection-start-column="27" selection-end-line="91" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1514903789671" expanded="true" signature="1210:1231" ph="SELECT * FRO... cities" />
+            <marker date="1514903789671" expanded="true" signature="2200:2246" ph="SELECT * FRO... users_has_cities" />
+            <marker date="1514903789671" expanded="true" signature="2796:2878" ph="INSERT INTO users_has_cities... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/citychosen.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="21" column="93" lean-forward="false" selection-start-line="21" selection-start-column="93" selection-end-line="21" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/LoginBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding>
+            <marker date="1514876694452" expanded="true" signature="1462:1468" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/services/ReactionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/AuthBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/faces-config.xml">
+      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/ProjectBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="e#1570#1571#0" expanded="true" />
+            <element signature="e#1605#1606#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/dataobjects/ProjectDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="111" column="86" lean-forward="true" selection-start-line="111" selection-start-column="86" selection-end-line="111" selection-end-column="86" />
+          <folding>
+            <marker date="1514905416053" expanded="true" signature="1227:1293" ph="SELECT city_... user_has_cities" />
+            <marker date="1514905416053" expanded="true" signature="2301:2708" ph="SELECT proje... cities" />
+            <marker date="1514905416053" expanded="true" signature="4224:4291" ph="SELECT city_... user_has_cities" />
+            <marker date="1514905416053" expanded="true" signature="4831:4898" ph="SELECT city_... user_has_cities" />
+            <marker date="1514905416053" expanded="true" signature="5680:5836" ph="SELECT budge... projects" />
+            <marker date="1514905416053" expanded="true" signature="7018:7155" ph="SELECT mood_... projects" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/homeTemplate.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="84" column="33" lean-forward="false" selection-start-line="84" selection-start-column="33" selection-end-line="84" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/details.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="920">
+          <caret line="87" column="18" lean-forward="false" selection-start-line="87" selection-start-column="18" selection-end-line="87" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="68">
           <caret line="55" column="33" lean-forward="false" selection-start-line="55" selection-start-column="33" selection-end-line="55" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/moreCities.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/CityBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="34" column="45" lean-forward="true" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#664#665#0" expanded="true" />
+            <element signature="e#695#696#0" expanded="true" />
+            <element signature="e#745#746#0" expanded="true" />
+            <element signature="e#785#786#0" expanded="true" />
+            <element signature="e#830#831#0" expanded="true" />
+            <element signature="e#882#883#0" expanded="true" />
+            <element signature="e#925#926#0" expanded="true" />
+            <element signature="e#958#959#0" expanded="true" />
+            <element signature="e#1016#1017#0" expanded="true" />
+            <element signature="e#1060#1061#0" expanded="true" />
+            <element signature="e#1097#1098#0" expanded="true" />
+            <element signature="e#1130#1131#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/protected/cities.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-253">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apc/entjava/agora/services/CityService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="59" lean-forward="true" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
           <folding />
         </state>
       </provider>

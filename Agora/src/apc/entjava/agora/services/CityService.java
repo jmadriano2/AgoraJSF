@@ -6,5 +6,8 @@ import java.util.List;
 
 public interface CityService {
     List<Cities> getCities();
+
     boolean userHasCity(String username);
+
+    void insertHomeCity(String username, String city_name);
 }

@@ -39,9 +39,7 @@
                 </p>
             </b:well>
         </b:panel>
-    </ui:define>
 
-    <ui:define name="budget_and_mood">
         <b:panel>
             <h1>Budget for this project:</h1>
             <p id="budget_materials" style="display: none;">#{detailBean.budget.budget_materials}</p>
@@ -59,7 +57,7 @@
             <h1>How you feel about this project:</h1>
             <h:form id="update">
                 <b:label for="my-mood" value="Click to confirm your feelings" span="4" offset="1"
-                        style="background:white; color:black"/>
+                         style="background:white; color:black"/>
                 <br/>
                 <b:commandButton id="my-mood" value="Neutral" span="4" offset="1" tooltip="Click to Confirm" ajax="true"
                                  onclick="ajax:reactionBean.updateSuccess();" update="my_message"
