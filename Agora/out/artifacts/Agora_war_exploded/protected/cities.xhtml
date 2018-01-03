@@ -22,9 +22,9 @@
             <ui:repeat value="#{cityBean.citiesList}" var="city">
                 <b:form id="cityForm">
                     <h:commandLink action="#{cityBean.chooseCity(city.city_index)}">
-                        <b:well span="5" style="height: 310px;padding-top:0px; margin-right:25px; margin-left:25px;"
+                        <b:well span="5" style="height: 310px; margin-right:25px; margin-left:25px;"
                                 styleClass="city-well">
-                            <h2 style="padding: 0px">#{city.city_name}</h2>
+                            <h:outputText style="font-size: 28px; margin-bottom: 10px;" value="#{city.city_name}" />
                             <b:image value="../#{city.city_imgpath}" height="215" span="12" style="padding: 0px;"/>
                         </b:well>
                     </h:commandLink>

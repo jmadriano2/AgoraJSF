@@ -35,6 +35,7 @@ html {
 .search_btn {
     height: 30px;
 }
+
 .well.city-well.col-md-5 {
     background: #cadcfa;
     border-color: #28a745;
@@ -45,6 +46,7 @@ html {
     color: #cffac2;
     border-color: #cffac2;
 }
+
 .well.chosen-well.col-md-6 {
     background: #cadcfa;
     border-color: #28a745;

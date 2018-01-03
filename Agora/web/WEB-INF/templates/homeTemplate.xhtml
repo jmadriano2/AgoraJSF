@@ -47,13 +47,16 @@
         <b:row>
             <b:column offset="1" span="2" style="padding: 0px; position: sticky; top: 85px;" hidden="sm, xs">
                 <b:panel look="success" title="My Neighbourhood" collapsible="false">
+                    <b:row>
+                        <b:column span="5" style="padding:0px;">
+                            <b:navLink>
+                                <b:image value="../#{authBean.loggedUser.user_imgpath}" span="12" />
+                            </b:navLink>
+                        </b:column>
+                        <b:navLink value="#{authBean.loggedUsername}" />
+                    </b:row>
+                    <br/>
                     <b:listLinks>
-                        <b:navLink href="" value="#{authBean.loggedUsername}" icon="globe" />
-
-                        <b:navLink href="" value="My Activities ">
-                            <b:badge value="0" />
-                        </b:navLink>
-
                         <hr style="margin:2px;"/>
                         <b:navLink header="My Cities"/>
                         <hr style="margin:2px;"/>

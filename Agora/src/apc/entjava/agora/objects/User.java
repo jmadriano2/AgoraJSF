@@ -8,8 +8,10 @@ public class User {
     private String user_dateJoined;
     private String user_email;
     private String user_nickname;
+    private String user_imgpath;
 
-    public User(int user_id, String user_name, String user_fname, String user_lname, String user_dateJoined, String user_email, String user_nickname) {
+    public User(int user_id, String user_name, String user_fname, String user_lname, String user_dateJoined,
+                String user_email, String user_nickname, String user_imgpath) {
         this.user_id = user_id;
         this.user_name = user_name;
         this.user_fname = user_fname;
@@ -17,6 +19,7 @@ public class User {
         this.user_dateJoined = user_dateJoined;
         this.user_email = user_email;
         this.user_nickname = user_nickname;
+        this.user_imgpath = user_imgpath;
     }
 
     public int getUser_id() {
@@ -75,6 +78,14 @@ public class User {
         this.user_nickname = user_nickname;
     }
 
+    public String getUser_imgpath() {
+        return user_imgpath;
+    }
+
+    public void setUser_imgpath(String user_imgpath) {
+        this.user_imgpath = user_imgpath;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -85,6 +96,7 @@ public class User {
                 ", user_dateJoined='" + user_dateJoined + '\'' +
                 ", user_email='" + user_email + '\'' +
                 ", user_nickname='" + user_nickname + '\'' +
+                ", user_imgpath='" + user_imgpath + '\'' +
                 '}';
     }
 }

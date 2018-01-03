@@ -13,7 +13,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class ProjectDao implements ProjectService {
@@ -71,7 +73,7 @@ public class ProjectDao implements ProjectService {
     private List<Projects> getProjects(String city, List<Projects> info) {
         try (Connection conn = ds.getConnection();
              PreparedStatement stmt = conn.prepareStatement(
-                     "SELECT projects.*, admins.admin_fullname, cities.city_name " +
+                     "SELECT projects.*,  admins.admin_fullname, cities.city_name " +
                              "FROM cities " +
                              "INNER JOIN admins ON admins.city_fk = cities.city_id " +
                              "INNER JOIN projects ON projects.city_fk = admins.city_fk " +
@@ -81,12 +83,15 @@ public class ProjectDao implements ProjectService {
             stmt.setString(1, city);
 
             try (ResultSet rs = stmt.executeQuery()) {
+                SimpleDateFormat myFormat = new SimpleDateFormat("MMM d, yyyy 'at' h:mm a");
+                Date date;
                 while (rs.next()) {
+                    date = rs.getDate("project_datePosted");
                     int project_id = rs.getInt("project_id");
                     String project_name = rs.getString("project_name");
                     String project_description = rs.getString("project_description");
                     String project_address = rs.getString("project_address");
-                    String project_dateposted = rs.getString("project_datePosted");
+                    String project_dateposted = myFormat.format(date);
                     String project_imgpath = rs.getString("project_imgpath");
                     String project_admin = rs.getString("admins.admin_fullname");
                     String project_city = rs.getString("cities.city_name");

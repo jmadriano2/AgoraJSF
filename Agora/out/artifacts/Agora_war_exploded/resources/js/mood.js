@@ -22,7 +22,9 @@ function drawChart() {
 
     var options = {
         title: 'How People Feel About It',
-        pieHole: 0.5
+        pieHole: 0.5,
+        height:500,
+        tooltip: {ignoreBounds:true}
     };
     var chart = new google.visualization.PieChart(document.getElementById('update:mood'));
     chart.draw(data, options);
@@ -97,4 +99,8 @@ function changeButton(currentMood) {
         document.getElementById("update:my-mood").childNodes[0].setAttribute("style", "height:50px; font-size: 24px; font-weight: bold; background: #990099; color: white;")
     }
 }
+
+$(window).resize(function(){
+    drawChart();
+});
 

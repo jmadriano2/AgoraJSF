@@ -29,7 +29,7 @@
             <b:iconAwesome name="caret-right" style="margin:5px;"/>
             <h:outputText value="#{detailBean.detail.project_city}" style="font-size: 20px;"/>
             <br style="margin:0px;"/>
-            <h:outputText value="#{detailBean.detail.project_dateposted}"/>
+            <h:outputText value="Posted on #{detailBean.detail.project_dateposted}"/>
             <hr/>
             <h1>#{detailBean.detail.project_name}</h1>
             <b:image tinyScreen="12" small-screen="12" value="../#{detailBean.detail.project_imgpath}" span="12"/>
@@ -82,9 +82,44 @@
                 <p class="fearful" id="mood_fearful" style="display: none;">#{detailBean.mood.mood_fearful}</p>
                 <p id="selected-mood" style="display: none;">#{reactionBean.user_mood}</p>
 
-                <b:well id="mood" style="width:100%; height: 500px;"/>
+                <b:well id="mood" style="width:100%;" span="12"/>
 
             </h:form>
+        </b:panel>
+    </ui:define>
+
+    <ui:define name="comments">
+        <b:panel style="padding-top:10px;">
+            <h1>Comments Section:</h1>
+            <b:form>
+                <b:inputTextarea placeholder="Type your comment here..." span="12"/>
+                <b:commandButton value="Submit" look="info" span="2" offset="10"/>
+            </b:form>
+            <br/>
+            <br/>
+            <h1># Thoughts on this project:</h1>
+            <b:panel>
+                <b:row style="padding-left:10px; margin-top:0px;">
+                    <h:outputText value="1."/>
+                </b:row>
+                <b:row>
+                    <b:column span="2">
+                        <b:image value="../resources/images/profile/profiledefault.jpg" span="12"/>
+                        <div align="center"><h:outputText value="nickname"/></div>
+                    </b:column>
+                    <b:column span="10">
+                        <h:outputText value="Posted On " span="12"/>
+                        <br/>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </b:column>
+                </b:row>
+            </b:panel>
         </b:panel>
     </ui:define>
 </ui:composition>

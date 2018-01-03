@@ -69,8 +69,9 @@ public class LoginDao implements LoginService {
                     String user_dateJoined = rs.getString("user_dateJoined");
                     String user_email = rs.getString("user_email");
                     String user_nickname = rs.getString("user_nickname");
+                    String user_imgpath = rs.getString("user_imgpath");
 
-                    user = new User(user_id, user_name, user_fname, user_lname, user_dateJoined, user_email, user_nickname);
+                    user = new User(user_id, user_name, user_fname, user_lname, user_dateJoined, user_email, user_nickname, user_imgpath);
                     return user;
                 }
             }
