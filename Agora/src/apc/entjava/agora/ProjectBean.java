@@ -18,6 +18,7 @@ public class ProjectBean {
     private List<Projects> project_info;
     private List<String> user_cities;
 
+    //Services
     private ProjectService projectService = new ProjectDao();
     private ReactionService reactionService = new ReactionDao();
 
@@ -49,12 +50,9 @@ public class ProjectBean {
         }
     }
 
+    //Getters and Setters
     public List<Projects> getProject_info() {
         return project_info;
-    }
-
-    public void setProject_info(List<Projects> project_info) {
-        this.project_info = project_info;
     }
 
     public DetailBean getDetailBean() {
@@ -81,6 +79,7 @@ public class ProjectBean {
         this.authBean = authBean;
     }
 
+    //Methods
     public String passDetails(int project_index, int project_id) {
         setDetail(project_index);
         setDetailBudget(project_id);

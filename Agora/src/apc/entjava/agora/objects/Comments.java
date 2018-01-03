@@ -1,16 +1,28 @@
 package apc.entjava.agora.objects;
 
 public class Comments {
+    private int comment_index;
     private int comment_id;
     private String comment_text;
     private String comment_datePosted;
     private String comment_poster;
+    private String comment_posterImg;
 
-    public Comments(int comment_id, String comment_text, String comment_datePosted, String comment_poster) {
+    public Comments(int comment_index, int comment_id, String comment_text, String comment_datePosted, String comment_poster, String comment_posterImg) {
+        this.comment_index = comment_index;
         this.comment_id = comment_id;
         this.comment_text = comment_text;
         this.comment_datePosted = comment_datePosted;
         this.comment_poster = comment_poster;
+        this.comment_posterImg = comment_posterImg;
+    }
+
+    public int getComment_index() {
+        return comment_index;
+    }
+
+    public void setComment_index(int comment_index) {
+        this.comment_index = comment_index;
     }
 
     public int getComment_id() {
@@ -45,13 +57,23 @@ public class Comments {
         this.comment_poster = comment_poster;
     }
 
+    public String getComment_posterImg() {
+        return comment_posterImg;
+    }
+
+    public void setComment_posterImg(String comment_posterImg) {
+        this.comment_posterImg = comment_posterImg;
+    }
+
     @Override
     public String toString() {
         return "Comments{" +
-                "comment_id=" + comment_id +
+                "comment_index=" + comment_index +
+                ", comment_id=" + comment_id +
                 ", comment_text='" + comment_text + '\'' +
                 ", comment_datePosted='" + comment_datePosted + '\'' +
                 ", comment_poster='" + comment_poster + '\'' +
+                ", comment_posterImg='" + comment_posterImg + '\'' +
                 '}';
     }
 }

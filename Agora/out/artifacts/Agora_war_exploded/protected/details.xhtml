@@ -92,34 +92,30 @@
         <b:panel style="padding-top:10px;">
             <h1>Comments Section:</h1>
             <b:form>
-                <b:inputTextarea placeholder="Type your comment here..." span="12" style="margin-bottom:10px;"/>
-                <b:commandButton value="Submit" look="info" span="2" offset="10"/>
+                <b:inputTextarea placeholder="Type your comment here..." value="#{commentBean.comment_txt}" span="12"/>
+                <b:commandButton value="Submit" action="#{commentBean.insertComment}" look="info" span="2" offset="10"/>
             </b:form>
             <br/>
             <br/>
-            <h1># Thoughts on this project:</h1>
-            <b:panel>
-                <b:row style="padding-left:10px; margin-top:0px;">
-                    <h:outputText value="1."/>
-                </b:row>
-                <b:row>
-                    <b:column span="2">
-                        <b:image value="../resources/images/profile/profiledefault.jpg" span="12"/>
-                        <div align="center"><h:outputText value="nickname"/></div>
-                    </b:column>
-                    <b:column span="10">
-                        <h:outputText value="Posted On " span="12"/>
-                        <br/>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                    </b:column>
-                </b:row>
-            </b:panel>
+            <h1>There are#{commentBean.comment_list_size} #{commentBean.thought_s} on this project:</h1>
+            <ui:repeat value="#{commentBean.comment_list}" var="comment">
+                <b:panel>
+                    <b:row style="padding-left:10px; margin-top:0px;">
+                        <h:outputText value="#{comment.comment_index}. "/>
+                    </b:row>
+                    <b:row>
+                        <b:column span="2">
+                            <b:image value="../#{comment.comment_posterImg}" span="12"/>
+                            <div align="center"><h:outputText value="#{comment.comment_poster}"/></div>
+                        </b:column>
+                        <b:column span="10">
+                            <h:outputText value="Posted On #{comment.comment_datePosted}" span="12"/>
+                            <br/>
+                            <p>#{comment.comment_text}</p>
+                        </b:column>
+                    </b:row>
+                </b:panel>
+            </ui:repeat>
         </b:panel>
     </ui:define>
 </ui:composition>
