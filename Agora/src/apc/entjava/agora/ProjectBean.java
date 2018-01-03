@@ -37,10 +37,14 @@ public class ProjectBean {
         project_info = projectService.getHomeProjectInfo(username, homeCity);
 
         if(projectService.userHasCities(username)){
-            System.out.println("User Has City");
             user_cities = projectService.getUserCities(username);
             for (String city: user_cities) {
                 project_info.addAll(projectService.getProjectInfo(username, city));
+            }
+            int i = 0;
+            for (Projects project: project_info){
+                project_info.get(i).setProject_index(i);
+                i++;
             }
         }
     }

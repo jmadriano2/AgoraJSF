@@ -32,12 +32,13 @@
         <b:navbarLinks>
             <b:button look="success" size="sm" value="#{authBean.loggedUsername}" href="#"/>
             <b:button look="success" size="sm" value="Home" href="home.jsf"/>
-            <b:dropButton look="success" value=" " size="sm">
-                <b:navLink value="My Activities" href="#"/>
-                <b:navLink value="Settings" href="#"/>
-                <b:navLink value="Log Out" href="/logout.jsf"/>
-            </b:dropButton>
         </b:navbarLinks>
+
+        <b:dropButton look="success" value=" " size="sm">
+            <b:navLink value="My Activities" href="#"/>
+            <b:navLink value="Settings" href="#"/>
+            <b:navLink value="Log Out" href="/index.jsf"/>
+        </b:dropButton>
     </b:navBar>
 
     <b:scrollUp distance="200" animation="fade" text="" scrollTitle="false" name="scrollUpCustom" />
