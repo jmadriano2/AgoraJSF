@@ -32,8 +32,8 @@
             <h:outputText value="#{detailBean.detail.project_dateposted}"/>
             <hr/>
             <h1>#{detailBean.detail.project_name}</h1>
-            <b:image value="../#{detailBean.detail.project_imgpath}" span="12"/>
-            <b:well span="12" style="margin-top: 15px;">
+            <b:image tinyScreen="12" small-screen="12" value="../#{detailBean.detail.project_imgpath}" span="12"/>
+            <b:well tinyScreen="12" span="12" style="margin-top: 15px;">
                 <p>
                     #{detailBean.detail.project_description}
                 </p>

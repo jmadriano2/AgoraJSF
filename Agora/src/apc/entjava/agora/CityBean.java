@@ -8,6 +8,7 @@ import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.SessionScoped;
+import java.util.ArrayList;
 import java.util.List;
 
 @ManagedBean
@@ -16,6 +17,7 @@ public class CityBean {
     private List<Cities> citiesList;
     private List<Cities> notChosen;
     private Cities chosenCity;
+    private Cities addedCity;
 
     private CityService cityService = new CityDao();
 
@@ -32,7 +34,9 @@ public class CityBean {
 
     @PostConstruct
     public void init() {
-        citiesList = cityService.getCities();
+        String username = authBean.getLoggedUser().getUser_name();
+        System.out.println("CityBean PostConstruct Username: " + username);
+        citiesList = cityService.selectCities();
     }
 
     public List<Cities> getCitiesList() {
@@ -43,13 +47,27 @@ public class CityBean {
         this.citiesList = citiesList;
     }
 
+    public List<Cities> getNotChosen() {
+        return notChosen;
+    }
+
     public Cities getChosenCity() {
         return chosenCity;
     }
 
+    public Cities getAddedCity() {
+        return addedCity;
+    }
+
+    //Methods
     public String chooseCity(int city_id){
         chosenCity = citiesList.get(city_id);
         return "CityChosen";
+    }
+
+    public String addCity(int city_id){
+        addedCity = notChosen.get(city_id);
+        return "AddedCity";
     }
 
     public String skip(){
@@ -62,9 +80,25 @@ public class CityBean {
         return "MoreCities";
     }
 
+    public String skipAdd(){
+        insertCity();
+        return "SkipAdd";
+    }
+
+    public String addMoreCities(){
+        insertCity();
+        return "AddMoreCities";
+    }
+
     private void insertHomeCity(){
-        System.out.println(authBean.getLoggedUser().getUser_name());
         String username = authBean.getLoggedUser().getUser_name();
         cityService.insertHomeCity(username, chosenCity.getCity_name());
+        notChosen = cityService.selectChooseCities(username);
+    }
+
+    private void insertCity(){
+        String username = authBean.getLoggedUser().getUser_name();
+        cityService.insertCity(username, addedCity.getCity_name());
+        notChosen = cityService.selectChooseCities(username);
     }
 }

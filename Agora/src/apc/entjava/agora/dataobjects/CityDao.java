@@ -32,27 +32,15 @@ public class CityDao implements CityService {
     }
 
     @Override
-    public List<Cities> getCities() {
+    public List<Cities> selectCities() {
         List<Cities> cities = new ArrayList<>();
-        int index=0;
+        int index = 0;
 
         try (Connection conn = ds.getConnection();
              PreparedStatement stmt = conn.prepareStatement(
                      "SELECT * FROM  cities"
              )) {
-            try (ResultSet rs = stmt.executeQuery()) {
-                System.out.println(rs);
-                while (rs.next()) {
-                    int city_id = rs.getInt("city_id");
-                    String city_name = rs.getString("city_name");
-                    String city_imgpath = rs.getString("city_imgpath");
-
-                    cities.add(new Cities(index, city_id,city_name,city_imgpath));
-                    index++;
-                    System.out.println("inside while loop");
-                }
-                return cities;
-            }
+            return getCities(cities, index, stmt);
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -62,7 +50,45 @@ public class CityDao implements CityService {
         }
     }
 
-    public boolean userHasCity(String username){
+    public List<Cities> selectChooseCities(String username) {
+        List<Cities> userCities = new ArrayList<>();
+        int index = 0;
+
+        try (Connection conn = ds.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(
+                     "SELECT * FROM cities  " +
+                             "WHERE city_name NOT IN( " +
+                             "SELECT cities.city_name FROM cities " +
+                             "LEFT JOIN users_has_cities ON users_has_cities.city_fk = cities.city_name " +
+                             "WHERE users_has_cities.user_fk=?)"
+             )) {
+
+            stmt.setString(1, username);
+
+            return getCities(userCities, index, stmt);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        } finally {
+            CreateUserDao.closeConnection(stmt, conn);
+        }
+    }
+
+    private List<Cities> getCities(List<Cities> userCities, int index, PreparedStatement stmt) throws SQLException {
+        try (ResultSet rs = stmt.executeQuery()) {
+            while (rs.next()) {
+                int city_id = rs.getInt("city_id");
+                String city_name = rs.getString("city_name");
+                String city_imgpath = rs.getString("city_imgpath");
+                userCities.add(new Cities(index, city_id, city_name, city_imgpath));
+                index++;
+            }
+            return userCities;
+        }
+    }
+
+    public boolean userHasCity(String username) {
         try (Connection conn = ds.getConnection();
              PreparedStatement stmt = conn.prepareStatement(
                      "SELECT * FROM users_has_cities WHERE user_fk=?"
@@ -80,7 +106,7 @@ public class CityDao implements CityService {
         }
     }
 
-    public void insertHomeCity(String username, String city_name){
+    public void insertHomeCity(String username, String city_name) {
         PreparedStatement stmt = null;
         Connection conn = null;
 
@@ -88,6 +114,26 @@ public class CityDao implements CityService {
             conn = ds.getConnection();
             stmt = conn.prepareStatement(
                     "INSERT INTO users_has_cities(id, user_fk, city_fk, is_home) VALUES(NULL, ?, ?, 1 )");
+            stmt.setString(1, username);
+            stmt.setString(2, city_name);
+            stmt.executeUpdate();
+            System.out.println("Data Added Successfully");
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        } finally {
+            CreateUserDao.closeConnection(stmt, conn);
+        }
+    }
+
+    public void insertCity(String username, String city_name) {
+        PreparedStatement stmt = null;
+        Connection conn = null;
+
+        try {
+            conn = ds.getConnection();
+            stmt = conn.prepareStatement(
+                    "INSERT INTO users_has_cities(id, user_fk, city_fk, is_home) VALUES(NULL, ?, ?, 0 )");
             stmt.setString(1, username);
             stmt.setString(2, city_name);
             stmt.executeUpdate();

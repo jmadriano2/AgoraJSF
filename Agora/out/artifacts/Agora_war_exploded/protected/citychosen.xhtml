@@ -14,8 +14,9 @@
     </ui:define>
 
     <ui:define name="cities">
-        <b:modal  styleClass="modalPseudoClass" style="top:200px">
-            <h3>Would you like to see other cities?</h3>
+        <b:modal  styleClass="modalPseudoClass" style="top:150px">
+            <h3 style="text-align: center;">You have set #{cityBean.chosenCity.city_name} <br/>as your Home City</h3>
+            <h3 style="text-align: center;">Would you like to see other cities?</h3>
             <f:facet name="footer">
                 <b:form>
                     <b:commandButton value="Skip" action="#{cityBean.skip}" dismiss="modal" />

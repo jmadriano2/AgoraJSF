@@ -53,6 +53,30 @@
     </navigation-rule>
 
     <navigation-rule>
+        <from-view-id>/protected/moreCities.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>AddedCity</from-outcome>
+            <to-view-id>/protected/addcity.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/protected/addcity.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>SkipAdd</from-outcome>
+            <to-view-id>/protected/homepage.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/protected/addcity.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>AddMoreCities</from-outcome>
+            <to-view-id>/protected/moreCities.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
         <from-view-id>/protected/homepage.xhtml</from-view-id>
         <navigation-case>
             <from-outcome>Details</from-outcome>

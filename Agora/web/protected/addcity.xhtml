@@ -15,38 +15,42 @@
 
     <ui:define name="cities">
         <b:modal  styleClass="modalPseudoClass" style="top:150px">
-            <h3 style="text-align: center;">You have set #{cityBean.chosenCity.city_name} <br/>as your Home City</h3>
-            <h3 style="text-align: center;">Would you like to see other cities?</h3>
+            <h3 style="text-align: center;">
+                You have added #{cityBean.chosenCity.city_name}
+                <br/>
+                to your list of Active Cities
+            </h3>
+            <h3 style="text-align: center;">Would you like to add other cities?</h3>
             <f:facet name="footer">
                 <b:form>
-                    <b:commandButton value="Skip" action="#{cityBean.skip}" dismiss="modal" />
-                    <b:commandButton value="Yes" look="primary" action="#{cityBean.moreCities}" dismiss="modal" />
+                    <b:commandButton value="No" action="#{cityBean.skipAdd}" dismiss="modal" />
+                    <b:commandButton value="Yes" look="primary" action="#{cityBean.addMoreCities}" dismiss="modal" />
                 </b:form>
             </f:facet>
         </b:modal>
 
         <b:panel style="padding-top:0px;">
             <b:row>
-                <h1 style="text-align: center; font-weight: bold; margin-top:0px;">Is This Your Home City?</h1>
+                <h1 style="text-align: center; font-weight: bold; margin-top:0px;">Add This city?</h1>
             </b:row>
             <b:row>
                 <b:column span="3"/>
                 <b:well span="6" style="height: 380px;padding-top:0px"
                         styleClass="chosen-well">
-                    <h2 style="padding: 0px; text-align: center;">#{cityBean.chosenCity.city_name}</h2>
+                    <h2 style="padding: 0px; text-align: center;">#{cityBean.addedCity.city_name}</h2>
                     <br/>
-                    <b:image value="../#{cityBean.chosenCity.city_imgpath}" height="250" span="12"
+                    <b:image value="../#{cityBean.addedCity.city_imgpath}" height="250" span="12"
                              style="padding: 0px;"/>
                 </b:well>
             </b:row>
             <b:row>
                 <b:column span="3">
-                    <b:button span="12" size="lg" href="/protected/cities.jsf" value="Go Back"
+                    <b:button span="12" size="lg" href="/protected/moreCities.jsf" value="Go Back"
                               iconAwesome="angle-left" look="info"/>
                 </b:column>
                 <b:column offset="6" span="3">
                     <b:button span="12" size="lg" look="success" value="Confirm" iconAwesome="angle-right"
-                                     iconAlign="right" onclick="$('.modalPseudoClass').modal()"/>
+                              iconAlign="right" onclick="$('.modalPseudoClass').modal()"/>
                 </b:column>
             </b:row>
         </b:panel>
