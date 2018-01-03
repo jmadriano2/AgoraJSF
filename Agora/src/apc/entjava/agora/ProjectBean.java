@@ -1,15 +1,14 @@
 package apc.entjava.agora;
 
 import apc.entjava.agora.dataobjects.ProjectDao;
-import apc.entjava.agora.dataobjects.ReactionDao;
+import apc.entjava.agora.dataobjects.MoodDao;
 import apc.entjava.agora.objects.Projects;
 import apc.entjava.agora.services.ProjectService;
-import apc.entjava.agora.services.ReactionService;
+import apc.entjava.agora.services.MoodService;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
-import java.util.LinkedList;
 import java.util.List;
 
 @ManagedBean
@@ -20,12 +19,10 @@ public class ProjectBean {
 
     //Services
     private ProjectService projectService = new ProjectDao();
-    private ReactionService reactionService = new ReactionDao();
+    private MoodService moodService = new MoodDao();
 
     @ManagedProperty(value = "#{detailBean}")
     private DetailBean detailBean;
-    @ManagedProperty(value = "#{reactionBean}")
-    private ReactionBean reactionBean;
     @ManagedProperty(value = "#{authBean}")
     private AuthBean authBean;
 
@@ -63,14 +60,6 @@ public class ProjectBean {
         this.detailBean = detailBean;
     }
 
-    public ReactionBean getReactionBean() {
-        return reactionBean;
-    }
-
-    public void setReactionBean(ReactionBean reactionBean) {
-        this.reactionBean = reactionBean;
-    }
-
     public AuthBean getAuthBean() {
         return authBean;
     }
@@ -84,23 +73,7 @@ public class ProjectBean {
         setDetail(project_index);
         setDetailBudget(project_id);
         setDetailMood(project_id);
-
-        int user_id = authBean.getLoggedUser().getUser_id();
-        if (!reactionService.userHasMood(user_id, project_id)) {
-            createReaction(user_id, project_id);
-        }
-
-        setUserMood(user_id, project_id);
-
         return "Details";
-    }
-
-    private void setUserMood(int user_id, int project_id) {
-        reactionBean.setUser_mood(reactionService.userMood(user_id, project_id));
-    }
-
-    private void createReaction(int user_id, int project_id) {
-        reactionService.createMood(user_id, project_id);
     }
 
     private void setDetailMood(int project_id) {

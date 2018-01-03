@@ -9,10 +9,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -84,14 +81,14 @@ public class ProjectDao implements ProjectService {
 
             try (ResultSet rs = stmt.executeQuery()) {
                 SimpleDateFormat myFormat = new SimpleDateFormat("MMM d, yyyy 'at' h:mm a");
-                Date date;
+                Timestamp datetime;
                 while (rs.next()) {
-                    date = rs.getDate("project_datePosted");
+                    datetime = rs.getTimestamp("project_datePosted");
                     int project_id = rs.getInt("project_id");
                     String project_name = rs.getString("project_name");
                     String project_description = rs.getString("project_description");
                     String project_address = rs.getString("project_address");
-                    String project_dateposted = myFormat.format(date);
+                    String project_dateposted = myFormat.format(datetime);
                     String project_imgpath = rs.getString("project_imgpath");
                     String project_admin = rs.getString("admins.admin_fullname");
                     String project_city = rs.getString("cities.city_name");

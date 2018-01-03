@@ -1,6 +1,6 @@
 package apc.entjava.agora.services;
 
-public interface ReactionService {
+public interface MoodService {
     void createMood(int user_id, int project_id);
 
     boolean userHasMood(int user_id, int project_id);

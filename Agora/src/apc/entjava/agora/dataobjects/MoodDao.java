@@ -1,6 +1,6 @@
 package apc.entjava.agora.dataobjects;
 
-import apc.entjava.agora.services.ReactionService;
+import apc.entjava.agora.services.MoodService;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -11,12 +11,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class ReactionDao implements ReactionService {
+public class MoodDao implements MoodService {
     private DataSource ds;
     private PreparedStatement stmt = null;
     private Connection conn = null;
 
-    public ReactionDao() {
+    public MoodDao() {
         Context context = null;
         try {
             context = new InitialContext();

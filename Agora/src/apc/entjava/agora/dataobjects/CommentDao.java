@@ -7,10 +7,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -44,13 +41,13 @@ public class CommentDao implements CommentService {
 
             try (ResultSet rs = stmt.executeQuery()) {
                 SimpleDateFormat myFormat = new SimpleDateFormat("MMM d, yyyy 'at' h:mm a");
-                Date date;
+                Timestamp datetime;
                 while (rs.next()) {
-                    date = rs.getDate("comments_datePosted");
+                    datetime = rs.getTimestamp("comments_datePosted");
                     int comment_index = commentsList.size() + 1;
                     int comment_id = rs.getInt("comments_id");
                     String comment_text = rs.getString("comments_text");
-                    String comment_datePosted = myFormat.format(date);
+                    String comment_datePosted = myFormat.format(datetime);
                     String comment_poster = rs.getString("user_nickname");
                     String comment_posterImg = rs.getString("user_imgPath");
 

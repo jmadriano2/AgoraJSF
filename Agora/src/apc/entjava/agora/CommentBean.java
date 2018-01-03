@@ -28,14 +28,13 @@ public class CommentBean {
     @PostConstruct
     public void init() {
         comment_list = commentService.getCommentsList();
-        System.out.println(comment_list.get(0).toString());
 
         comment_list_size = comment_list.size();
-        are_is = "is";
-        thought_s = "thought";
-        if(comment_list_size>1) {
-            are_is = "are";
-            thought_s = "thoughts";
+        are_is = "are";
+        thought_s = "thoughts";
+        if(comment_list_size==1) {
+            are_is = "is only";
+            thought_s = "thought";
         }
     }
 
@@ -90,6 +89,15 @@ public class CommentBean {
     public void insertComment(){
         int project_id = detailBean.getDetail().getProject_id();
         int user_id = authBean.getLoggedUser().getUser_id();
-        commentService.insertComment(comment_txt, user_id, project_id);
+        if(!comment_txt.isEmpty()){
+            commentService.insertComment(comment_txt, user_id, project_id);
+        }
+        comment_list = commentService.getCommentsList();
+        comment_list_size = comment_list.size();
+        if(comment_list_size==1) {
+            are_is = "is only";
+            thought_s = "thought";
+        }
+        comment_txt = null;
     }
 }

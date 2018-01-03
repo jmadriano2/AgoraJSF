@@ -1,22 +1,19 @@
 package apc.entjava.agora;
 
-import apc.entjava.agora.dataobjects.ReactionDao;
-import apc.entjava.agora.services.ReactionService;
+import apc.entjava.agora.dataobjects.MoodDao;
+import apc.entjava.agora.services.MoodService;
 
+import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
-import javax.faces.component.UIComponent;
-import javax.faces.component.UIInput;
-import javax.faces.component.UIViewRoot;
 import javax.faces.context.FacesContext;
-import javax.faces.event.ComponentSystemEvent;
 
 @ManagedBean
-public class ReactionBean {
+public class MoodBean {
     private int user_mood;
 
-    private ReactionService reactionService = new ReactionDao();
+    private MoodService moodService = new MoodDao();
 
     public int getUser_mood() {
         return user_mood;
@@ -26,14 +23,22 @@ public class ReactionBean {
         this.user_mood = user_mood;
     }
 
-    public ReactionService getReactionService() {
-        return reactionService;
-    }
-
     @ManagedProperty(value = "#{authBean}")
     private AuthBean authBean;
     @ManagedProperty(value = "#{detailBean}")
     private DetailBean detailBean;
+
+    @PostConstruct
+    public void init() {
+        int user_id = authBean.getLoggedUser().getUser_id();
+        int project_id = detailBean.getDetail().getProject_id();
+
+        if (!moodService.userHasMood(user_id, project_id)) {
+            moodService.createMood(user_id, project_id);
+        }
+
+        user_mood = moodService.userMood(user_id, project_id);
+    }
 
     public AuthBean getAuthBean() {
         return authBean;
@@ -72,17 +77,8 @@ public class ReactionBean {
                 mood = 4;
                 break;
         }
-        System.out.println("my-mood: " + input);
-        System.out.println("mood: " + mood);
-        System.out.println("user-id: " + authBean.getLoggedUser().getUser_id());
-        System.out.println("project-id: " + detailBean.getDetail().getProject_id());
-        System.out.println("Happy votes: " + h);
-        System.out.println("Sad votes: " + s);
-        System.out.println("Angry votes: " + a);
-        System.out.println("Disgusted votes: " + d);
-        System.out.println("Fearful votes: " + f);
-        reactionService.updateMood(mood, user_id, project_id);
-        reactionService.updateMoodVotes(project_id, h, s, a, d, f);
+        moodService.updateMood(mood, user_id, project_id);
+        moodService.updateMoodVotes(project_id, h, s, a, d, f);
     }
 
     public void updateSuccess() {
