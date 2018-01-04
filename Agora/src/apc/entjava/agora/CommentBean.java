@@ -24,6 +24,8 @@ public class CommentBean {
     private DetailBean detailBean;
     @ManagedProperty(value = "#{authBean}")
     private AuthBean authBean;
+    @ManagedProperty(value = "#{moodBean}")
+    private MoodBean moodBean;
 
     @PostConstruct
     public void init() {
@@ -85,18 +87,30 @@ public class CommentBean {
         this.authBean = authBean;
     }
 
+    public MoodBean getMoodBean() {
+        return moodBean;
+    }
+
+    public void setMoodBean(MoodBean moodBean) {
+        this.moodBean = moodBean;
+    }
+
     //Methods
     public void insertComment(){
+        String comment_mood = moodBean.getUser_mood_string();
         int project_id = detailBean.getDetail().getProject_id();
         int user_id = authBean.getLoggedUser().getUser_id();
         if(!comment_txt.isEmpty()){
-            commentService.insertComment(comment_txt, user_id, project_id);
+            commentService.insertComment(comment_txt, comment_mood, user_id, project_id);
         }
         comment_list = commentService.getCommentsList();
         comment_list_size = comment_list.size();
         if(comment_list_size==1) {
             are_is = "is only";
             thought_s = "thought";
+        }else {
+            are_is = "are";
+            thought_s = "thoughts";
         }
         comment_txt = null;
     }

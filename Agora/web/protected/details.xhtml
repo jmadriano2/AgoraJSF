@@ -60,9 +60,9 @@
                          style="background:white; color:black"/>
                 <br/>
                 <b:commandButton id="my-mood" value="Neutral" span="4" offset="1" tooltip="Click to Confirm" ajax="true"
-                                 onclick="ajax:reactionBean.updateSuccess();" update="my_message"
-                                 action="#{moodBean.updateMood(hiddenInput.value, hidden_happy.value, hidden_sad.value,
-                                            hidden_angry.value, hidden_disgusted.value, hidden_fearful.value)}"
+                                 onclick="ajax:moodBean.updateMood(hiddenInput.value, hidden_happy.value,
+                                 hidden_sad.value, hidden_angry.value, hidden_disgusted.value, hidden_fearful.value);"
+                                 update="my_message"
                                  style="height:50px; font-size: 24px; font-weight: bold;"/>
                 <b:messages id="my_message" for="my-mood" span="5" style="margin:0px;"/>
                 <br/>
@@ -91,8 +91,17 @@
     <ui:define name="comments">
         <b:panel style="padding-top:10px;">
             <h1>Comments Section:</h1>
-            <h:form>
-                <b:inputTextarea placeholder="Type your comment here..." value="#{commentBean.comment_txt}" span="12"/>
+            <h:form id="commentMoodForm">
+                <b:iconAwesome name="fa-circle" styleClass="#{moodBean.user_mood_string}" ajax="true"
+                               onclick="ajax:moodBean.updateMoodIcon()" update="@form"
+                               tooltip="Click to update your comment mood"/>
+                <h:outputText value=" You are #{moodBean.user_mood_string} about this project because:"
+                              style="font-size:14px; font-weight:bold;"/>
+            </h:form>
+
+            <h:form id="commentForm">
+                <b:inputTextarea id="comment-area" placeholder="Type your comment here..."
+                                 value="#{commentBean.comment_txt}" span="12"/>
                 <b:commandButton value="Submit" look="info" span="2" offset="10" ajax="true" update="@form"
                                  onclick="ajax:commentBean.insertComment()"/>
                 <br/>
@@ -109,7 +118,9 @@
                                 <b:image value="../#{comment.comment_posterImg}" span="12"/>
                             </b:column>
                             <b:column span="10">
-                                <h:outputText value="#{comment.comment_poster} is [mood] because:" span="12"/>
+                                <b:iconAwesome name="fa-circle" styleClass="#{comment.comment_mood}"/>
+                                <h:outputText value=" #{comment.comment_poster} is #{comment.comment_mood} about this project because:"
+                                              style="font-size:14px; font-weight:bold;"/>
                                 <br/>
                                 <p>#{comment.comment_text}</p>
                             </b:column>

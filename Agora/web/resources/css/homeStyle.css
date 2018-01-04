@@ -51,3 +51,19 @@ html {
     background: #cadcfa;
     border-color: #28a745;
 }
+
+.sad{
+    color:#3366cc;
+}
+.angry{
+    color:#dc3912;
+}
+.happy{
+    color:#ff9900;
+}
+.disgusted{
+    color:#109618;
+}
+.fearful{
+    color:#990099;
+}

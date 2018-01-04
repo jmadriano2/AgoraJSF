@@ -10,7 +10,6 @@ import javax.sql.DataSource;
 import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class CommentDao implements CommentService {
@@ -48,10 +47,11 @@ public class CommentDao implements CommentService {
                     int comment_id = rs.getInt("comments_id");
                     String comment_text = rs.getString("comments_text");
                     String comment_datePosted = myFormat.format(datetime);
+                    String comment_mood = rs.getString("comments_mood");
                     String comment_poster = rs.getString("user_nickname");
                     String comment_posterImg = rs.getString("user_imgPath");
 
-                    commentsList.add(new Comments(comment_index, comment_id, comment_text, comment_datePosted,
+                    commentsList.add(new Comments(comment_index, comment_id, comment_text, comment_datePosted, comment_mood,
                             comment_poster, comment_posterImg));
                 }
                 return commentsList;
@@ -63,18 +63,19 @@ public class CommentDao implements CommentService {
         }
     }
 
-    public void insertComment(String comment_text, int user_id, int project_id) {
+    public void insertComment(String comment_text, String comment_mood, int user_id, int project_id) {
         PreparedStatement stmt = null;
         Connection conn = null;
 
         try {
             conn = ds.getConnection();
             stmt = conn.prepareStatement(
-                    "INSERT INTO comments(comments_id, comments_text, comments_datePosted, project_fk, user_fk) " +
-                            "VALUES(NULL, ?, CURRENT_TIMESTAMP, ?, ?)");
+                    "INSERT INTO comments(comments_id, comments_text, comments_datePosted, comments_mood, project_fk, user_fk) " +
+                            "VALUES(NULL, ?, CURRENT_TIMESTAMP, ?, ?, ?)");
             stmt.setString(1, comment_text);
-            stmt.setInt(2, project_id);
-            stmt.setInt(3, user_id);
+            stmt.setString(2, comment_mood);
+            stmt.setInt(3, project_id);
+            stmt.setInt(4, user_id);
             stmt.executeUpdate();
             System.out.println("Data Added Successfully");
         } catch (Exception e) {

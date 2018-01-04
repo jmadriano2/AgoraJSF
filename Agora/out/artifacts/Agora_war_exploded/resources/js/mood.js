@@ -80,23 +80,23 @@ function changeButton(currentMood) {
     if (currentMood == 0) {
         document.getElementById("update:my-mood").firstChild.innerHTML = "Sad";
         document.getElementById("update:hidden").value = "Sad";
-        document.getElementById("update:my-mood").childNodes[0].setAttribute("style", "height:50px; font-size: 24px; font-weight: bold; background: #3366cc; color: white;")
+        document.getElementById("update:my-mood").childNodes[0].setAttribute("style", "height:50px; font-size: 24px; font-weight: bold; background: #3366cc; color: white;");
     } else if (currentMood == 1) {
         document.getElementById("update:my-mood").firstChild.innerHTML = "Angry";
         document.getElementById("update:hidden").value = "Angry";
-        document.getElementById("update:my-mood").childNodes[0].setAttribute("style", "height:50px; font-size: 24px; font-weight: bold; background: #dc3912; color: white;")
+        document.getElementById("update:my-mood").childNodes[0].setAttribute("style", "height:50px; font-size: 24px; font-weight: bold; background: #dc3912; color: white;");
     } else if (currentMood == 2) {
         document.getElementById("update:my-mood").firstChild.innerHTML = "Happy";
         document.getElementById("update:hidden").value = "Happy";
-        document.getElementById("update:my-mood").childNodes[0].setAttribute("style", "height:50px; font-size: 24px; font-weight: bold; background: #ff9900; color: white;")
+        document.getElementById("update:my-mood").childNodes[0].setAttribute("style", "height:50px; font-size: 24px; font-weight: bold; background: #ff9900; color: white;");
     } else if (currentMood == 3) {
         document.getElementById("update:my-mood").firstChild.innerHTML = "Disgusted";
         document.getElementById("update:hidden").value = "Disgusted";
-        document.getElementById("update:my-mood").childNodes[0].setAttribute("style", "height:50px; font-size: 24px; font-weight: bold; background: #109618; color: white;")
+        document.getElementById("update:my-mood").childNodes[0].setAttribute("style", "height:50px; font-size: 24px; font-weight: bold; background: #109618; color: white;");
     } else if (currentMood == 4) {
         document.getElementById("update:my-mood").firstChild.innerHTML = "Fearful";
         document.getElementById("update:hidden").value = "Fearful";
-        document.getElementById("update:my-mood").childNodes[0].setAttribute("style", "height:50px; font-size: 24px; font-weight: bold; background: #990099; color: white;")
+        document.getElementById("update:my-mood").childNodes[0].setAttribute("style", "height:50px; font-size: 24px; font-weight: bold; background: #990099; color: white;");
     }
 }
 

@@ -5,14 +5,17 @@ public class Comments {
     private int comment_id;
     private String comment_text;
     private String comment_datePosted;
+    private String comment_mood;
     private String comment_poster;
     private String comment_posterImg;
 
-    public Comments(int comment_index, int comment_id, String comment_text, String comment_datePosted, String comment_poster, String comment_posterImg) {
+    public Comments(int comment_index, int comment_id, String comment_text, String comment_datePosted,
+                    String comment_mood, String comment_poster, String comment_posterImg) {
         this.comment_index = comment_index;
         this.comment_id = comment_id;
         this.comment_text = comment_text;
         this.comment_datePosted = comment_datePosted;
+        this.comment_mood = comment_mood;
         this.comment_poster = comment_poster;
         this.comment_posterImg = comment_posterImg;
     }
@@ -49,6 +52,14 @@ public class Comments {
         this.comment_datePosted = comment_datePosted;
     }
 
+    public String getComment_mood() {
+        return comment_mood;
+    }
+
+    public void setComment_mood(String comment_mood) {
+        this.comment_mood = comment_mood;
+    }
+
     public String getComment_poster() {
         return comment_poster;
     }
@@ -72,6 +83,7 @@ public class Comments {
                 ", comment_id=" + comment_id +
                 ", comment_text='" + comment_text + '\'' +
                 ", comment_datePosted='" + comment_datePosted + '\'' +
+                ", comment_mood='" + comment_mood + '\'' +
                 ", comment_poster='" + comment_poster + '\'' +
                 ", comment_posterImg='" + comment_posterImg + '\'' +
                 '}';
