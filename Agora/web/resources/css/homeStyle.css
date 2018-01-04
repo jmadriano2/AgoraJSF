@@ -52,6 +52,14 @@ html {
     border-color: #28a745;
 }
 
+.sidebar{
+    padding:10px;
+}
+.sidebar:hover{
+    padding:10px;
+    background: #eeeeee;
+ }
+
 .sad{
     color:#3366cc;
 }

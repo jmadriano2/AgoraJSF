@@ -110,7 +110,15 @@
                 <ui:repeat value="#{commentBean.comment_list}" var="comment">
                     <b:panel>
                         <b:row style="padding-left:10px; margin-top:0px;">
-                            <h:outputText value="#{comment.comment_index}. Posted On #{comment.comment_datePosted}"/>
+                            <b:column span="6">
+                                <h:outputText value="#{comment.comment_index}. Posted On #{comment.comment_datePosted}"/>
+                            </b:column>
+                            <b:column span="2" offset="4">
+                                <b:iconAwesome id="upvoteIcon" name="fa-thumbs-o-up" ajax="true" update="@form"
+                                               onclick="ajax:commentBean.updateUpvote(comment.comment_index)"/>
+                                <h:outputText id="upvotes" value=" : #{comment.comment_upvotes}"
+                                              style="font-size:14px; font-weight:bold;"/>
+                            </b:column>
                         </b:row>
                         <br/>
                         <b:row>
@@ -119,8 +127,10 @@
                             </b:column>
                             <b:column span="10">
                                 <b:iconAwesome name="fa-circle" styleClass="#{comment.comment_mood}"/>
-                                <h:outputText value=" #{comment.comment_poster} is #{comment.comment_mood} about this project because:"
-                                              style="font-size:14px; font-weight:bold;"/>
+                                <h:outputText
+                                        value=" #{comment.comment_poster} is #{comment.comment_mood} about this project because:"
+                                        style="font-size:14px; font-weight:bold;"/>
+
                                 <br/>
                                 <p>#{comment.comment_text}</p>
                             </b:column>

@@ -35,7 +35,7 @@ public class CommentDao implements CommentService {
                      "SELECT comments.*, users.user_nickname, users.user_imgPath " +
                              "FROM comments " +
                              "INNER JOIN users ON users.user_id = comments.user_fk " +
-                             "ORDER BY comments_datePosted DESC"
+                             "ORDER BY comments_upvotes DESC, comments_datePosted DESC "
              )) {
 
             try (ResultSet rs = stmt.executeQuery()) {
@@ -48,11 +48,12 @@ public class CommentDao implements CommentService {
                     String comment_text = rs.getString("comments_text");
                     String comment_datePosted = myFormat.format(datetime);
                     String comment_mood = rs.getString("comments_mood");
+                    int comment_upvotes = rs.getInt("comments_upvotes");
                     String comment_poster = rs.getString("user_nickname");
                     String comment_posterImg = rs.getString("user_imgPath");
 
-                    commentsList.add(new Comments(comment_index, comment_id, comment_text, comment_datePosted, comment_mood,
-                            comment_poster, comment_posterImg));
+                    commentsList.add(new Comments(comment_index, comment_id, comment_text, comment_datePosted,
+                            comment_mood, comment_upvotes, comment_poster, comment_posterImg));
                 }
                 return commentsList;
             }
@@ -78,6 +79,144 @@ public class CommentDao implements CommentService {
             stmt.setInt(4, user_id);
             stmt.executeUpdate();
             System.out.println("Data Added Successfully");
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        } finally {
+            CreateUserDao.closeConnection(stmt, conn);
+        }
+    }
+
+    public boolean userUpvotedComment(int comment_id, int user_id){
+        try (Connection conn = ds.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(
+                     "SELECT * FROM user_upvoted WHERE comments_fk=? AND user_fk=?"
+             )) {
+
+            stmt.setInt(1, comment_id);
+            stmt.setInt(2, user_id);
+
+            try (ResultSet rs = stmt.executeQuery()) {
+                return rs.next();
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void insertUpvote(int comment_id, int user_id){
+        PreparedStatement stmt = null;
+        Connection conn = null;
+
+        try {
+            conn = ds.getConnection();
+            stmt = conn.prepareStatement(
+                    "INSERT INTO user_upvoted(id, comments_fk, user_fk, upvote) " +
+                            "VALUES(NULL, ?, ?, 1)");
+            stmt.setInt(1, comment_id);
+            stmt.setInt(2, user_id);
+            stmt.executeUpdate();
+            System.out.println("Data Added Successfully");
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        } finally {
+            CreateUserDao.closeConnection(stmt, conn);
+        }
+    }
+
+    public int selectUpvote(int comment_id, int user_id){
+        try (Connection conn = ds.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(
+                     "SELECT upvote FROM user_upvoted WHERE comments_fk=? AND user_fk=?"
+             )) {
+
+            stmt.setInt(1, comment_id);
+            stmt.setInt(2, user_id);
+
+            try (ResultSet rs = stmt.executeQuery()) {
+                rs.next();
+                return rs.getInt("upvote");
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void upvote(int comment_id, int user_id){
+        PreparedStatement stmt = null;
+        Connection conn = null;
+
+        try {
+            conn = ds.getConnection();
+            stmt = conn.prepareStatement(
+                    "UPDATE user_upvoted SET upvote = 1 WHERE comments_fk=? AND user_fk=?");
+            stmt.setInt(1, comment_id);
+            stmt.setInt(2, user_id);
+            stmt.executeUpdate();
+            System.out.println("Data Updated Successfully");
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        } finally {
+            CreateUserDao.closeConnection(stmt, conn);
+        }
+    }
+
+    public void increaseUpvote(int comment_id){
+        PreparedStatement stmt = null;
+        Connection conn = null;
+
+        try {
+            conn = ds.getConnection();
+            stmt = conn.prepareStatement(
+                    "UPDATE comments SET comments_upvotes=comments_upvotes+1 WHERE comments_id=?");
+            stmt.setInt(1, comment_id);
+            stmt.executeUpdate();
+            System.out.println("Data Updated Successfully");
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        } finally {
+            CreateUserDao.closeConnection(stmt, conn);
+        }
+    }
+
+    public void downvote(int comment_id, int user_id){
+        PreparedStatement stmt = null;
+        Connection conn = null;
+
+        try {
+            conn = ds.getConnection();
+            stmt = conn.prepareStatement(
+                    "UPDATE user_upvoted SET upvote = 0 WHERE comments_fk=? AND user_fk=?");
+            stmt.setInt(1, comment_id);
+            stmt.setInt(2, user_id);
+            stmt.executeUpdate();
+            System.out.println("Data Updated Successfully");
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        } finally {
+            CreateUserDao.closeConnection(stmt, conn);
+        }
+    }
+
+    public void decreaseUpvote(int comment_id){
+        PreparedStatement stmt = null;
+        Connection conn = null;
+
+        try {
+            conn = ds.getConnection();
+            stmt = conn.prepareStatement(
+                    "UPDATE comments SET comments_upvotes=comments_upvotes-1 WHERE comments_id=?");
+            stmt.setInt(1, comment_id);
+            stmt.executeUpdate();
+            System.out.println("Data Updated Successfully");
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException(e);

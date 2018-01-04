@@ -5,8 +5,10 @@ import apc.entjava.agora.objects.Comments;
 import apc.entjava.agora.services.CommentService;
 
 import javax.annotation.PostConstruct;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
+import javax.faces.context.FacesContext;
 import java.util.List;
 
 @ManagedBean
@@ -113,5 +115,31 @@ public class CommentBean {
             thought_s = "thoughts";
         }
         comment_txt = null;
+    }
+
+    public void updateUpvote(int comment_index) {
+        comment_index--;
+        int comment_id = comment_list.get(comment_index).getComment_id();
+        int user_id = authBean.getLoggedUser().getUser_id();
+
+        if(!commentService.userUpvotedComment(comment_id, user_id)){
+            commentService.insertUpvote(comment_id, user_id);
+            commentService.increaseUpvote(comment_id);
+            comment_list = commentService.getCommentsList();
+            return;
+        }
+
+        int vote = commentService.selectUpvote(comment_id, user_id);
+
+        if(vote == 0){
+            commentService.upvote(comment_id, user_id);
+            commentService.increaseUpvote(comment_id);
+            comment_list = commentService.getCommentsList();
+        }
+        else{
+            commentService.downvote(comment_id, user_id);
+            commentService.decreaseUpvote(comment_id);
+            comment_list = commentService.getCommentsList();
+        }
     }
 }

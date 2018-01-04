@@ -20,7 +20,8 @@
 </h:head>
 
 <h:body>
-    <b:navBar brandImg="#{resource['images:agora_login.png']}" brandHref="/protected/homepage.jsf" class="top" fixed="top" sticky="false">
+    <b:navBar brandImg="#{resource['images:agora_login.png']}" brandHref="/protected/homepage.jsf" class="top"
+              fixed="top" sticky="false">
         <b:form class="search_box">
             <b:inputText fieldSize="sm" span="6" placeholder="Search">
                 <f:facet name="append">
@@ -41,7 +42,7 @@
         </b:dropButton>
     </b:navBar>
 
-    <b:scrollUp distance="200" animation="fade" text="" scrollTitle="false" name="scrollUpCustom" />
+    <b:scrollUp distance="200" animation="fade" text="" scrollTitle="false" name="scrollUpCustom"/>
 
     <b:container fluid="true" styleClass="cont">
         <b:row>
@@ -50,43 +51,47 @@
                     <b:row>
                         <b:column span="5" style="padding:0px;">
                             <b:navLink>
-                                <b:image value="../#{authBean.loggedUser.user_imgpath}" span="12" />
+                                <b:image value="../#{authBean.loggedUser.user_imgpath}" span="12"/>
                             </b:navLink>
                         </b:column>
-                        <b:navLink value="#{authBean.loggedUsername}" />
+                        <b:navLink value="#{authBean.loggedUsername}"/>
                     </b:row>
                     <br/>
                     <b:listLinks>
-                        <hr style="margin:2px;"/>
-                        <b:navLink header="My Cities"/>
-                        <hr style="margin:2px;"/>
+                        <b:form>
+                            <hr style="margin:2px;"/>
+                            <b:navLink header="My Cities" span="12"/>
+                            <hr style="margin:2px;"/>
+                            <br/>
+                            <ui:repeat value="#{sidebarBean.myCities}" var="myCities">
+                                <b:navCommandLink value="#{myCities}" span="12" styleClass="sidebar"/>
+                            </ui:repeat>
 
-                        <b:navLink value="City 1"/>
-                        <b:navLink value="City 2"/>
+                            <hr style="margin:2px;"/>
+                            <b:navLink header="Nearby Cities" span="12"/>
+                            <hr style="margin:2px;"/>
 
-                        <hr style="margin:2px;"/>
-                        <b:navLink header="Nearby Cities"/>
-                        <hr style="margin:2px;"/>
+                            <ui:repeat value="#{sidebarBean.nearbyCities}" var="nearbyCities">
+                                <b:navCommandLink value="#{nearbyCities}" span="12" styleClass="sidebar"/>
+                            </ui:repeat>
 
-                        <b:navLink value="Nearby City 1"/>
-                        <b:navLink value="Nearby City 2"/>
+                            <hr style="margin:2px;"/>
+                            <b:navLink header="My Neighbours" span="12"/>
+                            <hr style="margin:2px;"/>
 
-                        <hr style="margin:2px;"/>
-                        <b:navLink header="My Neighbours"/>
-                        <hr style="margin:2px;"/>
-
-                        <b:navLink value="Neighbour 1"/>
-                        <b:navLink value="Neighbour 2"/>
-                        <b:navLink value="Neighbour 3"/>
+                            <ui:repeat value="#{sidebarBean.myNeighbours}" var="myNeighbours">
+                                <b:navCommandLink value="#{myNeighbours}" span="12" styleClass="sidebar"/>
+                            </ui:repeat>
+                        </b:form>
                     </b:listLinks>
                 </b:panel>
             </b:column>
             <b:column span="7">
-                <ui:insert name="cities" />
+                <ui:insert name="cities"/>
                 <ui:insert name="panels"/>
-                <ui:insert name="details" />
+                <ui:insert name="details"/>
                 <ui:insert name="mood"/>
-                <ui:insert name="comments" />
+                <ui:insert name="comments"/>
             </b:column>
         </b:row>
     </b:container>

@@ -6,16 +6,18 @@ public class Comments {
     private String comment_text;
     private String comment_datePosted;
     private String comment_mood;
+    private int comment_upvotes;
     private String comment_poster;
     private String comment_posterImg;
 
     public Comments(int comment_index, int comment_id, String comment_text, String comment_datePosted,
-                    String comment_mood, String comment_poster, String comment_posterImg) {
+                    String comment_mood, int comment_upvotes, String comment_poster, String comment_posterImg) {
         this.comment_index = comment_index;
         this.comment_id = comment_id;
         this.comment_text = comment_text;
         this.comment_datePosted = comment_datePosted;
         this.comment_mood = comment_mood;
+        this.comment_upvotes = comment_upvotes;
         this.comment_poster = comment_poster;
         this.comment_posterImg = comment_posterImg;
     }
@@ -58,6 +60,14 @@ public class Comments {
 
     public void setComment_mood(String comment_mood) {
         this.comment_mood = comment_mood;
+    }
+
+    public int getComment_upvotes() {
+        return comment_upvotes;
+    }
+
+    public void setComment_upvotes(int comment_upvotes) {
+        this.comment_upvotes = comment_upvotes;
     }
 
     public String getComment_poster() {
