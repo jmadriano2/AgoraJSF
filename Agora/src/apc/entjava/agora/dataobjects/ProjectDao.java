@@ -55,13 +55,36 @@ public class ProjectDao implements ProjectService {
         }
     }
 
-    public List<Projects> getHomeProjectInfo(String username, String homeCity) {
+    public String getAdminCity(int adminCity) {
+        String admin_city;
+
+        try (Connection conn = ds.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(
+                     "SELECT city_name FROM cities WHERE city_id=?"
+             )) {
+            stmt.setInt(1, adminCity);
+
+            try (ResultSet rs = stmt.executeQuery()) {
+                rs.next();
+                admin_city = rs.getString("city_name");
+                return admin_city;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        } finally {
+            CreateUserDao.closeConnection(stmt, conn);
+        }
+    }
+
+    public List<Projects> getHomeProjectInfo(String homeCity) {
         List<Projects> info = new ArrayList<>();
 
         return getProjects(homeCity, info);
     }
 
-    public List<Projects> getProjectInfo(String username, String city) {
+    public List<Projects> getProjectInfo(String city) {
         List<Projects> info = new ArrayList<>();
 
         return getProjects(city, info);

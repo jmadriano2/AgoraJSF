@@ -1,6 +1,7 @@
 package apc.entjava.agora;
 
 
+import apc.entjava.agora.objects.Admin;
 import apc.entjava.agora.objects.User;
 
 import javax.faces.bean.ManagedBean;
@@ -16,6 +17,8 @@ public class AuthBean implements Serializable{
 
     private String loggedUsername;
     private User loggedUser;
+    private String loggedAdminname;
+    private Admin loggedAdmin;
 
     public String getLoggedUsername() {
         return loggedUsername;
@@ -31,6 +34,22 @@ public class AuthBean implements Serializable{
 
     public void setLoggedUser(User loggedUser) {
         this.loggedUser = loggedUser;
+    }
+
+    public String getLoggedAdminname() {
+        return loggedAdminname;
+    }
+
+    public void setLoggedAdminname(String loggedAdminname) {
+        this.loggedAdminname = loggedAdminname;
+    }
+
+    public Admin getLoggedAdmin() {
+        return loggedAdmin;
+    }
+
+    public void setLoggedAdmin(Admin loggedAdmin) {
+        this.loggedAdmin = loggedAdmin;
     }
 
     public String logout() {

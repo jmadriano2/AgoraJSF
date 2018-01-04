@@ -32,12 +32,12 @@ public class ProjectBean {
         String username = authBean.getLoggedUser().getUser_name();
         String homeCity = projectService.getHomeCity(username);
         
-        project_info = projectService.getHomeProjectInfo(username, homeCity);
+        project_info = projectService.getHomeProjectInfo(homeCity);
 
         if(projectService.userHasCities(username)){
             user_cities = projectService.getUserCities(username);
             for (String city: user_cities) {
-                project_info.addAll(projectService.getProjectInfo(username, city));
+                project_info.addAll(projectService.getProjectInfo(city));
             }
             int i = 0;
             for (Projects project: project_info){

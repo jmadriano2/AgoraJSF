@@ -90,6 +90,14 @@ public class CreateUserBean {
 
         }
 
+        if (password.length()<8){
+
+            FacesMessage msg = new FacesMessage("Password must have at least 8 letters");
+            msg.setSeverity(FacesMessage.SEVERITY_ERROR);
+            fc.addMessage(passwordId, msg);
+            fc.renderResponse();
+
+        }
     }
 
     public void validateUsername(ComponentSystemEvent event) {

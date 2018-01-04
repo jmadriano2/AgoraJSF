@@ -86,7 +86,8 @@ public class SidebarDao implements SidebarService {
         try (Connection conn = ds.getConnection();
              PreparedStatement stmt = conn.prepareStatement(
                      "SELECT  user_fk FROM users_has_cities " +
-                             "WHERE city_fk=? AND is_home=1 AND user_fk!=? "
+                             "WHERE city_fk=? AND is_home=1 AND user_fk!=? " +
+                             "LIMIT 3 "
              )) {
             stmt.setString(1, city_name);
             stmt.setString(2, username);

@@ -13,6 +13,22 @@
         <h:outputStylesheet library="css" name="homeStyle.css"/>
     </ui:define>
 
+
+    <ui:define name="navName">
+        <b:button look="success" size="sm" value="#{authBean.loggedUsername}" href="#"/>
+    </ui:define>
+
+    <ui:define name="profile">
+        <b:row>
+            <b:column span="5" style="padding:0px;">
+                <b:navLink>
+                    <b:image value="../#{authBean.loggedUser.user_imgpath}" span="12"/>
+                </b:navLink>
+            </b:column>
+            <b:navLink value="#{authBean.loggedUsername}"/>
+        </b:row>
+    </ui:define>
+
     <ui:define name="cities">
         <b:panel style="padding-left:20px;">
             <h1 style="text-align: center; font-weight: bold;">Choose Your Active Cities</h1>

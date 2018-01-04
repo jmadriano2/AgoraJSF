@@ -23,6 +23,53 @@
         <h:outputScript library="js" name="mood.js"/>
     </ui:define>
 
+    <ui:define name="navName">
+        <b:button look="success" size="sm" value="#{authBean.loggedUsername}" href="#"/>
+    </ui:define>
+
+    <ui:define name="profile">
+        <b:row>
+            <b:column span="5" style="padding:0px;">
+                <b:navLink>
+                    <b:image value="../#{authBean.loggedUser.user_imgpath}" span="12"/>
+                </b:navLink>
+            </b:column>
+            <b:navLink value="#{authBean.loggedUsername}"/>
+        </b:row>
+    </ui:define>
+
+
+    <ui:define name="myNeighbourhood">
+        <br/>
+        <b:listLinks>
+            <b:form>
+                <hr style="margin:2px;"/>
+                <b:navLink header="My Cities" span="12"/>
+                <hr style="margin:2px;"/>
+
+                <ui:repeat value="#{sidebarBean.myCities}" var="myCities">
+                    <b:navCommandLink value="#{myCities}" span="12" styleClass="sidebar"/>
+                </ui:repeat>
+
+                <hr style="margin:2px;"/>
+                <b:navLink header="Nearby Cities" span="12"/>
+                <hr style="margin:2px;"/>
+
+                <ui:repeat value="#{sidebarBean.nearbyCities}" var="nearbyCities">
+                    <b:navCommandLink value="#{nearbyCities}" span="12" styleClass="sidebar"/>
+                </ui:repeat>
+
+                <hr style="margin:2px;"/>
+                <b:navLink header="My Neighbours" span="12"/>
+                <hr style="margin:2px;"/>
+
+                <ui:repeat value="#{sidebarBean.myNeighbours}" var="myNeighbours">
+                    <b:navCommandLink value="#{myNeighbours}" span="12" styleClass="sidebar"/>
+                </ui:repeat>
+            </b:form>
+        </b:listLinks>
+    </ui:define>
+
     <ui:define name="details">
         <b:panel style="margin-bottom: 15px;">
             <h:outputText value="#{detailBean.detail.project_admin}" style="font-size: 20px;"/>

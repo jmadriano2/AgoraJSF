@@ -23,6 +23,14 @@
     <navigation-rule>
         <from-view-id>/index.xhtml</from-view-id>
         <navigation-case>
+            <from-outcome>Admin</from-outcome>
+            <to-view-id>/protected/adminpage.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/index.xhtml</from-view-id>
+        <navigation-case>
             <from-outcome>CityList</from-outcome>
             <to-view-id>/protected/cities.xhtml</to-view-id>
         </navigation-case>

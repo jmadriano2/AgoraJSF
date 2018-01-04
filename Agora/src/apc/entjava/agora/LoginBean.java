@@ -44,6 +44,11 @@ public class LoginBean {
     private CityService cityService = new CityDao();
 
     public String login() {
+        if (loginService.loginadmin(username,password)){
+            authBean.setLoggedAdmin(loginService.loggedAdmin(username));
+            authBean.setLoggedAdminname(authBean.getLoggedAdmin().getAdmin_nickname());
+            return "Admin";
+        }
         if(loginService.login(username,password)){
             authBean.setLoggedUser(loginService.loggedUser(username));
             authBean.setLoggedUsername(authBean.getLoggedUser().getUser_nickname());
