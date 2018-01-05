@@ -60,6 +60,11 @@ html {
     background: #eeeeee;
  }
 
+.postProject{
+    min-height: 100px;
+    background: #cffac2;
+}
+
 .sad{
     color:#3366cc;
 }

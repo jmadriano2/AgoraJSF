@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:b="http://bootsfaces.net/ui"
+                xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                template="/WEB-INF/templates/homeTemplate.xhtml">
+
+    <ui:define name="title">Agora - Admin</ui:define>
+
+    <ui:define name="custom">
+        <h:outputStylesheet library="css" name="homeStyle.css"/>
+    </ui:define>
+
+    <ui:define name="profile">
+        <b:row>
+            <b:column span="5" style="padding:0px;">
+                <b:navLink>
+                    <b:image value="../#{authBean.loggedAdmin.admin_imgPath}" span="12"/>
+                </b:navLink>
+            </b:column>
+            <b:navLink value="#{authBean.loggedUsername}"/>
+        </b:row>
+    </ui:define>
+
+    <ui:define name="panels">
+        <b:panel look="success" title="Post a Project" collapsible="false">
+            <h:form enctype="multipart/form-data">
+                <b:panelGrid colSpans="3,9">
+                    <h:outputLabel value="Project Image:"/>
+                    <h:inputFile value="#{adminBean.project_image}"/>
+                    <h:outputLabel value="Project Name:" />
+                    <b:inputText value="#{adminBean.project_name}" placeholder="Project Name"
+                                 required="true" requiredMessage="Project must have a name"/>
+                    <h:outputLabel span="10" value="Project Description:" />
+                    <b:inputTextarea lg="12" value="#{adminBean.project_description}" placeholder="Project Description"
+                                     required="true" requiredMessage="Project must have a description"/>
+                    <h:outputLabel value="Project Adrress:"/>
+                    <b:inputText value="#{adminBean.project_address}" placeholder="Project Adress"
+                                 required="true" requiredMessage="Project address must be specified"/>
+                </b:panelGrid>
+                <br/>
+                <h:outputLabel value="Budget for this Project:" style="font-size:24px;"/>
+                <br/>
+                <br/>
+                <b:panelGrid colSpans="3,9">
+                    <h:outputLabel value="Materials and Supply:" />
+                    <b:inputText value="#{adminBean.budget_materials}" placeholder="Materials and Supply" span="3"/>
+                    <h:outputLabel value="Operations:" />
+                    <b:inputText value="#{adminBean.budget_operations}" placeholder="Operations" span="3"/>
+                    <h:outputLabel value="Project Management:" />
+                    <b:inputText value="#{adminBean.budget_management}" placeholder="Project Management" span="3"/>
+                    <h:outputLabel value="Labor Costs:" />
+                    <b:inputText value="#{adminBean.budget_labor}" placeholder="Labor Cost" span="3"/>
+                    <h:outputLabel value="Miscellaneous:" />
+                    <b:inputText value="#{adminBean.budget_misc}" placeholder="Miscellaneous" span="3"/>
+                </b:panelGrid>
+                <b:commandButton value="Post Project" action="#{adminBean.projectPosted}" look="info" span="3" offset="8"/>
+            </h:form>
+        </b:panel>
+    </ui:define>
+</ui:composition>

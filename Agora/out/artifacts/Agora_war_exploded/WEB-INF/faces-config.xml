@@ -29,6 +29,22 @@
     </navigation-rule>
 
     <navigation-rule>
+        <from-view-id>/protected/adminpage.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>PostProject</from-outcome>
+            <to-view-id>/protected/postProject.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/protected/postProject.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>ProjectPosted</from-outcome>
+            <to-view-id>/protected/adminpage.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
         <from-view-id>/index.xhtml</from-view-id>
         <navigation-case>
             <from-outcome>CityList</from-outcome>

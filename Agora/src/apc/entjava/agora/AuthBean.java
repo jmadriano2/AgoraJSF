@@ -17,7 +17,6 @@ public class AuthBean implements Serializable{
 
     private String loggedUsername;
     private User loggedUser;
-    private String loggedAdminname;
     private Admin loggedAdmin;
 
     public String getLoggedUsername() {
@@ -34,14 +33,6 @@ public class AuthBean implements Serializable{
 
     public void setLoggedUser(User loggedUser) {
         this.loggedUser = loggedUser;
-    }
-
-    public String getLoggedAdminname() {
-        return loggedAdminname;
-    }
-
-    public void setLoggedAdminname(String loggedAdminname) {
-        this.loggedAdminname = loggedAdminname;
     }
 
     public Admin getLoggedAdmin() {

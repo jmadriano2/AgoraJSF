@@ -37,6 +37,7 @@ public class CityBean {
         String username = authBean.getLoggedUser().getUser_name();
         System.out.println("CityBean PostConstruct Username: " + username);
         citiesList = cityService.selectCities();
+        notChosen = cityService.selectChooseCities(username);
     }
 
     public List<Cities> getCitiesList() {

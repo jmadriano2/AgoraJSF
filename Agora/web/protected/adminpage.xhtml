@@ -7,14 +7,10 @@
                 xmlns:f="http://xmlns.jcp.org/jsf/core"
                 template="/WEB-INF/templates/homeTemplate.xhtml">
 
-    <ui:define name="title">Agora - Home</ui:define>
+    <ui:define name="title">Agora - Admin</ui:define>
 
     <ui:define name="custom">
         <h:outputStylesheet library="css" name="homeStyle.css"/>
-    </ui:define>
-
-    <ui:define name="navName">
-        <b:button look="success" size="sm" value="#{authBean.loggedAdminname}" href="#"/>
     </ui:define>
 
     <ui:define name="profile">
@@ -24,11 +20,18 @@
                     <b:image value="../#{authBean.loggedAdmin.admin_imgPath}" span="12"/>
                 </b:navLink>
             </b:column>
-            <b:navLink value="#{authBean.loggedAdminname}"/>
+            <b:navLink value="#{authBean.loggedUsername}"/>
         </b:row>
     </ui:define>
 
     <ui:define name="panels">
+        <b:panel>
+            <b:form>
+                <b:commandButton span="12" value="Post a New Project" action="#{adminBean.postProject}"
+                                 size="lg" look="info" styleClass="postProject"/>
+            </b:form>
+        </b:panel>
+
         <ui:repeat value="#{adminBean.city_projects}" var="info">
             <b:panel style="margin-bottom: 15px;">
                 <h:outputText value="#{info.project_admin}" style="font-size: 20px;"/>
@@ -44,11 +47,6 @@
                         #{info.project_description}
                     </p>
                 </b:well>
-                <hr/>
-                <b:form>
-                    <b:commandButton value="Details" size="lg" iconAwesome="angle-right" iconAlign="right"
-                                     offset="10" action="#{projectBean.passDetails(info.project_index, info.project_id)}"/>
-                </b:form>
             </b:panel>
         </ui:repeat>
     </ui:define>

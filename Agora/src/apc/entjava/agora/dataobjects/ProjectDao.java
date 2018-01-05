@@ -244,4 +244,39 @@ public class ProjectDao implements ProjectService {
         }
 
     }
+
+    public void postProject(String project_name, String project_description, String project_address, String project_imgPath,
+                            double budget_materials, double budget_operations, double budget_management,
+                            double budget_labor, double budget_misc, int adminId, int adminCity) {
+
+        PreparedStatement stmt = null;
+        Connection conn = null;
+
+        try {
+            conn = ds.getConnection();
+            stmt = conn.prepareStatement(
+                    "INSERT INTO projects(project_id, project_name, project_description, project_address, project_datePosted, " +
+                            "project_imgPath, mood_happy, mood_sad, mood_angry, mood_disgusted, mood_fearful, budget_materials, " +
+                            "budget_operations, budget_management, budget_labor, budget_misc, admin_fk, city_fk) " +
+                            "VALUES(NULL, ?, ?, ?, CURRENT_TIMESTAMP, ?, 1, 1, 1, 1, 1, ?, ?, ?, ?, ?, ?, ?)");
+            stmt.setString(1, project_name);
+            stmt.setString(2, project_description);
+            stmt.setString(3, project_address);
+            stmt.setString(4, project_imgPath);
+            stmt.setDouble(5, budget_materials);
+            stmt.setDouble(6, budget_operations);
+            stmt.setDouble(7, budget_management);
+            stmt.setDouble(8, budget_labor);
+            stmt.setDouble(9, budget_misc);
+            stmt.setInt(10, adminId);
+            stmt.setInt(11, adminCity);
+            stmt.executeUpdate();
+            System.out.println("Data Added Successfully");
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        } finally {
+            CreateUserDao.closeConnection(stmt, conn);
+        }
+    }
 }

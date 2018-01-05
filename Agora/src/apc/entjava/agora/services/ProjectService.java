@@ -22,4 +22,8 @@ public interface ProjectService {
     Budget getBudget(int project_index);
 
     Mood getMood(int project_index);
+
+    void postProject(String project_name, String project_description, String project_address, String project_imgPath,
+                double budget_materials, double budget_operations, double budget_management,
+                double budget_labor, double budget_misc, int adminId, int adminCity);
 }

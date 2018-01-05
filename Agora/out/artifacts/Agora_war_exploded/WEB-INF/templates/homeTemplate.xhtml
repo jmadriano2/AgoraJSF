@@ -31,14 +31,14 @@
         </b:form>
 
         <b:navbarLinks>
-            <ui:insert name="navName"/>
+            <b:button look="success" size="sm" value="#{authBean.loggedUsername}" href="#"/>
             <b:button look="success" size="sm" value="Home" href="home.jsf"/>
         </b:navbarLinks>
 
         <b:dropButton look="success" value=" " size="sm">
-            <b:navLink value="My Activities" href="#"/>
+            <b:navLink value="Add Cities" href="/protected/moreCities.jsf"/>
             <b:navLink value="Settings" href="#"/>
-            <b:navLink value="Log Out" href="/logout.jsf"/>
+            <b:navLink value="Log Out" href="/index.jsf"/>
         </b:dropButton>
     </b:navBar>
 

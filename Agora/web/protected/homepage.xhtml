@@ -13,10 +13,6 @@
         <h:outputStylesheet library="css" name="homeStyle.css"/>
     </ui:define>
 
-    <ui:define name="navName">
-        <b:button look="success" size="sm" value="#{authBean.loggedUsername}" href="#"/>
-    </ui:define>
-
     <ui:define name="profile">
         <b:row>
             <b:column span="5" style="padding:0px;">
@@ -41,7 +37,7 @@
                 </ui:repeat>
 
                 <hr style="margin:2px;"/>
-                <b:navLink header="Nearby Cities" span="12"/>
+                <b:navLink header="Nearby Cities" span="12"  href="/protected/moreCities.jsf"/>
                 <hr style="margin:2px;"/>
 
                 <ui:repeat value="#{sidebarBean.nearbyCities}" var="nearbyCities">
